@@ -1,0 +1,3 @@
+preview-server*.log
+tests/*.png
+__pycache__/
