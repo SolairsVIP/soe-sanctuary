@@ -8,6 +8,10 @@
 
 在项目根目录运行 `python -m http.server 4173`，然后打开 http://127.0.0.1:4173/。
 
+## 首页资料入口
+
+右上角“资料索引”集中列出本站页面、天梯服务与档案馆栏目；首页“探索资料”提供尚未在首页其他位置出现的资料入口，装备和物品内容按分类收起，技能资料可直接打开；首页搜索也涵盖其他区域的入口。图鉴直接进入档案馆对应栏目。技能入口包括流放圣所新增技能及部分职业技能改动；资料更新日志记录的是档案馆的更新。新手教程与诅咒模式规则集中在本地服务器设定页。
+
 ## 发布
 
 更新页面或素材后，提交并推送至 `main`，GitHub Actions 检查通过后自动更新网站。
@@ -43,3 +47,13 @@ T4 地牢中文名参照 [PD2 汉化资料](https://wiki.projectdiablo2.cn/wiki/
 “在方块中合成”使用的赫拉迪姆方块图标来自 Blizzard 的 [Arreat Summit](https://classic.battle.net/diablo2exp/items/cube.shtml)，已去除纯色背景并以 28×28 像素显示。
 
 运行 `node --test tests/kiln.test.cjs` 可检查配方搜索和分类的组合行为。
+
+## 诅咒模式服务器设定页
+
+`damnation.html` 和 `damnation.css` 说明服务器当前采用的诅咒模式：以[档案馆标准模式](https://dev.wdjwxh.com/pd2-new/#standard)为基础，使用[诅咒模式](https://dev.wdjwxh.com/pd2-new/#damnation)中明确的变化覆盖或补充。资料版本为 v13.0.2；页面无需 JavaScript 即可阅读，版本或服务器规则更新时需逐项复核。
+
+新手路线与 PD2 和原版暗黑 2 的核心差异参考[档案馆新手教程](https://dev.wdjwxh.com/pd2-new/#tutorial)和 [PD2 通用改动](https://wiki.projectdiablo2.cn/wiki/General_Changes)；共享仓库页数和全球天梯标为 PD2 官服信息。符文降级范围与配方按服务器补充说明编写，1 号为最低阶符文。
+
+教程中对应的物品图标保存在 `assets/archive-materials/`，图鉴缺少的升华魂石素材由 `python tools/extract-damnation-icons.py` 从 SoE v13.0.2 原始 DC6 提取到 `assets/soe-mode-icons/`。物品代码、素材来源及复用说明见[图标说明](assets/archive-materials/README.md)。
+
+档案馆的标准规则中将 Sacred Orb 的中文名称混写为“神授宝珠”，本页依据英文名称及物品代码 `sror` 使用“圣化宝珠”，并与被禁用的 Divine Orb（`dvo`）区分。标准和诅咒资料对恶魔方块的标准数值不一致，页面采用诅咒模式明确写出的当前数值。

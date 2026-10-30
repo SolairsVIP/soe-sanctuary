@@ -1,0 +1,9 @@
+/* Show that the site mark leads back to the home page. */
+.brand{position:relative;z-index:3;cursor:pointer}
+.brand .brand-mark{transition:border-color .18s,filter .18s}
+.brand .brand-wordmark strong,.brand b{transition:color .18s,text-shadow .18s}
+.brand:hover .brand-mark,.brand:focus-visible .brand-mark{border-color:#e6c38c;filter:drop-shadow(0 0 6px #c69456aa)}
+.brand:hover .brand-wordmark strong,.brand:hover b,.brand:focus-visible .brand-wordmark strong,.brand:focus-visible b{color:#fff0d4;text-shadow:0 0 12px #bd885b70}
+.brand::after{content:"← 返回主页";position:absolute;top:calc(100% + 12px);left:0;z-index:4;padding:7px 11px;border:1px solid #755a3b;background:#191610;color:#ead1a7;font:12px/1.4 "Microsoft YaHei","PingFang SC",sans-serif;letter-spacing:.04em;white-space:nowrap;box-shadow:0 8px 20px #0009;opacity:0;visibility:hidden;transform:translateY(-4px);pointer-events:none;transition:opacity .18s,transform .18s,visibility .18s}
+.brand:hover::after,.brand:focus-visible::after{opacity:1;visibility:visible;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.brand .brand-mark,.brand .brand-wordmark strong,.brand b,.brand::after{transition:none}}
