@@ -35,3 +35,11 @@ T4 地牢中文名参照 [PD2 汉化资料](https://wiki.projectdiablo2.cn/wiki/
 从项目根目录运行 `python tools/build-mapping-data.py` 可重新整理地图名称、阶级和已收录的获取途径。脚本会核对中文站的版本，但通货效果和页面中的规则是人工整理的；资料或版本更新时，需对照中文站的 `Mapping.json` 和 Mod 表重新核对，再更新脚本、页面与快照。已知中文材料图鉴与 Mod 配方表的部分炼狱熔炉材料数量不一致，页面暂未写入冲突数值。
 
 搜索与数据边界可运行 `node --test tests/mapping.test.cjs` 检查。新增物品图标的来源、提取方式与权利说明见 `assets/mapping/mod-icons/README.md`；图标在页面以 28×28 像素或更小显示。
+
+## 炼狱熔炉页面
+
+`kiln.html` 整理诅咒模式的熔炉获取方式、常用配方和灌注对应表；`kiln.css`、`kiln.js` 与 `kiln-core.js` 提供样式和配方搜索。页面正文不依赖脚本加载。配方以[中文熔炉资料](https://dev.wdjwxh.com/pd2-new/#kiln)与 [Mod v13.0.2 诅咒模式配方表](https://github.com/Lukaszpg/PD2-Sanctuary-of-Exile/blob/db4b47404733545bb9184b2d500a6d74bbba2696/damnation-mode/data/global/excel/CubeMain.txt)核对；部分材料图鉴提示与配方表不一致，本页数量采用配方表。赛季更新时需重新核对。
+
+“在方块中合成”使用的赫拉迪姆方块图标来自 Blizzard 的 [Arreat Summit](https://classic.battle.net/diablo2exp/items/cube.shtml)，已去除纯色背景并以 28×28 像素显示。
+
+运行 `node --test tests/kiln.test.cjs` 可检查配方搜索和分类的组合行为。

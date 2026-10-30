@@ -274,4 +274,8 @@
 
 /* Keep the four hero destinations together where the viewport allows it. */
 @media(min-width:701px){.hero-copy{max-width:680px}}
+
+/* A subdued ember-lit scene connects the kiln entrance with its guide. */
+.journey-card-kiln{background:linear-gradient(0deg,#14110ff2 0%,#1c130fd9 45%,#1c130f9c 100%),url('./assets/highlights/infernal-map.jpg') center/cover}
+.journey-card-kiln .journey-art img{width:28px;height:28px;image-rendering:pixelated}
 @media(max-width:350px){.hero-actions .button{padding-inline:8px;gap:8px;letter-spacing:.05em}}
