@@ -239,3 +239,39 @@
 
 @media(min-width:701px) and (max-width:1050px){.ladder-inner{width:calc(100% - 64px)}}
 @media(max-width:900px){.ladder-inner{grid-template-columns:1fr;gap:24px}.entry-card{padding:28px}.entry-actions{padding-top:28px}}
+
+/* A soft gathering of distinct ascendancy portraits behind the card copy. */
+.journey-card-ascendancy{isolation:isolate}
+.journey-card-ascendancy .journey-number{position:relative;z-index:2}
+.journey-card-ascendancy .journey-art,.journey-card-ascendancy .journey-copy{z-index:2}
+.ascendancy-ghosts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.ascendancy-ghosts::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#14131066,transparent 58%),linear-gradient(0deg,#141310e8 0%,#14131060 38%,transparent 75%)}
+.ascendancy-ghosts span{position:absolute;width:29%;aspect-ratio:1;background-position:center;background-size:cover;filter:grayscale(1) sepia(.4) brightness(.85);mask-image:radial-gradient(ellipse at 50% 43%,#000 15%,#000b 38%,transparent 72%)}
+.ascendancy-ghosts span:nth-child(1){left:-4%;top:5%;opacity:.26;background-image:url('./assets/ascendancies/cropped/card/portrait-1.webp')}
+.ascendancy-ghosts span:nth-child(2){left:14%;top:-8%;opacity:.24;background-image:url('./assets/ascendancies/cropped/card/mage-1.webp')}
+.ascendancy-ghosts span:nth-child(3){left:32%;top:2%;opacity:.28;background-image:url('./assets/ascendancies/cropped/card/portrait-5.webp')}
+.ascendancy-ghosts span:nth-child(4){left:51%;top:-9%;opacity:.25;background-image:url('./assets/ascendancies/cropped/card/paladin-2.webp')}
+.ascendancy-ghosts span:nth-child(5){left:72%;top:3%;opacity:.25;background-image:url('./assets/ascendancies/cropped/card/elemental.webp')}
+.ascendancy-ghosts span:nth-child(6){left:3%;top:39%;opacity:.19;background-image:url('./assets/ascendancies/cropped/card/portrait-4.webp')}
+.ascendancy-ghosts span:nth-child(7){left:22%;top:32%;opacity:.22;background-image:url('./assets/ascendancies/cropped/card/sorceress-1.webp')}
+.ascendancy-ghosts span:nth-child(8){left:42%;top:34%;opacity:.24;background-image:url('./assets/ascendancies/cropped/card/lich-1.webp')}
+.ascendancy-ghosts span:nth-child(9){left:61%;top:37%;opacity:.22;background-image:url('./assets/ascendancies/cropped/card/ranger-1.webp')}
+.ascendancy-ghosts span:nth-child(10){left:80%;top:37%;opacity:.20;background-image:url('./assets/ascendancies/cropped/card/archer.webp')}
+
+/* Blended dungeon scenes echo the ascendancy portraits without enlarging item icons. */
+.journey-card-mapping{isolation:isolate}
+.journey-card-mapping .journey-number{position:relative;z-index:2}
+.journey-card-mapping .journey-art,.journey-card-mapping .journey-copy{z-index:2}
+.mapping-ghosts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.mapping-ghosts::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#14131055,transparent 58%),linear-gradient(0deg,#141310e8 0%,#14131060 38%,transparent 75%)}
+.mapping-ghosts span{position:absolute;width:66%;height:65%;background-position:center;background-size:cover;filter:grayscale(.85) sepia(.35) brightness(.9);mask-image:radial-gradient(ellipse at 50% 50%,#000 10%,#000b 40%,transparent 75%)}
+.mapping-ghosts span:nth-child(1){left:-13%;top:-12%;opacity:.43;background-image:url('./assets/dungeons/scene-4.webp')}
+.mapping-ghosts span:nth-child(2){left:39%;top:-12%;opacity:.42;background-image:url('./assets/dungeons/scene-3.webp')}
+.mapping-ghosts span:nth-child(3){left:-9%;top:26%;opacity:.36;background-image:url('./assets/dungeons/scene-2.webp')}
+.mapping-ghosts span:nth-child(4){left:42%;top:27%;opacity:.36;background-image:url('./assets/dungeons/scene-1.webp')}
+
+@media(max-width:700px){.journey-card-ascendancy .journey-art{width:82px;height:82px;top:24px;right:24px;opacity:.74}.journey-card-ascendancy .journey-symbol{width:35px;height:35px}}
+
+/* Keep the four hero destinations together where the viewport allows it. */
+@media(min-width:701px){.hero-copy{max-width:680px}}
+@media(max-width:350px){.hero-actions .button{padding-inline:8px;gap:8px;letter-spacing:.05em}}

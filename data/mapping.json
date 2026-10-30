@@ -1,0 +1,1088 @@
+{
+  "version": "v13.0.2",
+  "modRevision": "db4b47404733545bb9184b2d500a6d74bbba2696",
+  "sources": {
+    "materials": "https://dev.wdjwxh.com/pd2-new/data/MaterialsGuide.json",
+    "misc": "https://raw.githubusercontent.com/Lukaszpg/PD2-Sanctuary-of-Exile/db4b47404733545bb9184b2d500a6d74bbba2696/standard-mode/data/global/excel/Misc.txt",
+    "materialsSha256": "029b871fe2b9412acce5bb8d3ee3259bfc704ac78fe0da75a8af6ee6dea064d9"
+  },
+  "maps": [
+    {
+      "code": "t11",
+      "nameZh": "维兹郡废墟",
+      "nameEn": "Kurast Map",
+      "tier": "T1",
+      "bossDamage": "魔法",
+      "monsters": "恶魔:38.89%  亡灵:27.78%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "75",
+        "毒": "80",
+        "魔法": "50",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t21",
+      "nameZh": "火焰之河",
+      "nameEn": "Lava Map",
+      "tier": "T1",
+      "bossDamage": "火焰",
+      "monsters": "恶魔:58.33%  亡灵:8.33%",
+      "resistances": {
+        "火": "120",
+        "冰": "75",
+        "电": "80",
+        "毒": "120",
+        "魔法": "50",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t22",
+      "nameZh": "托拉然丛林",
+      "nameEn": "Jungle Map",
+      "tier": "T1",
+      "bossDamage": "物理&毒素",
+      "monsters": "恶魔:9.09%  亡灵:0",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "75",
+        "毒": "120",
+        "魔法": "50",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t24",
+      "nameZh": "佐敦·库勒的墓穴",
+      "nameEn": "Tomb Map",
+      "tier": "T1",
+      "bossDamage": "物理&毒素",
+      "monsters": "恶魔:22.22%  亡灵:11.11%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "75",
+        "毒": "120",
+        "魔法": "50",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t26",
+      "nameZh": "威斯特玛之影",
+      "nameEn": "Westmarch Map",
+      "tier": "T1",
+      "bossDamage": "物理&魔法",
+      "monsters": "恶魔:37.5%  亡灵:12.5%",
+      "resistances": {
+        "火": "120",
+        "冰": "85",
+        "电": "75",
+        "毒": "75",
+        "魔法": "105",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t33",
+      "nameZh": "失落神庙",
+      "nameEn": "Spider Map",
+      "tier": "T1",
+      "bossDamage": "毒素&物理",
+      "monsters": "恶魔:37.5%  亡灵:12.5%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "80",
+        "毒": "80",
+        "魔法": "105",
+        "物理": "55"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t34",
+      "nameZh": "先祖的试炼",
+      "nameEn": "Ice Map",
+      "tier": "T1",
+      "bossDamage": "冰霜",
+      "monsters": "恶魔:37.5%  亡灵:50%",
+      "resistances": {
+        "火": "120",
+        "冰": "75",
+        "电": "120",
+        "毒": "75",
+        "魔法": "50",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t36",
+      "nameZh": "卡尔蒂姆的沦陷",
+      "nameEn": "Caldeum Map",
+      "tier": "T1",
+      "bossDamage": "物理",
+      "monsters": "恶魔:0 ,  亡灵:14.29%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "120",
+        "毒": "80",
+        "魔法": "105",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t12",
+      "nameZh": "赫拉森的梦境",
+      "nameEn": "Arcane Map",
+      "tier": "T2",
+      "bossDamage": "物理",
+      "monsters": "恶魔:20%  亡灵:30%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "120",
+        "毒": "75",
+        "魔法": "50",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t14",
+      "nameZh": "萨纳托里姆疯人院",
+      "nameEn": "Library Map",
+      "tier": "T2",
+      "bossDamage": "物理&魔法",
+      "monsters": "恶魔:37.5%  亡灵:37.5%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "120",
+        "毒": "75",
+        "魔法": "105",
+        "物理": "60"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t16",
+      "nameZh": "废弃水道",
+      "nameEn": "Ruined Cistern Map",
+      "tier": "T2",
+      "bossDamage": "物理&毒素",
+      "monsters": "恶魔:30%  亡灵:30%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "75",
+        "毒": "120",
+        "魔法": "105",
+        "物理": "60"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t17",
+      "nameZh": "苦痛大厅",
+      "nameEn": "Halls of Torture Map",
+      "tier": "T2",
+      "bossDamage": null,
+      "monsters": "恶魔:37.5%  亡灵:25%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "120",
+        "毒": "85",
+        "魔法": "35",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t25",
+      "nameZh": "哈拉加斯下水道",
+      "nameEn": "Sewer Map",
+      "tier": "T2",
+      "bossDamage": "闪电",
+      "monsters": "恶魔:36.36%  亡灵:9.09%",
+      "resistances": {
+        "火": "120",
+        "冰": "80",
+        "电": "75",
+        "毒": "120",
+        "魔法": "50",
+        "物理": "66"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t32",
+      "nameZh": "疯狂王座",
+      "nameEn": "Throne Map",
+      "tier": "T2",
+      "bossDamage": "火焰",
+      "monsters": "恶魔:70%  亡灵:20%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "75",
+        "毒": "120",
+        "魔法": "75",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t37",
+      "nameZh": "混沌要塞",
+      "nameEn": "Pandemonium Map",
+      "tier": "T2",
+      "bossDamage": "火焰&物理",
+      "monsters": "恶魔:50%  亡灵:25%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "75",
+        "毒": "80",
+        "魔法": "105",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t38",
+      "nameZh": "赛斯切隆峡谷",
+      "nameEn": "Frozen Forest Map",
+      "tier": "T2",
+      "bossDamage": "冰霜",
+      "monsters": "恶魔:33.33%  亡灵:22.22%",
+      "resistances": {
+        "火": "120",
+        "冰": "80",
+        "电": "75",
+        "毒": "75",
+        "魔法": "55",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t3a",
+      "nameZh": "灰烬平原",
+      "nameEn": "Ashes Map",
+      "tier": "T2",
+      "bossDamage": "火焰&闪电",
+      "monsters": "恶魔:11.11%  亡灵:22.22%",
+      "resistances": {
+        "火": "120",
+        "冰": "130",
+        "电": "75",
+        "毒": "75",
+        "魔法": "50",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t13",
+      "nameZh": "巴斯延要塞",
+      "nameEn": "Fortress Map",
+      "tier": "T3",
+      "bossDamage": "冰霜",
+      "monsters": "恶魔:41.67%  亡灵:8.33%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "75",
+        "毒": "85",
+        "魔法": "105",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t15",
+      "nameZh": "皇室墓穴",
+      "nameEn": "Crypts Map",
+      "tier": "T3",
+      "bossDamage": "物理&魔法",
+      "monsters": "恶魔:11.11%  亡灵:33.33%",
+      "resistances": {
+        "火": "120",
+        "冰": "120",
+        "电": "80",
+        "毒": "75",
+        "魔法": "45",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t23",
+      "nameZh": "亚瑞特战场",
+      "nameEn": "Siege Map",
+      "tier": "T3",
+      "bossDamage": "物理&魔法",
+      "monsters": "恶魔:33.33%  亡灵:22.22%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "120",
+        "毒": "120",
+        "魔法": "105",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t27",
+      "nameZh": "恶魔之路",
+      "nameEn": "Demon Road Map",
+      "tier": "T3",
+      "bossDamage": "物理",
+      "monsters": "恶魔:40%  亡灵:40%",
+      "resistances": {
+        "火": "120",
+        "冰": "75",
+        "电": "120",
+        "毒": "75",
+        "魔法": "40",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t28",
+      "nameZh": "斯科沃斯要塞",
+      "nameEn": "Skovos Stronghold Map",
+      "tier": "T3",
+      "bossDamage": "物理&魔法",
+      "monsters": "恶魔:44.44%  亡灵:22.22%",
+      "resistances": {
+        "火": "75",
+        "冰": "120",
+        "电": "75",
+        "毒": "120",
+        "魔法": "40",
+        "物理": "55"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t31",
+      "nameZh": "血河",
+      "nameEn": "River Of Blood Map",
+      "tier": "T3",
+      "bossDamage": "毒素&冰霜",
+      "monsters": "恶魔:46.15%  亡灵:38.46%",
+      "resistances": {
+        "火": "75",
+        "冰": "75",
+        "电": "120",
+        "毒": "120",
+        "魔法": "105",
+        "物理": "66"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t35",
+      "nameZh": "血月",
+      "nameEn": "Graveyard Map",
+      "tier": "T3",
+      "bossDamage": "物理&闪电",
+      "monsters": "恶魔:0 ,  亡灵:0",
+      "resistances": {
+        "火": "65",
+        "冰": "65",
+        "电": "65",
+        "毒": "65",
+        "魔法": "33",
+        "物理": "50"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t39",
+      "nameZh": "凯吉斯坦集市",
+      "nameEn": "Desert Map",
+      "tier": "T3",
+      "bossDamage": "物理",
+      "monsters": "恶魔:40%  亡灵:20%",
+      "resistances": {
+        "火": "120",
+        "冰": "75",
+        "电": "75",
+        "毒": "75",
+        "魔法": "50",
+        "物理": "115"
+      },
+      "icon": null,
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "tm1i",
+      "nameZh": "炼狱 · 火焰之河",
+      "nameEn": "Infernal Lava Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm1i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm2i",
+      "nameZh": "炼狱 · 疯狂王座",
+      "nameEn": "Infernal Throne Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm2i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm3i",
+      "nameZh": "炼狱 · 血月",
+      "nameEn": "Infernal Graveyard Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm3i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm4i",
+      "nameZh": "炼狱 · 混沌要塞",
+      "nameEn": "Infernal Pandemonium Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm4i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm5i",
+      "nameZh": "炼狱 · 凯吉斯坦集市",
+      "nameEn": "Infernal Desert Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm5i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm6i",
+      "nameZh": "炼狱 · 赛斯切隆峡谷",
+      "nameEn": "Infernal Frozen Forest Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm6i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm7i",
+      "nameZh": "炼狱 · 萨纳托里姆疯人院",
+      "nameEn": "Infernal Library Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm7i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm8i",
+      "nameZh": "炼狱 · 废弃水道",
+      "nameEn": "Infernal Ruined Cistern Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm8i.png",
+      "nameSource": "基于对应地图的展示名称"
+    },
+    {
+      "code": "tm9i",
+      "nameZh": "地狱灰烬地图",
+      "nameEn": "Infernal Ashes Map",
+      "tier": "T3.5",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": {
+        "火": "120",
+        "冰": "130",
+        "电": "75",
+        "毒": "75",
+        "魔法": "50",
+        "物理": "50"
+      },
+      "icon": "./assets/mapping/mod-icons/tm9i.png",
+      "nameSource": "中文材料图鉴"
+    },
+    {
+      "code": "t42",
+      "nameZh": "折磨平原",
+      "nameEn": "Plains of Torment Map",
+      "aliases": [
+        "Torment Map"
+      ],
+      "tier": "T4",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm1i.png",
+      "nameSource": "PD2 汉化资料及 Mod 英文语言表"
+    },
+    {
+      "code": "t43",
+      "nameZh": "罪恶庇护所",
+      "nameEn": "Sanctuary of Sin Map",
+      "aliases": [
+        "Sanctuary of Sin Map"
+      ],
+      "tier": "T4",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm2i.png",
+      "nameSource": "PD2 汉化资料及 Mod 英文语言表"
+    },
+    {
+      "code": "t44",
+      "nameZh": "达肯沙尔大草原",
+      "nameEn": "Steppes of Daken-Shar Map",
+      "aliases": [
+        "KanemithMap"
+      ],
+      "tier": "T4",
+      "bossDamage": null,
+      "monsters": null,
+      "resistances": null,
+      "icon": "./assets/mapping/mod-icons/tm3i.png",
+      "nameSource": "PD2 汉化资料及 Mod 英文语言表"
+    }
+  ],
+  "currencies": [
+    {
+      "code": "scnm",
+      "nameZh": "宿敌铭文",
+      "nameEn": "Glyph of Nemeses",
+      "aliases": [
+        "仇敌符文石",
+        "符文石",
+        "刻印"
+      ],
+      "category": "glyph",
+      "categoryName": "铭文",
+      "summary": "地图额外增加 25% 的暗金怪物群，可与自身叠加。",
+      "rule": "仅适用于稀有地图。每个铭文权重为 1，地图铭文权重随 T1–T4 阶级为 1–4。",
+      "acquisition": [
+        {
+          "text": "地下城圣甲虫掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "恐怖怪铭文掉落",
+          "mode": "damnation"
+        },
+        {
+          "text": "圣甲虫(铭文)掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/scnm.png"
+    },
+    {
+      "code": "scas",
+      "nameZh": "强敌铭文",
+      "nameEn": "Glyph of Adversaries",
+      "aliases": [
+        "对手符文石",
+        "符文石",
+        "刻印"
+      ],
+      "category": "glyph",
+      "categoryName": "铭文",
+      "summary": "增加一名地图首领；首领额外掉落技能护符，这些效果不与自身叠加。",
+      "rule": "仅适用于稀有地图。每个铭文权重为 1，地图铭文权重随 T1–T4 阶级为 1–4。",
+      "acquisition": [
+        {
+          "text": "圣甲虫(铭文)掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "地下城圣甲虫掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "恐怖怪铭文掉落",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/scas.png"
+    },
+    {
+      "code": "sccn",
+      "nameZh": "腐化铭文",
+      "nameEn": "Glyph of Corruption",
+      "aliases": [
+        "腐化符文石",
+        "符文石",
+        "刻印"
+      ],
+      "category": "glyph",
+      "categoryName": "铭文",
+      "summary": "怪物有 25% 几率掉落腐化物品，可叠加；首领额外掉落 1–3 件腐化暗金，不可叠加。",
+      "rule": "仅适用于稀有地图。每个铭文权重为 1，地图铭文权重随 T1–T4 阶级为 1–4。",
+      "acquisition": [
+        {
+          "text": "圣甲虫(铭文)掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "地下城圣甲虫掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "恐怖怪铭文掉落",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/sccn.png"
+    },
+    {
+      "code": "troo",
+      "nameZh": "丰饶之恐怖",
+      "nameEn": "Terror of Opulence",
+      "aliases": [
+        "富饶恐惧",
+        "恐惧"
+      ],
+      "category": "terror",
+      "categoryName": "恐怖",
+      "summary": "加入偏向通货掉落的恐怖怪；T1–T4 分别最多掉落 1、2、3、4 件通货。",
+      "rule": "仅适用于稀有地图；每张地图最多使用一种恐怖。",
+      "acquisition": [],
+      "icon": "./assets/mapping/mod-icons/troo.png"
+    },
+    {
+      "code": "troe",
+      "nameZh": "无形之恐怖",
+      "nameEn": "Terror of Ethereal",
+      "aliases": [
+        "虚无恐惧",
+        "恐惧"
+      ],
+      "category": "terror",
+      "categoryName": "恐怖",
+      "summary": "加入偏向符文掉落的恐怖怪；T1–T4 分别最多掉落 1、2、3、4 枚符文。",
+      "rule": "仅适用于稀有地图；每张地图最多使用一种恐怖。",
+      "acquisition": [
+        {
+          "text": "恐怖怪掉落池 T3",
+          "mode": "damnation"
+        },
+        {
+          "text": "地下城恐怖怪掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "佐尔恐怖怪掉落",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/troe.png"
+    },
+    {
+      "code": "tror",
+      "nameZh": "光辉之恐怖",
+      "nameEn": "Terror of Resplendence",
+      "aliases": [
+        "辉煌恐惧",
+        "恐惧"
+      ],
+      "category": "terror",
+      "categoryName": "恐怖",
+      "summary": "加入偏向暗金掉落的恐怖怪；T1–T4 分别最多掉落 2、3、4、5 件暗金。",
+      "rule": "仅适用于稀有地图；每张地图最多使用一种恐怖。",
+      "acquisition": [
+        {
+          "text": "恐怖怪掉落池 T3",
+          "mode": "damnation"
+        },
+        {
+          "text": "地下城恐怖怪掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "佐尔恐怖怪掉落",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/tror.png"
+    },
+    {
+      "code": "troa",
+      "nameZh": "绝对之恐怖",
+      "nameEn": "Terror of Absolute",
+      "aliases": [
+        "绝对恐惧",
+        "恐惧"
+      ],
+      "category": "terror",
+      "categoryName": "恐怖",
+      "summary": "加入偏向超级首领材料掉落的恐怖怪；T1–T4 分别最多掉落 1、2、3、4 份材料。",
+      "rule": "仅适用于稀有地图；每张地图最多使用一种恐怖。",
+      "acquisition": [
+        {
+          "text": "恐怖怪掉落池 T3",
+          "mode": "damnation"
+        },
+        {
+          "text": "地下城恐怖怪掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "佐尔恐怖怪掉落",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/troa.png"
+    },
+    {
+      "code": "ccsl",
+      "nameZh": "制图凿子",
+      "nameEn": "Cartographer's Chisel",
+      "aliases": [
+        "制图师刻刀",
+        "基础凿子",
+        "刻刀",
+        "凿子"
+      ],
+      "category": "chisel",
+      "categoryName": "制图凿子",
+      "summary": "金币获取与魔法装备获取率提高 25%；T1–T4 怪物密度分别提高 55%、65%、75%、75%。",
+      "rule": "每张地图最多使用两个凿子；地图被注入赫拉迪姆宝珠重铸时，已使用的凿子会消失且不退还。",
+      "acquisition": [],
+      "icon": "./assets/mapping/mod-icons/ccsl.png"
+    },
+    {
+      "code": "ccsa",
+      "nameZh": "贪婪凿子",
+      "nameEn": "Cartographer's Chisel of Avarice",
+      "aliases": [
+        "贪婪制图师之凿",
+        "刻刀",
+        "凿子"
+      ],
+      "category": "chisel",
+      "categoryName": "制图凿子",
+      "summary": "金币获取与魔法装备获取率提高 75%，经验加成提高 75%。",
+      "rule": "每张地图最多使用两个凿子；地图被注入赫拉迪姆宝珠重铸时，已使用的凿子会消失且不退还。",
+      "acquisition": [
+        {
+          "text": "地下城凿子掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "恐怖怪凿子掉落",
+          "mode": "damnation"
+        },
+        {
+          "text": "制图凿子掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/ccsa.png"
+    },
+    {
+      "code": "ccpr",
+      "nameZh": "采购凿子",
+      "nameEn": "Cartographer's Chisel of Procurement",
+      "aliases": [
+        "采购制图师之凿",
+        "刻刀",
+        "凿子"
+      ],
+      "category": "chisel",
+      "categoryName": "制图凿子",
+      "summary": "T1–T4 怪物密度分别提高 85%、95%、105%、105%。",
+      "rule": "每张地图最多使用两个凿子；地图被注入赫拉迪姆宝珠重铸时，已使用的凿子会消失且不退还。",
+      "acquisition": [
+        {
+          "text": "地下城凿子掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "恐怖怪凿子掉落",
+          "mode": "damnation"
+        },
+        {
+          "text": "制图凿子掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/ccpr.png"
+    },
+    {
+      "code": "hor1",
+      "nameZh": "憎恶宝珠·装备",
+      "nameEn": "Hatred Orb of Equipment",
+      "aliases": [
+        "仇恨宝珠·装备",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落武器和护甲。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor1.png"
+    },
+    {
+      "code": "hor2",
+      "nameZh": "憎恶宝珠·配件",
+      "nameEn": "Hatred Orb of Accessories",
+      "aliases": [
+        "仇恨宝珠·饰品",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落首饰、护身符和珠宝。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor2.png"
+    },
+    {
+      "code": "hor3",
+      "nameZh": "憎恶宝珠·精华",
+      "nameEn": "Hatred Orb of Essences",
+      "aliases": [
+        "仇恨宝珠·精华",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落精华。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor3.png"
+    },
+    {
+      "code": "hor4",
+      "nameZh": "憎恶宝珠·命运卡",
+      "nameEn": "Hatred Orb of Fate Cards",
+      "aliases": [
+        "仇恨宝珠·命运卡",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落命运卡。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor4.png"
+    },
+    {
+      "code": "hor5",
+      "nameZh": "憎恶宝珠·符文",
+      "nameEn": "Hatred Orb of Runes",
+      "aliases": [
+        "仇恨宝珠·符文",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落符文。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor5.png"
+    },
+    {
+      "code": "hor6",
+      "nameZh": "憎恶宝珠·通货",
+      "nameEn": "Hatred Orb of Currency",
+      "aliases": [
+        "仇恨宝珠·通货",
+        "仇恨宝珠"
+      ],
+      "category": "hatred",
+      "categoryName": "憎恶宝珠",
+      "summary": "怪物有 1% 几率额外掉落通货。",
+      "rule": "每张地图最多使用 5 个憎恶宝珠，每个提高 1 级仇恨。",
+      "acquisition": [
+        {
+          "text": "地图掉落(主要来源)",
+          "mode": null
+        },
+        {
+          "text": "憎恶宝珠 T4 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T3 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T2 地图掉落池",
+          "mode": "damnation"
+        },
+        {
+          "text": "憎恶宝珠 T1 地图掉落池",
+          "mode": "damnation"
+        }
+      ],
+      "icon": "./assets/mapping/mod-icons/hor6.png"
+    }
+  ]
+}
