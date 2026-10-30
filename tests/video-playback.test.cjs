@@ -4,8 +4,7 @@ const path = require('node:path');
 const test = require('node:test');
 const vm = require('node:vm');
 
-// Model media and page lifecycle events that cannot be triggered reliably by a
-// headless browser: an autoplay rejection and a backgrounded document.
+// Model media playback and page lifecycle events.
 function makePage() {
   class Target {
     listeners = new Map();
@@ -47,15 +46,10 @@ function makePage() {
   return { clips, document, window };
 }
 
-test('a blocked sound attempt still resumes muted playback after the pointer leaves', async () => {
+test('starting a video pauses the other stream', () => {
   const { clips } = makePage();
-  const { frame, video } = clips[0];
-  frame.dispatch('pointerenter', { pointerType: 'mouse' });
-  frame.dispatch('pointerleave', { pointerType: 'mouse' });
-  video.rejectSound(new Error('autoplay blocked'));
-  await new Promise(resolve => setImmediate(resolve));
-  assert.equal(video.muted, true);
-  assert.equal(video.paused, false);
+  clips[0].video.dispatch('play');
+  assert.equal(clips[1].video.paused, true);
 });
 
 test('returning to the page restores playing videos but leaves manually paused videos paused', async () => {

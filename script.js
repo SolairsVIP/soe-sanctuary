@@ -79,28 +79,6 @@ function playSilently(video) {
   }
 }
 
-function playWithSound(clip) {
-  const attempt = clip.soundAttempt = (clip.soundAttempt || 0) + 1;
-  for (const other of videoClips) {
-    if (other !== clip) other.video.muted = true;
-  }
-
-  clip.video.muted = false;
-
-  const onSoundBlocked = () => {
-    if (clip.soundAttempt !== attempt) return;
-    clip.video.muted = true;
-    if (!document.hidden) playSilently(clip.video);
-  };
-
-  try {
-    const playback = clip.video.play();
-    if (playback) playback.catch(onSoundBlocked);
-  } catch {
-    onSoundBlocked();
-  }
-}
-
 let pageIsInactive = false;
 
 function suspendVideos() {
@@ -108,7 +86,6 @@ function suspendVideos() {
   pageIsInactive = true;
   for (const clip of videoClips) {
     clip.resumeOnReturn = !clip.video.paused;
-    clip.soundAttempt = (clip.soundAttempt || 0) + 1;
     clip.video.muted = true;
     if (clip.resumeOnReturn) clip.video.pause();
   }
@@ -130,11 +107,14 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('pagehide', suspendVideos);
 window.addEventListener('pageshow', resumeVideos);
 
+// Playback starts only through the native controls. Keep one stream active.
 for (const clip of videoClips) {
-  clip.frame.addEventListener('pointerenter', event => {
-    if (event.pointerType !== 'touch') playWithSound(clip);
-  });
-  clip.frame.addEventListener('pointerleave', event => {
-    if (event.pointerType !== 'touch') clip.video.muted = true;
+  clip.video.addEventListener('play', () => {
+    for (const other of videoClips) {
+      if (other !== clip) {
+        other.resumeOnReturn = false;
+        other.video.pause();
+      }
+    }
   });
 }

@@ -2,7 +2,7 @@
 
 中文首页与新赛季内容预览，使用原生 HTML、CSS 和 JavaScript 构建。
 
-站点：https://SolairsVIP.github.io/soe-sanctuary/
+站点：https://pd2soe.wdjwxh.com/
 
 ## 本地预览
 
@@ -10,7 +10,7 @@
 
 ## 发布
 
-GitHub Pages 从 `main` 分支的根目录发布。更新页面或素材后，提交并推送至 `main` 即可自动更新网站。
+更新页面或素材后，提交并推送至 `main`，GitHub Actions 检查通过后自动更新网站。
 
 ## 素材
 
