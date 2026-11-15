@@ -56,6 +56,11 @@ jobs:
           for path in assets data .nojekyll; do
             if [ -e "$path" ]; then files+=("$path"); fi
           done
+          # Markdown is the repository source for the generated archive pages;
+          # the website receiver accepts the generated HTML and static assets,
+          # but rejects source-document files.
+          files+=(--add-file=data/updates/index.json)
+          while IFS= read -r path; do files+=("$path"); done < <(git ls-tree -r --name-only HEAD assets data | awk '!/\.md$/ && !/^data\/updates\/index\.json$/')
           git archive --format=tar HEAD "${files[@]}" |
             ssh -T -i "$keydir/key" -o IdentitiesOnly=yes -o BatchMode=yes \
               -o StrictHostKeyChecking=yes -o UserKnownHostsFile="$keydir/known_hosts" \
