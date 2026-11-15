@@ -32,7 +32,6 @@ test('静态正文含真实表格、下载源文件及正确内测标记', () =>
       assert.ok(html.includes(`src="${image}"`), image);
     }
     assert.doesNotMatch(html, /&lt;br\s*\/?&gt;/);
-    assert.ok(html.includes(`href="./data/updates/${entry.source}" download`));
     assert.ok(fs.existsSync(path.join(root, 'data/updates', entry.source)));
     if (entry.status === 'test') assert.match(html, /class="status-badge">内测/);
   }

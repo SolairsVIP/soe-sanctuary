@@ -63,7 +63,7 @@ T4 地牢中文名参照 [PD2 汉化资料](https://wiki.projectdiablo2.cn/wiki/
 
 ## 赛季更新
 
-顶栏「赛季更新」进入 `updates.html`。按赛季和类型查看更新，文章提供章节目录、表格和Markdown下载；内测与已上线状态分别标注。
+顶栏「赛季更新」进入 `updates.html`。按赛季和类型查看更新，文章提供章节目录和表格；内测与已上线状态分别标注。
 
 - 正文：`data/updates/<文章ID>.md`。S2 完整说明为 `s2-season.md`；S1 开季说明为 `s1-season.md`，赛季中记录为 `s1-hotfix.md`，保留原文的更新日期与历史规则，配图在 `assets/updates/s1/`。
 - 目录：`data/updates/index.json`，维护赛季、文章标题、整理或发布日期、类型、状态、摘要和主题标签。
