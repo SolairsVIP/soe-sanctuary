@@ -1,0 +1,3209 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100f0d"><meta name="description" content="七职业技能与升华调整，装备、圣化与制作更新，以及地图事件和超级首领奖励的完整改动。"><title>第二赛季 BETA 更新说明 · 流放圣所</title><link rel="stylesheet" href="./updates.css"><script defer src="./updates.js"></script><link rel="stylesheet" href="./navigation.css"><script defer src="./navigation.js"></script></head><body id="top" data-view="article"><a class="skip-link" href="#main">跳到主要内容</a><!-- site-header:start -->
+<header class="sg-site-header" id="site-header">
+    <div class="sg-header-inner sg-shell">
+      <a class="sg-brand" href="./index.html" aria-label="返回流放圣所首页">
+        <span class="sg-brand-mark" aria-hidden="true"><span>✦</span></span>
+        <span class="sg-brand-wordmark"><strong>流放圣所</strong><small>SANCTUARY OF EXILE</small></span>
+      </a>
+      <nav class="sg-main-nav" id="main-nav" aria-label="主导航"><a href="./index.html">首页</a><a href="./updates.html" aria-current="page">赛季更新</a><a href="./damnation.html">服务器设定</a><a href="./ascendancies.html">升华职业</a><a href="./mapping.html">刷图系统</a><a href="./kiln.html">炼狱熔炉</a><a href="https://bd.wdjwxh.com/">天梯与构筑</a></nav>
+      <div class="sg-header-actions">
+        <button class="sg-search-toggle" type="button" aria-label="搜索资料分类" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+        <div class="sg-archive-index">
+          <button class="sg-archive-index-toggle" type="button" aria-expanded="false" aria-controls="archive-index-panel">资料索引 <span aria-hidden="true">⌄</span></button>
+          <nav class="sg-archive-index-panel" id="archive-index-panel" aria-label="资料索引" hidden>
+            <div class="sg-archive-index-heading"><strong>资料索引</strong><span>选择栏目直达</span></div>
+            <div class="sg-archive-index-list">
+              <div class="sg-archive-index-group">
+                <p>本站页面</p>
+                <a href="./updates.html"><span>赛季更新</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html" style="--index-order:0"><span>服务器设定</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html#journey" style="--index-order:1"><span>新手指南</span><span aria-hidden="true">→</span></a>
+                <a href="./ascendancies.html" style="--index-order:2"><span>升华职业</span><span aria-hidden="true">→</span></a>
+                <a href="./mapping.html" style="--index-order:3"><span>刷图系统</span><span aria-hidden="true">→</span></a>
+                <a href="./kiln.html" style="--index-order:4"><span>炼狱熔炉</span><span aria-hidden="true">→</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>其他服务 <span>↗</span></p>
+                <a href="https://bd.wdjwxh.com/" target="_blank" rel="noopener noreferrer" style="--index-order:5"><span>天梯与人物构筑</span><span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>中文档案馆 <span>↗</span></p>
+                <a href="https://dev.wdjwxh.com/pd2-new/#runewords" target="_blank" rel="noopener noreferrer" style="--index-order:6"><span>符文之语</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#sacreds" target="_blank" rel="noopener noreferrer" style="--index-order:7"><span>圣化物品</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#uniques" target="_blank" rel="noopener noreferrer" style="--index-order:8"><span>暗金装备</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#weapons" target="_blank" rel="noopener noreferrer" style="--index-order:9"><span>武器基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#armors" target="_blank" rel="noopener noreferrer" style="--index-order:10"><span>护甲基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#affixes" target="_blank" rel="noopener noreferrer" style="--index-order:11"><span>装备词缀</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer" style="--index-order:12"><span>腐化图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#cube" target="_blank" rel="noopener noreferrer" style="--index-order:13"><span>方块配方</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#fatecards" target="_blank" rel="noopener noreferrer" style="--index-order:14"><span>命运卡</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#materials" target="_blank" rel="noopener noreferrer" style="--index-order:15"><span>材料图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#skills" target="_blank" rel="noopener noreferrer" style="--index-order:16"><span>技能资料</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#drops" target="_blank" rel="noopener noreferrer" style="--index-order:17"><span>掉率查询</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#changelog" target="_blank" rel="noopener noreferrer" style="--index-order:18"><span>资料更新日志</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <button class="sg-menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="sg-search-panel" id="search-panel" hidden>
+      <div class="sg-search-inner">
+        <label for="archive-search">搜索资料分类</label>
+        <div class="sg-search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="archive-search" type="search" placeholder="例如：符文、装备、配方……" autocomplete="off"><kbd>ESC</kbd></div>
+        <p class="sg-search-hint">搜索资料分类，选择结果后打开对应页面。</p>
+        <div class="sg-search-results" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+<!-- site-header:end --><div class="reading-progress" aria-hidden="true"><span></span></div><main id="main" class="updates-shell article-main">
+<a class="breadcrumb" href="./updates.html?season=s2">← 赛季更新 <span>/ 第二赛季</span></a>
+<section class="article-heading"><p class="updates-kicker">SEASON 2 <span>✦</span> PATCH NOTES</p><div class="entry-meta"><span class="status-badge">内测</span><span>赛季说明</span><time datetime="2026-11-12">整理日期 2026.11.12</time></div><h1>第二赛季 BETA 更新说明</h1><p>七职业技能与升华调整，装备、圣化与制作更新，以及地图事件和超级首领奖励的完整改动。</p><div class="article-actions"><a href="./data/updates/s2-season.md" download>下载 Markdown ↓</a><span>25 个章节</span></div><label class="article-search"><span>搜索本文</span><input id="article-search" type="search" placeholder="输入技能、装备或改动关键词" aria-label="搜索文章全文"></label><p id="article-search-status" role="status" hidden></p><p class="article-notice">当前为内测整理版本，调整内容仍可能变化，请以正式发布公告为准。</p></section>
+<div class="reading-layout"><aside class="article-sidebar"><details open><summary>文章目录 <span>CONTENTS</span></summary><label class="toc-search"><span class="sr-only">筛选文章目录</span><input type="search" id="toc-search" placeholder="查找章节，例如：升华"></label><nav class="article-toc" aria-label="文章目录"><a href="#general-changes">综合改动</a><a href="#character-changes">人物成长</a><a href="#amazon">亚马逊</a><a href="#assassin">刺客</a><a href="#barbarian">野蛮人</a><a href="#druid">德鲁伊</a><a href="#necromancer">死灵法师</a><a href="#paladin">圣骑士</a><a href="#sorceress">法师</a><a href="#ascendancies">升华</a><a href="#maps">地图</a><a href="#map-events">地图事件</a><a href="#loot-changes">掉落调整</a><a href="#ubers">超级首领</a><a href="#uniques">暗金装备</a><a href="#item-passives">装备被动</a><a href="#runewords">符文之语</a><a href="#sets">套装</a><a href="#sacred-orbs">圣化宝珠</a><a href="#affixes">词缀</a><a href="#crafting">手工制作</a><a href="#corruptions">腐化</a><a href="#recipes">机会宝珠与合成</a><a href="#divination-cards">命运卡</a><a href="#bug-fixes">错误修复</a></nav><p class="toc-empty" hidden>没有匹配的章节</p></details></aside><article class="patch-content"><blockquote>
+<p>BETA 版本：内容仍可能调整，最终数值以正式公告为准。</p>
+</blockquote>
+</section><section class="note-section"><h2 id="general-changes">综合改动 General Changes</h2>
+<h3 id="section-1">S14内容适配</h3>
+<p>适配S14七职业、装备、地图、怪物和制作内容，内核与配套数据、资源更新至S14补丁1／2。</p>
+<h3 id="section-2">独立护符栏</h3>
+<p>新增10×4独立护符栏，普通背包保留10×8；护符在护符栏生效，收起不关闭效果，普通拾取不自动塞入护符栏。主背包下半部沿用上半部深色底图，上下底色统一。</p>
+<h3 id="section-3">物品品质背景</h3>
+<p>背包、装备、佣兵及仓库显示品质背景与边框，符文之语以银色区分；已穿装备因耐久耗尽或属性不足失效时，保留原生红底，不被品质背景及边框覆盖；未鉴定与悬停反馈优先保留。</p>
+<h3 id="section-4">公会功能</h3>
+<p>适配公会大厅、名册、邀请、加入退出、职级、仓库与陈列柜、留言和中文界面；普通房间及进退房提示显示确认后的公会标签。公会大厅成员入场后向在场玩家补齐名字标签，避免先进入者看不到后来者标签。官员可将新兵晋升为战士、将战士降为新兵；不能授予官员或操作自己、同级及上级。</p>
+<h3 id="section-5">公会及城镇传送</h3>
+<p>公会和城镇开放法师传送、死灵血之传送、德鲁伊风遁及谜团传送。血之传送、风遁在城镇内不进入技能冷却，城外冷却保持原有规则。</p>
+<h3 id="section-6">个人与账号共享仓库</h3>
+<p>个人仓库扩展为10页，账号共享扩展为4组、每组10页，共40页；支持分组按钮及滚轮翻页。原共享物品保留账号归属，不转为人物私有。连续滚动、分组与菜单切换统一等待翻页确认，修正D2DX／D2GL滚轮位置判断。</p>
+</section><section class="note-section"><h2 id="character-changes">人物成长 Character Changes</h2>
+<h3 id="section-7">分等级经验获取</h3>
+<ul>
+<li>1～59级经验获取倍率由100%提高至约 <strong>120%</strong>。</li>
+<li>60～90级保持不变。</li>
+<li>下调91～98级的经验获取系数，升级所需累计经验不变。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>等级</th>
+<th align="right">原经验系数</th>
+<th align="right">新经验系数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>91</td>
+<td align="right">4.492%</td>
+<td align="right">1.172%</td>
+</tr>
+<tr>
+<td>92</td>
+<td align="right">3.418%</td>
+<td align="right">0.879%</td>
+</tr>
+<tr>
+<td>93</td>
+<td align="right">2.539%</td>
+<td align="right">0.684%</td>
+</tr>
+<tr>
+<td>94</td>
+<td align="right">1.953%</td>
+<td align="right">0.488%</td>
+</tr>
+<tr>
+<td>95</td>
+<td align="right">1.465%</td>
+<td align="right">0.391%</td>
+</tr>
+<tr>
+<td>96</td>
+<td align="right">1.074%</td>
+<td align="right">0.293%</td>
+</tr>
+<tr>
+<td>97</td>
+<td align="right">0.781%</td>
+<td align="right">0.195%</td>
+</tr>
+<tr>
+<td>98</td>
+<td align="right">0.586%</td>
+<td align="right">0.098%</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-8">指定召唤物元素继承</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>召唤物</th>
+<th>元素精通继承</th>
+<th>元素穿透继承</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>骷髅法师</td>
+<td>人物对应四系精通的100%</td>
+<td>对应元素穿透的50%</td>
+</tr>
+<tr>
+<td>乌鸦</td>
+<td>人物冰冷精通的100%</td>
+<td>冰冷穿透的50%</td>
+</tr>
+<tr>
+<td>毒藤</td>
+<td>人物毒素精通的100%</td>
+<td>毒素穿透的50%</td>
+</tr>
+<tr>
+<td>复活怪</td>
+<td>人物对应四系精通的100%</td>
+<td>对应元素穿透的50%</td>
+</tr>
+<tr>
+<td>火焰石魔</td>
+<td>保留100%火焰精通继承</td>
+<td>保留100%火焰穿透继承</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>保留原有协同，已有更高穿透时保留原值，不重复叠加。</li>
+<li>召唤时读取人物属性，换装后需重新召唤。</li>
+<li>陷阱继承单独见刺客及破坏者章节；回血藤、回蓝藤和佣兵不套用此规则。</li>
+</ul>
+</section><section class="note-section"><h2 id="amazon">亚马逊 Amazon</h2>
+<h3 id="section-9">角色成长</h3>
+<ul>
+<li>每点精力获得2法力。</li>
+</ul>
+<h3 id="section-10">威力一击</h3>
+<ul>
+<li>协同加成为25%，新星弹体同步。威力一击的闪电环支持百分比和固定技能范围增益；闪电数量、伤害及命中间隔不变。</li>
+</ul>
+<h3 id="section-11">闪电攻击</h3>
+<ul>
+<li>协同加成为10%。</li>
+</ul>
+<h3 id="section-12">戳刺</h3>
+<ul>
+<li>每级增强伤害15%，协同12%。</li>
+</ul>
+<h3 id="section-13">多重箭</h3>
+<ul>
+<li>基础5箭、基础上限25，基础增强伤害50%，每级+4%；保留SOE额外箭数和上限属性。</li>
+</ul>
+<h3 id="section-14">火焰箭</h3>
+<ul>
+<li>两项协同由15%恢复为26%。</li>
+</ul>
+<h3 id="section-15">急冻箭</h3>
+<ul>
+<li>冰冷箭／冰冻箭协同由10%恢复为22%；魔法箭额外协同16%保留。</li>
+</ul>
+<h3 id="section-16">龙卷射击</h3>
+<ul>
+<li>普通及奥术龙卷射击：分裂箭数由10支降至8支；每只分裂箭穿透时总共只再触发一次分裂。</li>
+</ul>
+</section><section class="note-section"><h2 id="assassin">刺客 Assassin</h2>
+<h3 id="section-17">角色成长</h3>
+<ul>
+<li>每点精力获得2法力。</li>
+</ul>
+<h3 id="section-18">凤凰攻击</h3>
+<ul>
+<li>陨石／冰阶段的基础与分段成长采用S14；陨石协同10%。</li>
+</ul>
+<h3 id="section-19">寒冰刃</h3>
+<ul>
+<li>第二阶段波采用S14的减速与存续参数。</li>
+</ul>
+<h3 id="section-20">心灵爆震</h3>
+<ul>
+<li>层数持续时间按20帧接入。</li>
+</ul>
+<h3 id="section-21">影子战士／影子大师</h3>
+<ul>
+<li>补充原生技能等级说明；实际行为增益沿原生执行。</li>
+</ul>
+<h3 id="section-22">火焰复苏</h3>
+<ul>
+<li>29级起高等级成长由22～26改为26～31。</li>
+</ul>
+<h3 id="section-23">刃之怒</h3>
+<ul>
+<li>命中合法单位后继续穿透；保留100%武器系数、50%分裂及撞墙分裂；实际命中触发参数20 → 100，吸取参数75保留。</li>
+</ul>
+<h3 id="section-24">破坏者陷阱继承</h3>
+<ul>
+<li>破坏者四阶生效时，下列六种陷阱的元素精通、穿透继承效率由 <strong>125% 提高至175%</strong>：电能守卫、火焰复苏、雷霆守卫、复苏狱火、亡者守卫、雷光守卫。</li>
+</ul>
+</section><section class="note-section"><h2 id="barbarian">野蛮人 Barbarian</h2>
+<h3 id="section-25">角色成长</h3>
+<ul>
+<li>每点精力获得1.5法力。</li>
+</ul>
+<h3 id="section-26">双手专精</h3>
+<ul>
+<li>基础增强伤害40%，每级+10%；压碎效率5%～20%。</li>
+</ul>
+<h3 id="section-27">单手专精</h3>
+<ul>
+<li>暴击概率上限45%。</li>
+</ul>
+<h3 id="section-28">自然抵抗</h3>
+<ul>
+<li>基础抗性加成上限65%。</li>
+</ul>
+<h3 id="section-29">旋风</h3>
+<ul>
+<li>基础增强伤害20%，每级+5%；双手武器攻击间隔6帧。</li>
+</ul>
+<h3 id="section-30">跳跃攻击</h3>
+<ul>
+<li>范围伤害跳过准确率掷骰，保留格挡及其他结算。</li>
+</ul>
+</section><section class="note-section"><h2 id="druid">德鲁伊 Druid</h2>
+<h3 id="section-31">角色成长</h3>
+<ul>
+<li>每级获得3法力。</li>
+</ul>
+<h3 id="section-32">召唤狼灵</h3>
+<ul>
+<li>采用S14分段伤害，每级生命+50%，灰熊协同读取基础点；保留后续升华召唤继承。</li>
+</ul>
+<h3 id="section-33">召唤狂狼</h3>
+<ul>
+<li>采用S14基础／分段伤害、5%伤害协同、固定准确率及物理穿透；保留SOE召唤减伤与后续升华继承。</li>
+</ul>
+<h3 id="section-34">地裂</h3>
+<ul>
+<li>协同14%，基础间隔5帧，每5硬点缩短间隔；保留SOE范围与频率属性。</li>
+</ul>
+<h3 id="section-35">火爪</h3>
+<ul>
+<li>主伤、地火、5帧同一目标重复命中间隔及投射物参数接入S14；两项协同保留28%。</li>
+</ul>
+<h3 id="section-36">小旋风</h3>
+<ul>
+<li>采用S14基础与分段成长、协同；9帧同一目标重复命中间隔，保留SOE范围和频率支持。</li>
+</ul>
+<h3 id="section-37">龙卷风</h3>
+<ul>
+<li>采用S14基础与分段成长、协同；9帧同一目标重复命中间隔，保留SOE范围和频率支持。</li>
+</ul>
+<h3 id="section-38">猛毒花藤</h3>
+<ul>
+<li>移除冷却，生命／伤害成长及25%协同接入S14；保留 SOE 召唤减伤。</li>
+<li>每 10 个基础技能等级额外增加 <strong>2 只</strong>毒藤。</li>
+<li>中毒持续时间由 4 秒缩短至 <strong>2 秒</strong>，总伤害不变。</li>
+</ul>
+<h3 id="section-39">食尸藤</h3>
+<ul>
+<li>恢复量公式、协同与参数接入S14。</li>
+</ul>
+<h3 id="section-40">太阳藤</h3>
+<ul>
+<li>恢复量公式、协同与参数接入S14。</li>
+</ul>
+<h3 id="section-41">狼獾之心</h3>
+<ul>
+<li>光环伤害／准确率每级成长8，硬点及召唤消费者同步。</li>
+</ul>
+<h3 id="section-42">棘灵</h3>
+<ul>
+<li>光环伤害／准确率每级成长8，协同7%。</li>
+</ul>
+<h3 id="section-43">召唤灰熊</h3>
+<ul>
+<li>技能自身四抗成长封顶85 → 90；五档最小／最大伤害成长统一调整为7／9／11／14／17；升华额外继承另计。</li>
+</ul>
+<h3 id="section-44">饥饿</h3>
+<ul>
+<li>增益持续时间乘3，保留技能持续时间加成。</li>
+</ul>
+<h3 id="section-45">毁天灭地</h3>
+<ul>
+<li>基础持续时间与每级持续时间成长均乘2。</li>
+</ul>
+<h3 id="section-46">暴风</h3>
+<ul>
+<li>基础持续时间与每级持续时间成长均乘2。</li>
+</ul>
+</section><section class="note-section"><h2 id="necromancer">死灵法师 Necromancer</h2>
+<h3 id="section-47">角色成长</h3>
+<ul>
+<li>每级获得3法力。</li>
+</ul>
+<h3 id="section-48">毒击</h3>
+<ul>
+<li>接入20%溅射，保留原生短状态。</li>
+</ul>
+<h3 id="section-49">剧毒新星</h3>
+<ul>
+<li>协同11%，高等级成长9。</li>
+</ul>
+<h3 id="section-50">降低抵抗</h3>
+<ul>
+<li>接入S14基础与成长；修复冰抗分支漏乘SOE诅咒效果。</li>
+</ul>
+<h3 id="section-51">伤害加深</h3>
+<ul>
+<li>基础与成长接入S14，保留SOE诅咒效果与魔抗分支。</li>
+</ul>
+<h3 id="section-52">衰老</h3>
+<ul>
+<li>基础减速20%，移动减速基础公式封顶60%，每2级降低1物抗；保留SOE诅咒效果。</li>
+</ul>
+<h3 id="section-53">骷髅弓箭手</h3>
+<ul>
+<li>基础伤害20～25及五段成长采用S14，移除旧额外伤害协同，保留生命词缀。</li>
+</ul>
+<h3 id="section-54">召唤骷髅说明</h3>
+<ul>
+<li>骷髅战士／法师／弓手按实际生命百分比及SOE词缀显示；法师加伤说明移至精通。</li>
+</ul>
+<h3 id="section-55">黑暗契约</h3>
+<ul>
+<li>基础爆炸半径4，保留SOE范围属性。</li>
+</ul>
+<h3 id="section-56">尸体爆炸</h3>
+<ul>
+<li>基础范围计算上限36 → 40；继续接入既有技能范围属性。</li>
+</ul>
+<h3 id="section-57">火焰石魔</h3>
+<ul>
+<li>专属圣火间隔调整为24帧（约0.96秒）、范围约11.33码；继承主人火焰穿透。</li>
+</ul>
+</section><section class="note-section"><h2 id="paladin">圣骑士 Paladin</h2>
+<h3 id="section-58">角色成长</h3>
+<ul>
+<li>每级获得2法力，每点精力获得2法力。</li>
+</ul>
+<h3 id="section-59">祝福之锤</h3>
+<ul>
+<li>接入原生穿墙行为。</li>
+</ul>
+<h3 id="section-60">重击</h3>
+<ul>
+<li>接入20%溅射，吸取与同步沿原生处理。</li>
+</ul>
+<h3 id="section-61">专注</h3>
+<ul>
+<li>不可打断概率15%＋每3级1%，保留SOE灵气效果。</li>
+</ul>
+<h3 id="section-62">荆棘</h3>
+<ul>
+<li>原生第二层撕裂概率按14＋技能等级接入，保留SOE灵气效果。</li>
+</ul>
+<h3 id="section-63">天堂之拳</h3>
+<ul>
+<li>接入穿透与3帧同一目标重复命中间隔；基础圣光弹数量参数50，保留SOE额外弹体和上限，实际弹数仍由目标选择决定。</li>
+</ul>
+<h3 id="section-64">牺牲</h3>
+<ul>
+<li>尸体爆炸伤害改为物理／魔法各50%，保持总伤害；说明明确125%溢出伤害＋怪物5%生命值。普通近战攻击本身不改成混合伤害。</li>
+</ul>
+<h3 id="section-65">神圣冰冻</h3>
+<ul>
+<li>两项协同由11%恢复为12%。</li>
+</ul>
+</section><section class="note-section"><h2 id="sorceress">法师 Sorceress</h2>
+<h3 id="section-66">角色成长</h3>
+<ul>
+<li>每级获得3法力与1.25生命。</li>
+</ul>
+<h3 id="section-67">炽烈之径</h3>
+<ul>
+<li>基础移速25%，每级+1%，基础上限60%；保留SOE增益效果。</li>
+</ul>
+<h3 id="section-68">寒冰装甲／碎冰甲</h3>
+<ul>
+<li>协同来源分别读取暴风雪／霜之新星。</li>
+</ul>
+<h3 id="section-69">九头海蛇</h3>
+<ul>
+<li>投射物速度、最大速度和存续时间接入S14。</li>
+</ul>
+<h3 id="section-70">次级多头蛇</h3>
+<ul>
+<li>投射物速度、最大速度和存续时间接入S14。</li>
+</ul>
+<h3 id="section-71">静态力场</h3>
+<ul>
+<li>玩家与佣兵版本扣血参数8%；佣兵基础距离上限16，保留SOE范围属性。</li>
+</ul>
+<h3 id="section-72">附魔火焰</h3>
+<ul>
+<li>基础持续时间300秒 → 600秒；保留技能持续时间加成。</li>
+</ul>
+<h3 id="section-73">附魔冰霜</h3>
+<ul>
+<li>基础持续时间300秒 → 600秒；移除原有时长封顶，持续时间加成继续生效。</li>
+</ul>
+<h3 id="section-74">霜之新星</h3>
+<ul>
+<li>弹体存续参数射程由12改14，并调整范围计算；第3／4／5成长档每级伤害分别由12～12.5／15～15.5／17.5～18，改为12.5～13／18～18.5／22.5～23。</li>
+</ul>
+<h3 id="section-75">闪电齐射</h3>
+<ul>
+<li>充能弹、连锁闪电对闪电齐射的伤害协同，均由每基础等级16% → 8%。</li>
+</ul>
+<h3 id="section-76">陨石最低施放间隔</h3>
+<ul>
+<li>同一角色的主动陨石与装备触发陨石共用0.2秒最小间隔；多件装备、不同技能等级合并计时。主动施法原有更长冷却保留；间隔内的额外触发不生成陨石。</li>
+</ul>
+</section><section class="note-section"><h2 id="ascendancies">升华 Ascendancies</h2>
+<h3 id="section-77">升华魂石掉落</h3>
+<ul>
+<li>普通巴尔不再掉落初始升华魂石及升华石冢；初始升华来源移至噩梦巴尔，地狱巴尔掉落二阶。大黑、路西安、拉斯玛：L0掉三阶，L1掉四阶，三、四阶均为个人拾取。</li>
+</ul>
+<h3 id="section-78">升华护符·单枚生效</h3>
+<ul>
+<li>护符栏所有专精、所有阶数合计仅允许一枚；由玩家手动替换，不自动选最高阶。</li>
+</ul>
+<h3 id="section-79">勇士</h3>
+<ul>
+<li>四阶：每个耐力球增强伤害25% → 50%；每40点攻击准确率获得1%攻击速度 → 每20点获得1%。</li>
+</ul>
+<h3 id="section-80">圣宗</h3>
+<ul>
+<li>二阶：法力上限提高40% → 60%；被击中伤害转法力30% → 50%。</li>
+</ul>
+<h3 id="section-81">守护者</h3>
+<ul>
+<li>三阶：力量、敏捷与精力提高30%；所有元素抗性上限+5%。</li>
+<li>四阶：每3%额外元素抗性上限获得2%灵气效果，四项合计；每1%灵气效果获得100点基础防御。</li>
+</ul>
+<h3 id="section-82">狂战士</h3>
+<ul>
+<li>三阶：每1%吸血增加4～10物理伤害 → 2～3。继续允许弓箭，未新增仅近战限制。</li>
+</ul>
+<h3 id="section-83">破坏者</h3>
+<ul>
+<li>三阶：每秒恢复2%最大生命，补齐20%增益效果，保留20%技能持续时间；恢复不受增益效果重复放大。</li>
+<li>四阶：陷阱继承元素穿透／精通效率125% → 175%。</li>
+</ul>
+<h3 id="section-84">秘术家</h3>
+<ul>
+<li>三阶秽言绽放：击杀触发概率15% → 5%；最小、最大魔法伤害4000 → 1000。</li>
+<li>四阶：每个可施加的诅咒提供的诅咒效果10% → 5%；每1%诅咒效果换取1%魔法精通及1%打击恢复速度保持。</li>
+</ul>
+<h3 id="section-85">血魔法师</h3>
+<ul>
+<li>四阶：每40生命获得1%元素／魔法精通 → 每100生命获得1%；击杀恢复1%最大生命保持。恢复鲜血施法，技能费用由生命支付（除非某些装备自带指定消耗法力）。</li>
+</ul>
+<h3 id="section-86">追猎者</h3>
+<ul>
+<li>一阶新增+5%最大毒抗；二阶移速25% → 50%、增益30% → 40%；三阶每层凋零减毒抗2% → 4%，未计增益时总效果封顶20%；四阶击中／施法触发20%／35% → 40%／55%，持续4秒 → 8秒。</li>
+</ul>
+<h3 id="section-87">酋长</h3>
+<ul>
+<li>四阶爆燃伤害：5000 → 1000；触发概率保留15%，范围保留10码。</li>
+</ul>
+<h3 id="section-88">时术师</h3>
+<ul>
+<li>三阶：时间扭曲基础持续时间10秒 → 15秒；时间冻结基础持续时间8秒 → 15秒。</li>
+</ul>
+<h3 id="section-89">锐眼</h3>
+<ul>
+<li>一阶：敏捷30 → 40，准确率250 → 500。</li>
+<li>三阶：击中触发概率50% → 25%；每层准确率10% → 5%，上限100% → 50%；每层物理减伤2% → 5%，上限20% → 50%（未计增益效果）。</li>
+<li>四阶：移除+1攻击投射物上限；每点攻击投射物上限提供的增强伤害125% → 150%。</li>
+</ul>
+<h3 id="section-90">巫妖</h3>
+<ul>
+<li>四阶召唤抗性此前存在继承缺口 → 补齐自身战斗召唤物+50%抗性；不是给队友玩家加50%抗性。</li>
+</ul>
+<h3 id="section-91">灵行者</h3>
+<ul>
+<li>三阶：新增额外4只恐狼，保留额外2只灰熊；召唤物继承主人物理减伤：25% → 50%；新增75%火焰／冰冷／闪电抗性。</li>
+<li>四阶：凶狠咆哮基础持续时间10秒 → 360秒。</li>
+</ul>
+</section><section class="note-section"><h2 id="maps">地图 Maps</h2>
+<h3 id="section-92">普通地图与剧情区域</h3>
+<p><strong>疯人院（Sanatorium）</strong></p>
+<ul>
+<li>接入 S14 地图更新。</li>
+<li>地图阶级由 T2 调整为 <strong>T1</strong>。</li>
+<li>地狱区域等级由 88 降至 <strong>87</strong>。</li>
+<li>提高怪物密度。</li>
+</ul>
+<p><strong>地洞第二层</strong></p>
+<ul>
+<li>基础怪物密度提高 <strong>50%</strong>。</li>
+<li>腐化密度加成由 +150% 提高至 <strong>+300%</strong>。</li>
+<li>缩小入口安全区，扩大可生成怪物的区域。</li>
+</ul>
+<h3 id="section-93">地图强化</h3>
+<p><strong>暗金地图强化</strong></p>
+<ul>
+<li>强化暗金地图时，增加 <strong>30% 移动速度</strong>，与 S14 对应强化效果一致。</li>
+</ul>
+<p><strong>七职业耳朵</strong></p>
+<ul>
+<li>地图怪物稀有度加成由 25% 降至 <strong>10%</strong>。</li>
+<li>特定物品类型掉落加成由 55% 降至 <strong>10%</strong>。</li>
+<li>额外物品掉落加成由 55% 降至 <strong>50%</strong>。</li>
+</ul>
+<h3 id="section-94">神殿</h3>
+<ul>
+<li>传送神殿不再生成。</li>
+<li>降低火焰、爆炸和毒神殿的出现频率。</li>
+</ul>
+<h3 id="section-95">暗金地图</h3>
+<p><strong>乌瑞城</strong></p>
+<ul>
+<li>怪物额外掉落武器的几率由 10～15% 提高至 <strong>55～65%</strong>。</li>
+<li>怪物额外掉落护甲的几率由 10～15% 提高至 <strong>55～65%</strong>。</li>
+</ul>
+<p><strong>精灵领域</strong></p>
+<ul>
+<li>符文掉落几率提高约 <strong>15%</strong>。</li>
+</ul>
+<p><strong>堕落花园</strong></p>
+<ul>
+<li>修复神话珠宝底材无法正常生成暗金品质的问题。</li>
+<li>调整普通怪物的珠宝掉落，参考概率如下：</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>物品</th>
+<th align="right">普通参考怪物掉落概率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>神话暗金珠宝</td>
+<td align="right">约 1:1,800</td>
+</tr>
+<tr>
+<td>非暗金珠宝</td>
+<td align="right">约 1:85</td>
+</tr>
+<tr>
+<td>彩虹刻面</td>
+<td align="right">约 1:3,203</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>关底首领额外掉落 <strong>1 颗神话暗金珠宝</strong>。</li>
+</ul>
+<p><strong>暗金地图首领装备奖励</strong></p>
+<ul>
+<li>提高下列首领的指定稀有暗金掉落，单件参考概率调整至 <strong>1:1,000～1:100</strong>；不同装备的概率不同。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>地图</th>
+<th>调整范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冥河洞穴</td>
+<td>24 件指定稀有暗金</td>
+</tr>
+<tr>
+<td>乌瑞城</td>
+<td>22 件指定稀有暗金</td>
+</tr>
+<tr>
+<td>纳克鲁尔深渊</td>
+<td>11 件指定稀有暗金</td>
+</tr>
+</tbody></table></div>
+<p><strong>特殊暗金地图供给</strong></p>
+<ul>
+<li>下列八张特殊暗金地图统一使用同一供给规则，自然掉落供给提高约 <strong>25%</strong>：堕落花园、外虚空、帝国宫殿、扎尔密室、精灵领域、纳克鲁尔深渊、鲜血督军、乌瑞城。</li>
+</ul>
+</section><section class="note-section"><h2 id="map-events">地图事件 Map Events</h2>
+<h3 id="section-96">恐惧化地图</h3>
+<ul>
+<li>虚灵、辉煌、绝对和富饶之怖采用统一的本体数量上限。</li>
+<li>随地图房间生成进度逐步解锁生成额度，避免恐惧怪集中出现在入口。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>地图阶级</th>
+<th align="right">本体数量上限</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>T2</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>T3</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>炼狱 T3.5</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>T4</td>
+<td align="right">10</td>
+</tr>
+</tbody></table></div>
+<p>上述数量为上限，并非每场必定生成的数量；初始护卫不计入本体数量。</p>
+<p><strong>虚灵之怖：符文奖励</strong></p>
+<ul>
+<li>单只平均掉落约 <strong>10 颗符文</strong>。</li>
+<li>每只独立有 <strong>10%</strong> 几率额外掉落 1 张精灵领域暗金地图。</li>
+</ul>
+<p><strong>辉煌之怖：装备奖励</strong></p>
+<ul>
+<li>单只平均掉落约 <strong>2～4 件装备</strong>，并非全部为暗金装备。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>地图阶级</th>
+<th align="right">单只平均装备数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1、T2</td>
+<td align="right">约 2 件</td>
+</tr>
+<tr>
+<td>T3、炼狱 T3.5</td>
+<td align="right">约 3.7 件</td>
+</tr>
+<tr>
+<td>T4</td>
+<td align="right">约 4 件</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>每只独立有 <strong>10%</strong> 几率额外掉落 1 张纳克鲁尔深渊暗金地图。</li>
+</ul>
+<p><strong>绝对之怖：首领材料奖励</strong></p>
+<ul>
+<li>单只平均掉落约 <strong>2 件超级首领门票材料</strong>。</li>
+<li>每只独立有 <strong>10%</strong> 几率额外掉落 1 张外虚空暗金地图。</li>
+</ul>
+<p><strong>富饶之怖：通货奖励</strong></p>
+<ul>
+<li>掉落通货、凿子或铭文，单只平均数量如下。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>地图阶级</th>
+<th align="right">单只平均奖励数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1</td>
+<td align="right">约 1 件</td>
+</tr>
+<tr>
+<td>T2</td>
+<td align="right">约 1.67 件</td>
+</tr>
+<tr>
+<td>T3、炼狱 T3.5</td>
+<td align="right">约 2.5 件</td>
+</tr>
+<tr>
+<td>T4</td>
+<td align="right">约 3.33 件</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>每只独立有 <strong>10%</strong> 几率额外掉落 1 张乌瑞城暗金地图。</li>
+</ul>
+<p>以上主奖励数量为单人参考均值；多人、空掉落和实际生成数量会影响最终产出。主题暗金地图独立判定，不随主奖励数量重复判定。</p>
+<h3 id="section-97">随机事件奖励</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>奖励调整</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>孟德恩</td>
+<td>额外掉落 1 张帝国宫殿暗金地图</td>
+</tr>
+<tr>
+<td>赫拉森</td>
+<td>额外掉落 1 张扎尔密室暗金地图</td>
+</tr>
+<tr>
+<td>黑门</td>
+<td>每名英雄额外掉落 3 件精英底材暗金装备，部位可以重复</td>
+</tr>
+<tr>
+<td>黑暗流放者</td>
+<td>奖励调整为一次掉落 10 个普通完美精华</td>
+</tr>
+<tr>
+<td>盗宝哥布林</td>
+<td>保留沿途掉落及原击杀奖励；死亡时独立有 10% 几率额外掉落 1 个恐惧化材料</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="loot-changes">掉落调整 Loot Changes</h2>
+<h3 id="section-98">符文与仇恨奖励</h3>
+<ul>
+<li>重新调整符文号码分布，使高阶符文掉落更接近 PD2。</li>
+<li>提高此前过低的虚灵之怖符文产出。</li>
+<li>符文仇恨奖励调整为原满额追加奖励的 <strong>一半</strong>；命运卡仇恨追加奖励维持约原来的 <strong>五分之一</strong>。</li>
+<li>精灵领域的符文加成见「地图」章节。</li>
+</ul>
+<h3 id="section-99">装备</h3>
+<ul>
+<li>提高部分精英级暗金装备的自然掉落几率。</li>
+<li>枯槁者之哀嚎的两词缀形态 <strong>1、2、3、4、6、8、9、10、20、25</strong> 停止新掉落，减少低价值形态占比；已有物品保留。</li>
+</ul>
+<h3 id="section-100">宝石</h3>
+<ul>
+<li>怪物和箱子的随机宝石掉落中，移除碎裂、裂开、普通三档宝石及骷髅，共 <strong>21 种</strong>。</li>
+<li>保留无瑕疵和完美宝石的随机掉落。</li>
+<li>首杀、地狱熔炉、神殿的直接奖励，以及已有宝石和合成用途保持不变。</li>
+<li>完美宝石扩增为同类完美宝石 ×50，消耗晶化烬魂由 10 个提高至 <strong>50 个</strong>。</li>
+</ul>
+<h3 id="section-101">永恒宝珠与圣化宝珠</h3>
+<ul>
+<li>提高永恒宝珠掉落几率，并调整圣化宝珠的普通掉落供给。</li>
+<li>下表为不同怪物等级下的普通参考概率。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>怪物等级</th>
+<th align="right">永恒宝珠</th>
+<th align="right">圣化宝珠</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>85</td>
+<td align="right">约 1:130,122</td>
+<td align="right">—</td>
+</tr>
+<tr>
+<td>88</td>
+<td align="right">约 1:126,958</td>
+<td align="right">—</td>
+</tr>
+<tr>
+<td>89</td>
+<td align="right">约 1:124,101</td>
+<td align="right">—</td>
+</tr>
+<tr>
+<td>90</td>
+<td align="right">约 1:121,071</td>
+<td align="right">约 1:50,016</td>
+</tr>
+<tr>
+<td>92</td>
+<td align="right">约 1:100,054</td>
+<td align="right">约 1:25,009</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-102">成品圣化宝珠</h3>
+<ul>
+<li>成品圣化宝珠加入分难度自然掉落池。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th align="right">可掉落种数</th>
+<th align="right">合计掉落概率</th>
+<th>对应制作配方最高符文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>普通</td>
+<td align="right">8 种</td>
+<td align="right">约 1:1,000</td>
+<td>15 号</td>
+</tr>
+<tr>
+<td>噩梦</td>
+<td align="right">34 种</td>
+<td align="right">约 1:1,000</td>
+<td>25 号</td>
+</tr>
+<tr>
+<td>地狱及 T 图</td>
+<td align="right">41 种</td>
+<td align="right">约 1:20,000</td>
+<td>27 号</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>上述概率为该难度下所有可掉落成品圣化宝珠的合计概率。</li>
+<li>使用 28 号及以上符文制作的成品圣化宝珠仍需制作获得。</li>
+</ul>
+<h3 id="section-103">特殊精华</h3>
+<p><strong>精华·癫狂</strong></p>
+<ul>
+<li>不再通过合成获得。</li>
+<li>对应普通掉落链从 <strong>90 级怪物</strong>开始有几率掉落；低阶地图中的高等级怪物也可进入该掉落档。</li>
+<li>将装备转变为亮金品质时，必定出现伤害加深词缀。</li>
+</ul>
+<p><strong>精华·歇斯底里</strong></p>
+<ul>
+<li>不再通过合成获得。</li>
+<li>对应普通掉落链从 <strong>90 级怪物</strong>开始有几率掉落；低阶地图中的高等级怪物也可进入该掉落档。</li>
+<li>将装备转变为亮金品质时，必定出现降低抵抗词缀。</li>
+</ul>
+<h3 id="section-104">其他稀有材料</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>物品</th>
+<th align="right">地狱参考掉落概率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>提取宝珠</td>
+<td align="right">约 1:86,000</td>
+</tr>
+<tr>
+<td>拉苏克谜盒</td>
+<td align="right">约 1:26,000</td>
+</tr>
+<tr>
+<td>莉莉丝的镜子</td>
+<td align="right">约 1:5,140,000</td>
+</tr>
+<tr>
+<td>光颂之瓶</td>
+<td align="right">约 1:1,840,000</td>
+</tr>
+</tbody></table></div>
+<p>掉落概率均为指定条件下的参考值，不代表击杀固定数量必定获得；怪物等级、类型、人数及地图词缀会影响实际产出。</p>
+</section><section class="note-section"><h2 id="ubers">超级首领 Ubers</h2>
+<h3 id="section-105">大主教门票</h3>
+<ul>
+<li>地图首领独立判定是否额外掉落 <strong>1 片大主教门票碎片</strong>。</li>
+<li>四种碎片等概率，集齐四种各 1 片可合成门票。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>地图阶级</th>
+<th align="right">额外掉落 1 片的几率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>T1、T2</td>
+<td align="right">40%</td>
+</tr>
+<tr>
+<td>T3</td>
+<td align="right">60%</td>
+</tr>
+<tr>
+<td>炼狱 T3.5</td>
+<td align="right">70%</td>
+</tr>
+<tr>
+<td>T4</td>
+<td align="right">80%</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-106">超级先祖标志</h3>
+<ul>
+<li>炼狱 T3.5 和 T4 地图的超级先祖标志掉落，调整为从三种标志中等概率选取。</li>
+</ul>
+<h3 id="section-107">火炬首领</h3>
+<ul>
+<li>六名火炬首领的单人生命提高约 <strong>70%</strong>。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>首领</th>
+<th align="right">调整前</th>
+<th align="right">调整后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>莉莉丝</td>
+<td align="right">650,000～660,000</td>
+<td align="right">1,105,000～1,122,000</td>
+</tr>
+<tr>
+<td>超级督瑞尔</td>
+<td align="right">650,000～660,000</td>
+<td align="right">1,105,000～1,122,000</td>
+</tr>
+<tr>
+<td>超级衣卒尔</td>
+<td align="right">650,000～660,000</td>
+<td align="right">1,105,000～1,122,000</td>
+</tr>
+<tr>
+<td>超级墨菲斯托</td>
+<td align="right">569,500</td>
+<td align="right">968,200</td>
+</tr>
+<tr>
+<td>超级迪亚波罗</td>
+<td align="right">642,700</td>
+<td align="right">1,092,600</td>
+</tr>
+<tr>
+<td>超级巴尔</td>
+<td align="right">633,600</td>
+<td align="right">1,077,100</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-108">大主教战斗调整</h3>
+<ul>
+<li>调整下列技能的基础单次伤害。</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th align="right">调整前</th>
+<th align="right">调整后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>冰冷轰击</td>
+<td align="right">4,000</td>
+<td align="right">1,200</td>
+</tr>
+<tr>
+<td>魔法宝珠</td>
+<td align="right">1.953125～2.34375</td>
+<td align="right">250～500</td>
+</tr>
+<tr>
+<td>魔法地墙</td>
+<td align="right">46.875～62.5</td>
+<td align="right">146～162</td>
+</tr>
+<tr>
+<td>魔法地面</td>
+<td align="right">15.625～21.875</td>
+<td align="right">25～31</td>
+</tr>
+<tr>
+<td>分身闪电波</td>
+<td align="right">800</td>
+<td align="right">1,800</td>
+</tr>
+<tr>
+<td>分身魔法火墙</td>
+<td align="right">7.5</td>
+<td align="right">25</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-109">大黑分档奖励</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>奖励</th>
+<th align="right">L0</th>
+<th align="right">L1</th>
+<th align="right">L2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>毁灭护符</td>
+<td align="right">100%</td>
+<td align="right">100%</td>
+<td align="right">100%</td>
+</tr>
+<tr>
+<td>大君面甲</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>黑暗深渊</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>艾丹的伤痕</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>哈德尔之手</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>伊瑟瑞尔的途径</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>恐惧之眼命运卡</td>
+<td align="right">1%</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>原罪</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">2%</td>
+</tr>
+<tr>
+<td>无限回城书</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">3%</td>
+</tr>
+<tr>
+<td>额外 26～33 号符文</td>
+<td align="right">—</td>
+<td align="right">合计 3%</td>
+<td align="right">合计 10%</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-110">路西昂分档奖励</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>奖励</th>
+<th align="right">L0</th>
+<th align="right">L1</th>
+<th align="right">L2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>亵渎宝珠</td>
+<td align="right">10%</td>
+<td align="right">15%</td>
+<td align="right">20%</td>
+</tr>
+<tr>
+<td>创生</td>
+<td align="right">—</td>
+<td align="right">5%</td>
+<td align="right">10%</td>
+</tr>
+<tr>
+<td>额外拉苏克谜盒</td>
+<td align="right">—</td>
+<td align="right">必掉 3 个</td>
+<td align="right">必掉 5 个</td>
+</tr>
+<tr>
+<td>额外恶魔宝盒</td>
+<td align="right">—</td>
+<td align="right">必掉 3 个</td>
+<td align="right">必掉 5 个</td>
+</tr>
+<tr>
+<td>无限钥匙</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">3%</td>
+</tr>
+<tr>
+<td>额外 26～33 号符文</td>
+<td align="right">—</td>
+<td align="right">合计 3%</td>
+<td align="right">合计 10%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>拉苏克谜盒与恶魔宝盒可以同时获得，并可与其他奖励同时掉落。</li>
+<li>保留额外掉落永生者命运卡的 <strong>1%</strong> 几率。</li>
+</ul>
+<h3 id="section-111">拉斯玛分档奖励</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>奖励</th>
+<th align="right">L0</th>
+<th align="right">L1</th>
+<th align="right">L2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>污秽的世界之石碎片</td>
+<td align="right">沿用原生必掉规则</td>
+<td align="right">沿用原生必掉规则</td>
+<td align="right">沿用原生必掉规则</td>
+</tr>
+<tr>
+<td>第三只眼</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>骷髅授带</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>无垢者牢笼</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>拉斯玛的冥河之手</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">1.5%</td>
+</tr>
+<tr>
+<td>低语</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">3%</td>
+</tr>
+<tr>
+<td>无限辨识书</td>
+<td align="right">—</td>
+<td align="right">1%</td>
+<td align="right">3%</td>
+</tr>
+<tr>
+<td>额外符文</td>
+<td align="right">—</td>
+<td align="right">26～33 号合计 3%</td>
+<td align="right">22～33 号合计 10%</td>
+</tr>
+</tbody></table></div>
+<p>分档奖励表中的「—」表示不提供该项奖励；额外奖励行表示不追加。符文概率为整个号码区间的合计概率，区间内沿既有符文权重分配。</p>
+<h3 id="section-112">大主教掉落</h3>
+<ul>
+<li>下列六件装备分别进行 <strong>5% 独立掉落判定</strong>：</li>
+</ul>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>装备</th>
+<th align="right">单件掉落几率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>命运印记</td>
+<td align="right">5%</td>
+</tr>
+<tr>
+<td>时空之衣</td>
+<td align="right">5%</td>
+</tr>
+<tr>
+<td>无尽之渴</td>
+<td align="right">5%</td>
+</tr>
+<tr>
+<td>时光浪潮</td>
+<td align="right">5%</td>
+</tr>
+<tr>
+<td>庇护之殇</td>
+<td align="right">5%</td>
+</tr>
+<tr>
+<td>拉克达南的牺牲</td>
+<td align="right">5%</td>
+</tr>
+</tbody></table></div>
+<ul>
+<li>聚合体调整为 <strong>46% 独立掉落判定</strong>。</li>
+<li>新掉落的聚合体生成 <strong>5 条原专用腐化词缀</strong>，并可在路西昂祭坛再次腐化；初始五条属性不包含额外赠送的亵渎属性。</li>
+<li>保留额外掉落生不如死命运卡的 <strong>2.5%</strong> 几率。</li>
+</ul>
+</section><section class="note-section"><h2 id="uniques">暗金装备 Uniques</h2>
+<p>以下列出本轮同步及SOE调整涉及的属性；其余属性沿用原有规则。</p>
+<h3 id="section-113">S14装备接入</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>装备</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>瓦瑞夫的令牌</td>
+<td>开放S14新暗金，加入收藏目录及圣杯发现。</td>
+</tr>
+<tr>
+<td>幽灵板甲</td>
+<td>S14新暗金开放，进入收藏目录及原生圣杯资格。已知相位移动暂未实装。</td>
+</tr>
+<tr>
+<td>追猎者的刺杀</td>
+<td>致命打击词条改为20%暴击概率、30%～50%暴击倍率，保留SOE额外攻击。</td>
+</tr>
+<tr>
+<td>族长</td>
+<td>移除负攻速，保留SOE的260%～290%增强伤害。</td>
+</tr>
+<tr>
+<td>恶魔机器</td>
+<td>专用多重射击触发技能改为12级。</td>
+</tr>
+<tr>
+<td>海拉柏得的国度</td>
+<td>移除旧精通页技能词条；战斗体制、战嚎加成均为2～3级。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-114">装备属性调整</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>装备</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>碎骨</td>
+<td>压碎性打击几率 20～40% → 压碎性打击几率 20%</td>
+</tr>
+<tr>
+<td>霜燃</td>
+<td>法力上限提高 20～40% → 法力上限提高 10%<br>敌人冰冷抗性降低 5～10% → 敌人冰冷抗性降低 10%<br>敌人火焰抗性降低 5～10% → 敌人火焰抗性降低 10%</td>
+</tr>
+<tr>
+<td>玛那得的治疗</td>
+<td>生命恢复 5～8 → 生命偷取 4～7%</td>
+</tr>
+<tr>
+<td>血树残株</td>
+<td>压碎性打击几率 50% → 压碎性打击几率 25%</td>
+</tr>
+<tr>
+<td>惊怖焰亡灵</td>
+<td>额外骷髅法师上限：6 → 12。<br>新增：装备后召唤的骷髅法师获得100攻击动作速度，行为攻击等待时间减半；换装后需重新召唤。<br>禁止召唤骷髅战士和弓箭手。</td>
+</tr>
+<tr>
+<td>扭曲之矛</td>
+<td>施法时25%触发10级冰尖柱 → 施法时25%触发35级寒冰弹幕</td>
+</tr>
+<tr>
+<td>狂野之弦</td>
+<td>凹槽数 2～4 → 凹槽数 4</td>
+</tr>
+<tr>
+<td>金击圆弧</td>
+<td>击中时20%触发20级天堂之拳 → 击中时20%触发5级天堂之拳</td>
+</tr>
+<tr>
+<td>谢夫特斯坦布</td>
+<td>对远程防御 250 → 所有抗性 15～20%</td>
+</tr>
+<tr>
+<td>亚特玛的哭喊</td>
+<td>所有技能 1 → 所有技能 2</td>
+</tr>
+<tr>
+<td>魁黑刚的智慧</td>
+<td>所有技能 1 → 所有技能 2</td>
+</tr>
+<tr>
+<td>地狱之嘴</td>
+<td>击中时4%触发34级陨石 → 击中时4%触发14级陨石</td>
+</tr>
+<tr>
+<td>地狱阔步</td>
+<td>被击中时18%触发16级炽烈之径 → 击中时18%触发40级炽烈之径</td>
+</tr>
+<tr>
+<td>纱织</td>
+<td>法力上限提高 10～20% → 法力上限提高 20～30%</td>
+</tr>
+<tr>
+<td>钢铁面纱</td>
+<td>耐久度 20 → 装备需求 -20%</td>
+</tr>
+<tr>
+<td>碎脑锤</td>
+<td>击中时14%触发29级伤害加深 → 击中时14%触发29级衰老<br>压碎性打击几率 75% → 压碎性打击几率 25%</td>
+</tr>
+<tr>
+<td>衔尾蛇之环</td>
+<td>快速施法速度 20% → 快速施法速度 30%</td>
+</tr>
+<tr>
+<td>矮人之星</td>
+<td>额外金币 100% → 额外金币 150%<br>火焰吸收 4～6% → 火焰吸收 8～12%</td>
+</tr>
+<tr>
+<td>萨拉森的机会</td>
+<td>增强伤害 30～50% → 增强伤害 60～80%</td>
+</tr>
+<tr>
+<td>地平线的台风</td>
+<td>+3～4 小旋风（职业技能） → +6～7 小旋风（职业技能）<br>+3～4 龙卷风（职业技能） → +6～7 龙卷风（职业技能）</td>
+</tr>
+<tr>
+<td>碎石者</td>
+<td>压碎性打击几率 40% → 压碎性打击几率 20～30%</td>
+</tr>
+<tr>
+<td>地狱之吻</td>
+<td>+2 野性狂暴（职业技能） → +2 震波（职业技能）</td>
+</tr>
+<tr>
+<td>海王利维亚桑</td>
+<td>物理伤害减免 15～25% → 物理伤害减免 20～30%</td>
+</tr>
+<tr>
+<td>鬼火投射者</td>
+<td>2级狼獾之心聚气（13次） → 11级狼獾之心聚气（13次）<br>7级棘灵聚气（11次） → 13级棘灵聚气（13次）</td>
+</tr>
+<tr>
+<td>梅格之歌的教训</td>
+<td>施法时12%触发11级降低抵抗 → 施法时12%触发12级衰老</td>
+</tr>
+<tr>
+<td>蝮蛇叉</td>
+<td>击中时12%触发32级亵渎 → 击中时12%触发40级剧毒新星</td>
+</tr>
+<tr>
+<td>恶魔号角的边缘</td>
+<td>撕开敌人伤口几率 20% → 撕开敌人伤口几率 50%</td>
+</tr>
+<tr>
+<td>灵魂看守者</td>
+<td>额外灵体上限 1 → 额外灵体上限 2</td>
+</tr>
+<tr>
+<td>戮夫刃</td>
+<td>移除：+3～5 龙卷射击（跨职业技能）<br>移除：+3～5 多重箭（跨职业技能）</td>
+</tr>
+<tr>
+<td>鬼火焰</td>
+<td>火焰技能伤害 15～25% → 火焰技能伤害 25～35%</td>
+</tr>
+<tr>
+<td>影杀者</td>
+<td>击中时33%触发50级霜之新星 → 击中时33%触发32级霜之新星</td>
+</tr>
+<tr>
+<td>风之锤</td>
+<td>压碎性打击几率 50% → 压碎性打击几率 25%</td>
+</tr>
+<tr>
+<td>雷击</td>
+<td>击中时20%触发28级连锁闪电 → 击中时20%触发35级闪电之怒</td>
+</tr>
+<tr>
+<td>铁柱</td>
+<td>敌人物理抗性降低 5～10% → 敌人物理抗性降低 15～20%</td>
+</tr>
+<tr>
+<td>年纪之冠</td>
+<td>最大物理抗性 1% → 最大物理抗性 5%</td>
+</tr>
+<tr>
+<td>龙鳞</td>
+<td>火焰技能伤害 15～20% → 火焰技能伤害 25～30%</td>
+</tr>
+<tr>
+<td>死亡深度</td>
+<td>快速施法速度 20% → 快速施法速度 40～50%</td>
+</tr>
+<tr>
+<td>基得的运气</td>
+<td>魔法装备获取几率 20～40% → 魔法装备获取几率 60～80%<br>额外金币 80～160% → 额外金币 180～260%<br>商店价格降低 10～15% → 商店价格降低 5～10%</td>
+</tr>
+<tr>
+<td>暴风之结</td>
+<td>击中时20%触发25级静态力场 → 击中时20%触发35级静态力场</td>
+</tr>
+<tr>
+<td>冰霜之风</td>
+<td>装备时赋予6级抵抗冰冷灵气 → 装备时赋予6级神圣冰冻灵气</td>
+</tr>
+<tr>
+<td>圣堂武士的力量</td>
+<td>装备时赋予6～8级力量灵气 → 装备时赋予9～11级力量灵气</td>
+</tr>
+<tr>
+<td>艾斯屈塔的脾气</td>
+<td>所有技能 2～3 → 所有技能 3～4</td>
+</tr>
+<tr>
+<td>火蜥蜴之爪</td>
+<td>格挡时25%触发40级炽烈之径 → 击中时5%触发30级炽烈之径</td>
+</tr>
+<tr>
+<td>腐肉之风</td>
+<td>11级猛毒花藤聚气（35次） → 21级猛毒花藤聚气（35次）</td>
+</tr>
+<tr>
+<td>爱理欧克之针</td>
+<td>新增：装备时赋予20级荆棘灵气</td>
+</tr>
+<tr>
+<td>大地变形者</td>
+<td>击中时25%触发28级火山爆 → 击中时10%触发28级火山爆<br>压碎性打击几率 33% → 压碎性打击几率 20%<br>击杀时14%触发28级火山 → 击杀时5%触发28级火山</td>
+</tr>
+<tr>
+<td>伊瑟瑞尔的途径</td>
+<td>防御 40～60 → 力量 10～15<br>移动速度 20% → 移动速度 40%</td>
+</tr>
+<tr>
+<td>大君面甲</td>
+<td>敌人物理抗性降低 15% → 敌人物理抗性降低 15～25%</td>
+</tr>
+<tr>
+<td>黑暗深渊</td>
+<td>所有技能 1 → 所有技能 2～3</td>
+</tr>
+<tr>
+<td>独眼巨人的咆哮（击中形态）</td>
+<td>击中时8%触发6级战嗥 → 击中时8%触发16级战嗥</td>
+</tr>
+<tr>
+<td>法师杀手</td>
+<td>新增：装备时赋予6级专注灵气</td>
+</tr>
+<tr>
+<td>风暴</td>
+<td>被击中时8%触发12级霜之新星 → 击中时8%触发32级霜之新星</td>
+</tr>
+<tr>
+<td>无垢者牢笼</td>
+<td>所有抗性 15～20% → 所有抗性 35～40%</td>
+</tr>
+<tr>
+<td>第三只眼</td>
+<td>所有技能 1 → 所有技能 2<br>快速施法速度 20% → 快速施法速度 30%<br>施法时12%触发25级白骨新星 → 施法时30%触发35级白骨新星</td>
+</tr>
+<tr>
+<td>秘术师</td>
+<td>法力上限提高 25～35% → 法力上限提高 20%</td>
+</tr>
+<tr>
+<td>硫磺之雨</td>
+<td>施法时18%触发35级陨石 → 施法时18%触发18级陨石</td>
+</tr>
+<tr>
+<td>蕾蔻的美德</td>
+<td>+2～3 双手挥击（职业技能） → +2～3 残酷吓阻（职业技能）</td>
+</tr>
+<tr>
+<td>独眼巨人的咆哮（施法形态）</td>
+<td>施法时8%触发6级战嗥 → 施法时8%触发16级战嗥</td>
+</tr>
+<tr>
+<td>暮光倒影</td>
+<td>敌人物理抗性降低 10% → 敌人物理抗性降低 15～20%</td>
+</tr>
+<tr>
+<td>兽穴之母</td>
+<td>+2～3 召唤灰熊（职业技能） → +3 召唤灰熊（职业技能）<br>额外灰熊上限 2 → 额外灰熊上限 4</td>
+</tr>
+<tr>
+<td>幻影幽语</td>
+<td>快速施法速度 10% → 快速施法速度 30%</td>
+</tr>
+<tr>
+<td>荒野语者</td>
+<td>+2～3 大叫（职业技能） → +2～3 战斗狂嗥（职业技能）</td>
+</tr>
+<tr>
+<td>神蛇之羽</td>
+<td>新增：穿透几率 30～40%</td>
+</tr>
+<tr>
+<td>灰烬之誓</td>
+<td>+2～3 温暖（职业技能） → +2～3 次级多头蛇（职业技能）<br>+4～5 能量护盾（职业技能） → +2～3 九头海蛇（职业技能）</td>
+</tr>
+<tr>
+<td>天陨</td>
+<td>闪电技能等级 3 → 闪电技能等级 4<br>快速施法速度 20% → 快速施法速度 40%</td>
+</tr>
+<tr>
+<td>巨型残虐者</td>
+<td>压碎性打击几率 20% → 压碎性打击几率 50%<br>移除：压碎性打击效率 40～50%</td>
+</tr>
+<tr>
+<td>朝露</td>
+<td>快速施法速度 20% → 快速施法速度 30～40%</td>
+</tr>
+<tr>
+<td>星流霆击</td>
+<td>击中时15%触发25级毒枪 → 击中时15%触发40级剧毒新星</td>
+</tr>
+<tr>
+<td>克拉托斯之怒</td>
+<td>击中时20%触发1级斯巴达之怒 → 击中时40%触发1级斯巴达之怒</td>
+</tr>
+<tr>
+<td>尼拉塞克的恶意</td>
+<td>击中时50%触发50级霜之新星 → 击中时25%触发21级降低抵抗</td>
+</tr>
+<tr>
+<td>均衡之符</td>
+<td>力量 50～75 → 力量 25～50<br>敏捷 50～75 → 敏捷 25～50<br>精力 50～75 → 精力 25～50<br>体力 50～75 → 体力 25～50</td>
+</tr>
+<tr>
+<td>拉斯玛的冥河之手</td>
+<td>快速施法速度 25% → 快速施法速度 40%</td>
+</tr>
+<tr>
+<td>雷神之锤</td>
+<td>击中时50%触发40级连锁闪电 → 击中时30%触发25级连锁闪电。</td>
+</tr>
+<tr>
+<td>低语</td>
+<td>所有技能 1～4 → 所有技能 1</td>
+</tr>
+<tr>
+<td>末日之刃</td>
+<td>击中时75%触发50级火风暴 → 击中时75%触发50级火山爆。新制作的末日之刃装备后自动运行30级毁天灭地；保留原伤害、范围和协同，已有武器不迁移。</td>
+</tr>
+<tr>
+<td>广域毁灭</td>
+<td>近战溅射范围 10～12 → 近战溅射范围 15</td>
+</tr>
+<tr>
+<td>低语骷髅</td>
+<td>穿透几率 20～25% → 穿透几率 55～60%</td>
+</tr>
+<tr>
+<td>死亡的平衡</td>
+<td>增强伤害 25～30% → 增强伤害 20%</td>
+</tr>
+<tr>
+<td>卡夏之殇</td>
+<td>亚马逊所有技能 2～3 → 所有技能 1<br>增强伤害 100～130% → 增强伤害 50～80%</td>
+</tr>
+<tr>
+<td>血肉熔合</td>
+<td>所有元素抗性上限 1～4% → 所有元素抗性上限 5～8%<br>所有抗性 -50～-30% → 所有抗性 -10～-5%<br>最大物理抗性 1～3% → 最大物理抗性 5～10%</td>
+</tr>
+<tr>
+<td>剧毒纺锤</td>
+<td>新增：穿透几率 30～40%</td>
+</tr>
+<tr>
+<td>冰川风暴</td>
+<td>新增：穿透几率 30～40%</td>
+</tr>
+<tr>
+<td>金缕帽</td>
+<td>所有抗性 40～50% → 所有抗性 10～20%<br>魔法装备获取几率 45～50% → 魔法装备获取几率 15～20%</td>
+</tr>
+<tr>
+<td>时空之衣</td>
+<td>法力上限提高 15～20% → 法力上限提高 20～25%</td>
+</tr>
+<tr>
+<td>地狱锻铸·广域毁灭</td>
+<td>技能范围 2～3% → 技能范围 5%</td>
+</tr>
+<tr>
+<td>地狱锻铸·蜘蛛之网</td>
+<td>最大毒素抗性 10～15% → 敌人毒素抗性降低 10～15%</td>
+</tr>
+<tr>
+<td>时光浪潮</td>
+<td>技能频率 20～30% → 技能频率 30～40%</td>
+</tr>
+<tr>
+<td>地狱锻铸·美杜莎的凝视</td>
+<td>新增：快速施法速度 30～40%</td>
+</tr>
+<tr>
+<td>庇护之殇</td>
+<td>新增：施法时20%触发45级牙</td>
+</tr>
+<tr>
+<td>法拉之悔</td>
+<td>冰冷技能伤害 10～15% → 冰冷技能伤害 15～20%<br>敌人冰冷抗性降低 5～10% → 敌人冰冷抗性降低 10～15%</td>
+</tr>
+<tr>
+<td>地狱锻铸·寡妇制造者</td>
+<td>+6～10 奥术龙卷射击（跨职业技能） → +1～3 奥术龙卷射击（跨职业技能）</td>
+</tr>
+<tr>
+<td>地狱锻铸·旭日东升</td>
+<td>施法时8%触发35级巨型陨石 → 施法时8%触发15级巨型陨石</td>
+</tr>
+<tr>
+<td>地狱锻铸·碧蓝怒火</td>
+<td>击中时15%触发60级黑暗契约 → 击中时15%触发20级黑暗契约</td>
+</tr>
+<tr>
+<td>地狱锻铸·拉斯玛的冥河之手</td>
+<td>快速施法速度 25% → 快速施法速度 40%<br>+1～2 诅咒技能 → +2～3 诅咒技能</td>
+</tr>
+<tr>
+<td>地狱锻铸·泰瑞尔的力量</td>
+<td>增强伤害 150～200% → 增强伤害 200～250%</td>
+</tr>
+<tr>
+<td>地狱锻铸·钢铁甲壳</td>
+<td>击中时8%触发12级衰老 → 击中时8%触发21级衰老</td>
+</tr>
+<tr>
+<td>无尽之衣（朴素长袍）</td>
+<td>恢复去除镶嵌物配方：无尽之衣＋1把普通钥匙。无限钥匙不能用于去镶嵌配方，避免被消耗。<br>分解白袍固定产出1个机会宝珠碎片，不再按精英暗金产出3个；无限钥匙分解时保留。</td>
+</tr>
+<tr>
+<td>巴尔的通行证</td>
+<td>火焰技能伤害 5～10% → 火焰技能伤害 10～15%</td>
+</tr>
+<tr>
+<td>巴尔的喘息</td>
+<td>闪电技能伤害 5～10% → 闪电技能伤害 10～15%</td>
+</tr>
+<tr>
+<td>巴尔之握</td>
+<td>冰冷技能伤害 5～10% → 冰冷技能伤害 10～15%</td>
+</tr>
+<tr>
+<td>驯服</td>
+<td>所有技能 1 → 所有技能 2</td>
+</tr>
+<tr>
+<td>幽灵板甲</td>
+<td>所有技能 1 → 所有技能 2</td>
+</tr>
+<tr>
+<td>凯恩的智慧</td>
+<td>获得经验 25～40% → 获得经验 10%</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="item-passives">装备被动 Item Passives</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>装备</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>兄弟会的召唤</td>
+<td>四种元素精通总和转换为魔法精通的比例：30% → 10%。</td>
+</tr>
+<tr>
+<td>赋能之魂</td>
+<td>基础准确率高于2000时，每10点准确率+1伤害 → 每40点+1伤害；</td>
+</tr>
+<tr>
+<td>超然心智（元素形态）</td>
+<td>法力门槛：高于2000 → 高于2500；最大法力转换为施法速度：1% → 2%；转换为元素精通：2% → 1%。未改魔法形态。</td>
+</tr>
+<tr>
+<td>驯服</td>
+<td>按火、冰、雷、毒各自最大抗性上限的30%获得对应元素穿透，向上取整；采用8键详细人物面板右侧“/最大值”口径，当前封顶90。参考75→23、85→26、90→27。</td>
+</tr>
+<tr>
+<td>雷神之锤</td>
+<td>每40力量获得5%闪电精通与穿透 → 每100力量获得5%；每1力量+3闪电伤害上限保持。</td>
+</tr>
+<tr>
+<td>命运印记</td>
+<td>基础最大伤害转换为物理穿透的比例：1% → 5%。</td>
+</tr>
+<tr>
+<td>时间膨胀</td>
+<td>精力门槛：不低于250 → 不低于350；提供的冷却缩减：20% → 30%。</td>
+</tr>
+<tr>
+<td>万物归无</td>
+<td>敏捷高于300时：每15敏捷+1%致命攻击 → 每30敏捷+1%；每30敏捷+1%致命上限 → 每60敏捷+1%。</td>
+</tr>
+<tr>
+<td>斯瓦林</td>
+<td>实际格挡几率转换为物理减伤：约1/3 → 1/2；转换为物理吸收：8% → 10%。保留实际计算的80%格挡上限。</td>
+</tr>
+<tr>
+<td>淬炼之躯</td>
+<td>力量高于450时，每10力量使生命上限+1% → 每15力量+1%；门槛保持，按总力量计算。</td>
+</tr>
+<tr>
+<td>原罪</td>
+<td>对应元素／魔法穿透转换为额外精通的比例：100% → 50%。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-115">持续恢复</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>装备</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法师之血／枯槁者恢复形态</td>
+<td>法师之血恢复形态、枯槁者恢复形态与破坏者三阶统一每秒恢复2%最大生命；法师之血同时每秒直接恢复4%最大法力。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-116">灵气</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>灵气</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>脆弱灵气</td>
+<td>起始降低物理抗性15 → 7，每级仍增加1；无额外灵气效果时，16级降低22点。装备赋予的12～16级灵气等级不变。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="runewords">符文之语 Runewords</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>符文之语</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>纯真</td>
+<td>装备赋予的刀刃之盾：10～15级 → 10～12级。</td>
+</tr>
+</tbody></table></div>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>符文之语</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>迪勒瑞姆主动变身</td>
+<td>符文之语接入原生主动变身技能。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="sets">套装 Set Items</h2>
+<h3 id="section-117">套装部件</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>部件</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>不朽之王的碎魂者</td>
+<td>压碎性打击几率35%～40% → 固定25%。</td>
+</tr>
+<tr>
+<td>塔格奥之手</td>
+<td>四件套奖励的陨石技能20级 → 40级。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-118">完整套装奖励</h3>
+<p>七职业套装额外增加2级本职业技能，其余列出的套装额外增加2级所有技能。均在原有完整奖励上增加；下表同时列出最终技能加成。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>套装</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>希弗伯的法衣</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>萨鲁斯的防御</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>克雷得劳的支柱</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>依雷撒的精铣炉</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>依森哈德的武器室</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>维达拉的配备</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>米拉伯佳的雪茄</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>卡珊的陷阱</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>坦克雷的战斗工具</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>西刚的全套刀剑</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>地狱的工具</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>狂战士的军火库</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>死亡的伪装</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>天上的衣服</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>北极装置</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>阿卡娜的诡计</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+3。</td>
+</tr>
+<tr>
+<td>娜塔亚的非难</td>
+<td>在原完整奖励上额外+2刺客所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>艾尔多的守卫</td>
+<td>在原完整奖励上额外+2德鲁伊所有技能；完整奖励为+5。</td>
+</tr>
+<tr>
+<td>不朽之王</td>
+<td>在原完整奖励上额外+2野蛮人所有技能；完整奖励为+5。</td>
+</tr>
+<tr>
+<td>塔－拉夏的外袍</td>
+<td>在原完整奖励上额外+2法师所有技能；完整奖励为+5。</td>
+</tr>
+<tr>
+<td>格瑞斯华尔德的传奇</td>
+<td>在原完整奖励上额外+2圣骑士所有技能；完整奖励为+5。</td>
+</tr>
+<tr>
+<td>塔格奥的化身</td>
+<td>在原完整奖励上额外+2死灵法师所有技能；完整奖励为+5。</td>
+</tr>
+<tr>
+<td>马维娜之战斗诗歌</td>
+<td>在原完整奖励上额外+2亚马逊所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>门徒</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>天堂的信徒</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>孤儿的呼唤</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>华宁的威严</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>沙撒璧的雄伟贡品</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>布尔凯索的孩子</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+4。</td>
+</tr>
+<tr>
+<td>牛魔王之皮甲</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+2。</td>
+</tr>
+<tr>
+<td>娜吉的古代遗迹</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+3。</td>
+</tr>
+<tr>
+<td>山德的愚行</td>
+<td>在原完整奖励上额外+2所有技能；完整奖励为+3。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-119">主动变身</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>套装</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>奶牛套装主动变身</td>
+<td>接入原生主动奶牛变身技能。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="sacred-orbs">圣化宝珠 Sacred Orbs</h2>
+<h3 id="section-120">效果调整</h3>
+<p>按装备部位、品质及不同形态分别生效。下表列出改动项，其余配方效果保留。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>圣化宝珠</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>圣化宝珠·橡树之心</td>
+<td>橡木智者聚气（4级、25次）→ +1所有技能。</td>
+</tr>
+<tr>
+<td>圣化宝珠·永恒</td>
+<td>额外复生者上限：6 → 12；其他配方效果保留。</td>
+</tr>
+<tr>
+<td>圣化宝珠·轻风</td>
+<td>非法杖的龙卷风／小旋风触发等级：35 → 45，概率仍各18%。法杖独立分支保留35级两种触发，并增加5%施法触发9级飓风装甲。</td>
+</tr>
+<tr>
+<td>圣化宝珠·回响</td>
+<td>穿透几率：20%～30% → 30%～40%。</td>
+</tr>
+<tr>
+<td>圣化宝珠·烙印</td>
+<td>20%致命攻击 → 20%～30%穿透几率。适用弓／弩；其余按现行四条效果。</td>
+</tr>
+<tr>
+<td>圣化宝珠·妒忌</td>
+<td>+2亚马逊被动与魔法技能 → 80%～100%增强伤害；降低敌人毒抗12%～16% → 40%攻击速度。+12幻影投掷及5%吸血保留。</td>
+</tr>
+<tr>
+<td>圣化宝珠·谵妄</td>
+<td>+261防御 → +1所有技能。三项原触发效果保留；</td>
+</tr>
+<tr>
+<td>圣化宝珠·毒液</td>
+<td>+6毒素打击 → +3毒素打击。</td>
+</tr>
+<tr>
+<td>圣化宝珠·荒寂</td>
+<td>降低敌人物理抗性：15%～20% → 5%～10%；增强伤害：140%～170% → 50%～80%。脆弱灵气等级与致命攻击保留。</td>
+</tr>
+<tr>
+<td>圣化宝珠·原理</td>
+<td>25级圣光弹的击中触发概率：75% → 15%。</td>
+</tr>
+<tr>
+<td>圣化宝珠·崇高</td>
+<td>净化灵气：3～5级 → 13～15级。增强防御配方保持130%～150%；</td>
+</tr>
+<tr>
+<td>圣化宝珠·飞龙（胸甲）</td>
+<td>圣火灵气：12级 → 18级；稀有／手工分支以+4%最大闪电抗性替换暗金分支的九头火蛇触发。</td>
+</tr>
+<tr>
+<td>圣化宝珠·飞龙（盾牌）</td>
+<td>圣火灵气：12级 → 18级；稀有／手工分支以+4%最大闪电抗性替换暗金分支的400～550防御。</td>
+</tr>
+<tr>
+<td>圣化宝珠·幽暗</td>
+<td>170%～230%增强防御 → 可额外施加1个诅咒。</td>
+</tr>
+<tr>
+<td>圣化宝珠·喧嚣</td>
+<td>20%打击恢复速度 → 20%移动速度；暗金技能频率保持5%～8%，稀有／手工分支现为5%～10%。</td>
+</tr>
+<tr>
+<td>圣化宝珠·纯真</td>
+<td>装备赋予的刀刃之盾统一为10～12级，覆盖暗金、手工、亮金三类圣化；15%～20%技能范围 → 100%增强防御。既有装备不自动改级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·背叛</td>
+<td>击中触发毒牙：25%概率／15级 → 15%概率／25级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·野蔷薇</td>
+<td>+300防御 → 装备时赋予18级荆棘灵气。</td>
+</tr>
+<tr>
+<td>圣化宝珠·降雨</td>
+<td>击中小旋风：20%／25级 → 35%／35级；被击中飓风装甲：8%／15级 → 25%／25级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·白骨</td>
+<td>击中触发：30%／25级骨矛 → 15%／30级碎髓。</td>
+</tr>
+<tr>
+<td>圣化宝珠·凤凰（盾牌）</td>
+<td>20%击中触发40级火焰风暴 → 20%击中触发40级火山爆；350～400对远程防御 → 80%～100%增强伤害。</td>
+</tr>
+<tr>
+<td>圣化宝珠·圣堂</td>
+<td>格挡几率：20% → 40%；所有抗性：40～50 → 20～30。</td>
+</tr>
+<tr>
+<td>圣化宝珠·破碎之墙</td>
+<td>160%～200%增强防御 → +1所有技能。</td>
+</tr>
+<tr>
+<td>圣化宝珠·欢欣</td>
+<td>35级降低抗性触发概率：30% → 12%；14%击中触发的火山爆：46级 → 25级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·庇护</td>
+<td>天堂之拳触发等级：40级 → 25级；概率25%不变。非法杖／魔杖为击中触发，法杖／魔杖为施法触发。</td>
+</tr>
+<tr>
+<td>圣化宝珠·裂缝</td>
+<td>26%击中触发龙卷风：30级 → 40级；24%击中触发冰封球：25级 → 35级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·无限</td>
+<td>非法杖：25%击中触发20级连锁闪电 → 25%击中触发30级闪电齐射；法杖：15%施法触发20级连锁闪电 → 15%施法触发30级闪电齐射，飓风装甲由2%／15级 → 5%／20级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·遵从</td>
+<td>压碎几率：40% → 25%；30%击杀触发的火焰强化：21级 → 31级。</td>
+</tr>
+<tr>
+<td>圣化宝珠·凤凰（全部武器）</td>
+<td>法杖的20%施法触发40级火焰风暴 → 20%施法触发30级火山爆；非法杖原20%击中触发40级火焰风暴保留。</td>
+</tr>
+<tr>
+<td>圣化宝珠·毁灭</td>
+<td>法杖陨石：15%／45级 → 10%／25级；霜之新星：20%／35级 → 20%／45级；新星：15%／40级 → 5%／45级。保留8%／35级熔浆巨岩；非法杖按现行分支保留。</td>
+</tr>
+<tr>
+<td>圣化宝珠·记忆</td>
+<td>50%增强防御 → +3能量护盾（限法师）。</td>
+</tr>
+<tr>
+<td>圣化宝珠·追猎</td>
+<td>180～220对远程防御 → 20%移动速度；击杀触发1级猛攻概率：10% → 30%。</td>
+</tr>
+<tr>
+<td>圣化宝珠·顺风</td>
+<td>30%魔法物品获取率 → 30%移动速度。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-121">精神盾圣化珠</h3>
+<ul>
+<li>原59～82法力替换为 <strong>+1所有技能</strong>，覆盖暗金、手工和稀有盾牌。</li>
+<li>保留11～22体力、25～35%施法速度与3～8魔法吸收。</li>
+<li>已生成的装备不会自动重做圣化属性。</li>
+</ul>
+<p>成品圣化宝珠的分难度掉落规则见「掉落调整」。</p>
+</section><section class="note-section"><h2 id="affixes">词缀 Affixes</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>词缀</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内脏词缀</td>
+<td>75级、301%～400%增强伤害，按现有部位与排除规则允许稀有／制作获取；不重复新增。</td>
+</tr>
+<tr>
+<td>黄装物理减伤词缀</td>
+<td>头盔、衣服、盾牌补充4%～6%与6%～10%物理减伤前缀；与SOE原高减伤后缀属于不同词缀族。</td>
+</tr>
+<tr>
+<td>黄装最大抗性词缀</td>
+<td>腰带／盾牌补充各元素最大抗性2%～3%，盾牌另有3%～5%档位。</td>
+</tr>
+<tr>
+<td>珠宝法术伤害词缀</td>
+<td>补充2%～3%与3%～5%各类法术伤害词缀。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="crafting">手工制作 Crafting</h2>
+<p>同步S14对应手工家族的指定属性，保留SOE材料用量、额外制作入口和无形处理规则。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>手工类别</th>
+<th>更新后指定属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>打击系头盔</td>
+<td>穿透攻击10～15%；准确率100～150</td>
+</tr>
+<tr>
+<td>打击系项链</td>
+<td>穿透攻击10～15%；准确率100～150</td>
+</tr>
+<tr>
+<td>丰饶系头盔、腰带、武器</td>
+<td>魔法物品获得率15～25%；额外金币25～40%</td>
+</tr>
+<tr>
+<td>丰饶系手套、鞋子</td>
+<td>魔法物品获得率10～20%；额外金币20～30%</td>
+</tr>
+<tr>
+<td>丰饶系项链</td>
+<td>额外金币30～50%</td>
+</tr>
+<tr>
+<td>丰饶系戒指</td>
+<td>额外金币20～30%</td>
+</tr>
+<tr>
+<td>丰饶系箭袋</td>
+<td>额外金币25～40%</td>
+</tr>
+<tr>
+<td>鲜血系衣服、盾牌</td>
+<td>最大生命提高5～7%</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="corruptions">腐化 Corruptions</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>防具腐化</td>
+<td>衣服诅咒／快速施法档位及头盔、盾牌结果按S14对应入口接入；相关防具腐化的诅咒词条改为诅咒抗性，纠正原先减少诅咒持续时间的结果。</td>
+</tr>
+<tr>
+<td>T4地城腐化</td>
+<td>接入S14对应十档腐化结果及重置标记；普通地图保留SOE曲线。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="recipes">机会宝珠与合成 Recipes</h2>
+<h3 id="section-122">机会宝珠分档</h3>
+<p>精英底材按对应暗金稀有度分为 <strong>1%、3%、5%、7%、10%</strong> 五档。以下概率为成功生成暗金的总概率；同底材内继续沿用既有暗金权重。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>精英底材</th>
+<th align="right">成功率</th>
+<th>稀有度定档参照</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>腕剑</td>
+<td align="right">10%</td>
+<td>碧玉爪</td>
+</tr>
+<tr>
+<td>战拳</td>
+<td align="right">10%</td>
+<td>幻影幽语</td>
+</tr>
+<tr>
+<td>斗腰刀</td>
+<td align="right">10%</td>
+<td>影杀者</td>
+</tr>
+<tr>
+<td>猛禽爪</td>
+<td align="right">7%</td>
+<td>火蜥蜴之爪</td>
+</tr>
+<tr>
+<td>符文爪</td>
+<td align="right">10%</td>
+<td>追猎者的刺杀</td>
+</tr>
+<tr>
+<td>战钺</td>
+<td align="right">10%</td>
+<td>刀锋边缘</td>
+</tr>
+<tr>
+<td>双头斧</td>
+<td align="right">10%</td>
+<td>符文大师</td>
+</tr>
+<tr>
+<td>战刺</td>
+<td align="right">7%</td>
+<td>鹤嘴</td>
+</tr>
+<tr>
+<td>狂战士斧</td>
+<td align="right">7%</td>
+<td>死亡之刀</td>
+</tr>
+<tr>
+<td>银刃斧</td>
+<td align="right">10%</td>
+<td>永恒边界</td>
+</tr>
+<tr>
+<td>斩首斧</td>
+<td align="right">10%</td>
+<td>地狱毁灭者</td>
+</tr>
+<tr>
+<td>豪杰斧</td>
+<td align="right">7%</td>
+<td>希梅斯特的掠夺</td>
+</tr>
+<tr>
+<td>荣光之斧</td>
+<td align="right">7%</td>
+<td>刽子手的裁决</td>
+</tr>
+<tr>
+<td>鬼魂法杖</td>
+<td align="right">7%</td>
+<td>幽冥魂器</td>
+</tr>
+<tr>
+<td>巫妖法杖</td>
+<td align="right">7%</td>
+<td>白骨阴影</td>
+</tr>
+<tr>
+<td>破隐法杖</td>
+<td align="right">3%</td>
+<td>死亡之网</td>
+</tr>
+<tr>
+<td>战仪杖</td>
+<td align="right">10%</td>
+<td>诺德的蚀肉药</td>
+</tr>
+<tr>
+<td>强威权杖</td>
+<td align="right">5%</td>
+<td>天堂之光</td>
+</tr>
+<tr>
+<td>炽天使法杖</td>
+<td align="right">7%</td>
+<td>阿卡拉特的奉献</td>
+</tr>
+<tr>
+<td>神使之杖</td>
+<td align="right">3%</td>
+<td>法拉之忆</td>
+</tr>
+<tr>
+<td>暴君之棒</td>
+<td align="right">10%</td>
+<td>恶魔爪牙</td>
+</tr>
+<tr>
+<td>恶魔流星锤</td>
+<td align="right">10%</td>
+<td>巴拉那之星</td>
+</tr>
+<tr>
+<td>天罚之锤</td>
+<td align="right">3%</td>
+<td>暴风之结</td>
+</tr>
+<tr>
+<td>传说之锤</td>
+<td align="right">5%</td>
+<td>史恰佛之锤</td>
+</tr>
+<tr>
+<td>食人魔之锤</td>
+<td align="right">10%</td>
+<td>风之锤</td>
+</tr>
+<tr>
+<td>雷锤</td>
+<td align="right">1%</td>
+<td>雷神之锤</td>
+</tr>
+<tr>
+<td>土耳其剑</td>
+<td align="right">10%</td>
+<td>魔灵杀手</td>
+</tr>
+<tr>
+<td>优雅之剑</td>
+<td align="right">10%</td>
+<td>血月</td>
+</tr>
+<tr>
+<td>幻化之刃</td>
+<td align="right">5%</td>
+<td>碧蓝怒火</td>
+</tr>
+<tr>
+<td>神秘之剑</td>
+<td align="right">7%</td>
+<td>冰霜之风</td>
+</tr>
+<tr>
+<td>秘仪之剑</td>
+<td align="right">7%</td>
+<td>尼拉塞克的恶意</td>
+</tr>
+<tr>
+<td>高地之剑</td>
+<td align="right">10%</td>
+<td>李奥瑞克王的秘银之刃</td>
+</tr>
+<tr>
+<td>炎魔之刃</td>
+<td align="right">10%</td>
+<td>火焰号叫</td>
+</tr>
+<tr>
+<td>冠军之剑</td>
+<td align="right">7%</td>
+<td>末日毁灭者</td>
+</tr>
+<tr>
+<td>巨神之剑</td>
+<td align="right">7%</td>
+<td>厌恶</td>
+</tr>
+<tr>
+<td>巨神之刃</td>
+<td align="right">7%</td>
+<td>祖父</td>
+</tr>
+<tr>
+<td>骸骨小刀</td>
+<td align="right">10%</td>
+<td>巫师之刺</td>
+</tr>
+<tr>
+<td>秘银小刀</td>
+<td align="right">10%</td>
+<td>破碎之刃</td>
+</tr>
+<tr>
+<td>齿缘小刀</td>
+<td align="right">7%</td>
+<td>裂肉者</td>
+</tr>
+<tr>
+<td>传说尖刺</td>
+<td align="right">7%</td>
+<td>鬼火焰</td>
+</tr>
+<tr>
+<td>飞斧</td>
+<td align="right">10%</td>
+<td>碎片贪婪者</td>
+</tr>
+<tr>
+<td>翼刀</td>
+<td align="right">7%</td>
+<td>战争之鸟</td>
+</tr>
+<tr>
+<td>翼斧</td>
+<td align="right">7%</td>
+<td>撕裂者</td>
+</tr>
+<tr>
+<td>炎魔长矛</td>
+<td align="right">10%</td>
+<td>恶魔之王</td>
+</tr>
+<tr>
+<td>鬼魂尖枪</td>
+<td align="right">7%</td>
+<td>死灵夜翔</td>
+</tr>
+<tr>
+<td>翼鱼叉</td>
+<td align="right">7%</td>
+<td>石像鬼之噬</td>
+</tr>
+<tr>
+<td>亥伯龙之矛</td>
+<td align="right">10%</td>
+<td>爱理欧克之针</td>
+</tr>
+<tr>
+<td>刺人枪</td>
+<td align="right">10%</td>
+<td>蝮蛇叉</td>
+</tr>
+<tr>
+<td>鬼魂之矛</td>
+<td align="right">7%</td>
+<td>乌迪贤的觉醒</td>
+</tr>
+<tr>
+<td>战枪</td>
+<td align="right">3%</td>
+<td>阿斯卡里的和风</td>
+</tr>
+<tr>
+<td>食人魔之斧</td>
+<td align="right">10%</td>
+<td>破骨</td>
+</tr>
+<tr>
+<td>巨神之斧</td>
+<td align="right">10%</td>
+<td>巨型残虐者</td>
+</tr>
+<tr>
+<td>锐利之斧</td>
+<td align="right">10%</td>
+<td>死神的丧钟</td>
+</tr>
+<tr>
+<td>神秘之斧</td>
+<td align="right">7%</td>
+<td>盗墓者</td>
+</tr>
+<tr>
+<td>鲛尾巨斧</td>
+<td align="right">7%</td>
+<td>暴风尖塔</td>
+</tr>
+<tr>
+<td>长老之杖</td>
+<td align="right">7%</td>
+<td>安戴尔的智慧</td>
+</tr>
+<tr>
+<td>树皮之杖</td>
+<td align="right">5%</td>
+<td>硫磺之雨</td>
+</tr>
+<tr>
+<td>执政官之杖</td>
+<td align="right">3%</td>
+<td>梅格之歌的教训</td>
+</tr>
+<tr>
+<td>刀锋弓</td>
+<td align="right">10%</td>
+<td>星流霆击</td>
+</tr>
+<tr>
+<td>十字军之弓</td>
+<td align="right">7%</td>
+<td>鹰号角</td>
+</tr>
+<tr>
+<td>庇护之弓</td>
+<td align="right">7%</td>
+<td>戮夫刃</td>
+</tr>
+<tr>
+<td>九头蛇弓</td>
+<td align="right">5%</td>
+<td>风之力</td>
+</tr>
+<tr>
+<td>巨神十字弓</td>
+<td align="right">10%</td>
+<td>地狱拷问</td>
+</tr>
+<tr>
+<td>恶魔十字弓</td>
+<td align="right">7%</td>
+<td>内脏吸管</td>
+</tr>
+<tr>
+<td>怪异之球</td>
+<td align="right">7%</td>
+<td>艾斯屈塔的脾气</td>
+</tr>
+<tr>
+<td>恶魔之心</td>
+<td align="right">7%</td>
+<td>灰烬之誓</td>
+</tr>
+<tr>
+<td>漩涡球</td>
+<td align="right">7%</td>
+<td>天陨</td>
+</tr>
+<tr>
+<td>次元碎片</td>
+<td align="right">7%</td>
+<td>死亡深度</td>
+</tr>
+<tr>
+<td>女族长之弓</td>
+<td align="right">7%</td>
+<td>血鸟的袭击</td>
+</tr>
+<tr>
+<td>大院长之弓</td>
+<td align="right">7%</td>
+<td>灾祸黑檀</td>
+</tr>
+<tr>
+<td>女族长之矛</td>
+<td align="right">7%</td>
+<td>石乌鸦</td>
+</tr>
+<tr>
+<td>女族长之长矛</td>
+<td align="right">7%</td>
+<td>泽瑞尔的决心</td>
+</tr>
+<tr>
+<td>女族长之标枪</td>
+<td align="right">7%</td>
+<td>雷击</td>
+</tr>
+<tr>
+<td>权冠</td>
+<td align="right">5%</td>
+<td>格利风之眼</td>
+</tr>
+<tr>
+<td>军帽</td>
+<td align="right">7%</td>
+<td>谐角之冠</td>
+</tr>
+<tr>
+<td>活动头盔</td>
+<td align="right">7%</td>
+<td>钢影</td>
+</tr>
+<tr>
+<td>巨贝头盔</td>
+<td align="right">7%</td>
+<td>智者的反抗</td>
+</tr>
+<tr>
+<td>螺旋头盔</td>
+<td align="right">7%</td>
+<td>钢铁面纱</td>
+</tr>
+<tr>
+<td>头冠</td>
+<td align="right">7%</td>
+<td>年纪之冠</td>
+</tr>
+<tr>
+<td>恶魔头盖骨面具</td>
+<td align="right">7%</td>
+<td>安达利尔的面貌</td>
+</tr>
+<tr>
+<td>灰暮寿衣</td>
+<td align="right">7%</td>
+<td>奥玛斯的长袍</td>
+</tr>
+<tr>
+<td>线羊毛皮甲</td>
+<td align="right">7%</td>
+<td>斗士的祸根</td>
+</tr>
+<tr>
+<td>钻石锁子甲</td>
+<td align="right">7%</td>
+<td>幽灵之肤</td>
+</tr>
+<tr>
+<td>巨型鳞铠胸甲</td>
+<td align="right">7%</td>
+<td>幽灵板甲</td>
+</tr>
+<tr>
+<td>炎魔皮板甲</td>
+<td align="right">7%</td>
+<td>阿凯尼的荣耀</td>
+</tr>
+<tr>
+<td>海妖壳甲</td>
+<td align="right">7%</td>
+<td>海王利维亚桑</td>
+</tr>
+<tr>
+<td>阴影铠甲</td>
+<td align="right">7%</td>
+<td>钢铁铠甲</td>
+</tr>
+<tr>
+<td>神圣盔甲</td>
+<td align="right">1%</td>
+<td>泰瑞尔的力量</td>
+</tr>
+<tr>
+<td>执政官铠甲</td>
+<td align="right">7%</td>
+<td>炼狱</td>
+</tr>
+<tr>
+<td>防寒圆盾</td>
+<td align="right">7%</td>
+<td>瓦瑞夫的令牌</td>
+</tr>
+<tr>
+<td>月精灵护盾</td>
+<td align="right">7%</td>
+<td>黑橡树盾</td>
+</tr>
+<tr>
+<td>亥伯龙盾</td>
+<td align="right">7%</td>
+<td>暮光倒影</td>
+</tr>
+<tr>
+<td>统治者大盾</td>
+<td align="right">7%</td>
+<td>暴风之盾</td>
+</tr>
+<tr>
+<td>圣盾</td>
+<td align="right">7%</td>
+<td>梅杜莎的凝视</td>
+</tr>
+<tr>
+<td>保护盾牌</td>
+<td align="right">3%</td>
+<td>斯瓦林</td>
+</tr>
+<tr>
+<td>荆棘连指手套</td>
+<td align="right">7%</td>
+<td>泰坦之握</td>
+</tr>
+<tr>
+<td>吸血鬼骸骨手套</td>
+<td align="right">7%</td>
+<td>卓古拉之握</td>
+</tr>
+<tr>
+<td>吸血鬼手套</td>
+<td align="right">7%</td>
+<td>吸魂者</td>
+</tr>
+<tr>
+<td>十字军铁手套</td>
+<td align="right">7%</td>
+<td>秘术师</td>
+</tr>
+<tr>
+<td>食人魔铁手套</td>
+<td align="right">5%</td>
+<td>碎钢</td>
+</tr>
+<tr>
+<td>飞龙皮靴</td>
+<td align="right">7%</td>
+<td>人鱼的齿轮</td>
+</tr>
+<tr>
+<td>圣甲虫壳靴</td>
+<td align="right">7%</td>
+<td>沙暴之旅</td>
+</tr>
+<tr>
+<td>骸骨靴</td>
+<td align="right">7%</td>
+<td>骨髓行走</td>
+</tr>
+<tr>
+<td>镜化靴</td>
+<td align="right">7%</td>
+<td>毁灭之痕</td>
+</tr>
+<tr>
+<td>极速靴</td>
+<td align="right">5%</td>
+<td>影舞者</td>
+</tr>
+<tr>
+<td>蛛网腰带</td>
+<td align="right">7%</td>
+<td>蜘蛛之网</td>
+</tr>
+<tr>
+<td>吸血鬼獠牙腰带</td>
+<td align="right">7%</td>
+<td>吸血圣王之圈</td>
+</tr>
+<tr>
+<td>秘银腰带</td>
+<td align="right">7%</td>
+<td>维尔登戈的心结</td>
+</tr>
+<tr>
+<td>巨神腰带</td>
+<td align="right">5%</td>
+<td>猎首</td>
+</tr>
+<tr>
+<td>骸骨面罩</td>
+<td align="right">7%</td>
+<td>巨骷髅</td>
+</tr>
+<tr>
+<td>洞穴巨魔巢穴骨盾</td>
+<td align="right">7%</td>
+<td>猎头人的荣耀</td>
+</tr>
+<tr>
+<td>刀刃刺盾</td>
+<td align="right">7%</td>
+<td>尖刺根源</td>
+</tr>
+<tr>
+<td>血腥之灵</td>
+<td align="right">7%</td>
+<td>地狱之吻</td>
+</tr>
+<tr>
+<td>太阳之灵</td>
+<td align="right">5%</td>
+<td>兽穴之母</td>
+</tr>
+<tr>
+<td>大地之灵</td>
+<td align="right">5%</td>
+<td>灵魂看守者</td>
+</tr>
+<tr>
+<td>天空之灵</td>
+<td align="right">7%</td>
+<td>乌鸦之王</td>
+</tr>
+<tr>
+<td>幽梦之灵</td>
+<td align="right">3%</td>
+<td>乌尔萨的噩梦</td>
+</tr>
+<tr>
+<td>暴怒面甲</td>
+<td align="right">7%</td>
+<td>狼嚎</td>
+</tr>
+<tr>
+<td>毁灭者头盔</td>
+<td align="right">7%</td>
+<td>恶魔号角的边缘</td>
+</tr>
+<tr>
+<td>征服者皇冠面甲</td>
+<td align="right">7%</td>
+<td>海拉柏得的国度</td>
+</tr>
+<tr>
+<td>守护者皇冠面甲</td>
+<td align="right">1%</td>
+<td>穿脉者</td>
+</tr>
+<tr>
+<td>神圣小盾</td>
+<td align="right">7%</td>
+<td>朝露</td>
+</tr>
+<tr>
+<td>神圣轻圆盾</td>
+<td align="right">7%</td>
+<td>阿尔玛－尼格拉</td>
+</tr>
+<tr>
+<td>撒卡兰姆盾牌</td>
+<td align="right">5%</td>
+<td>龙鳞</td>
+</tr>
+<tr>
+<td>旋风盾</td>
+<td align="right">7%</td>
+<td>天界卫士</td>
+</tr>
+<tr>
+<td>地狱恶灵颅骨</td>
+<td align="right">5%</td>
+<td>神圣图腾</td>
+</tr>
+<tr>
+<td>监视者之骨</td>
+<td align="right">7%</td>
+<td>殉道者</td>
+</tr>
+<tr>
+<td>女妖之骨</td>
+<td align="right">7%</td>
+<td>骨焰</td>
+</tr>
+<tr>
+<td>血王之骨</td>
+<td align="right">1%</td>
+<td>低语骷髅</td>
+</tr>
+<tr>
+<td>神话腰带</td>
+<td align="right">5%</td>
+<td>法师之血</td>
+</tr>
+<tr>
+<td>雅致圆盾</td>
+<td align="right">1%</td>
+<td>侍从</td>
+</tr>
+<tr>
+<td>虔敬头盔</td>
+<td align="right">1%</td>
+<td>裁决者光环</td>
+</tr>
+<tr>
+<td>猎手兜帽</td>
+<td align="right">5%</td>
+<td>卡夏之殇</td>
+</tr>
+<tr>
+<td>朴素长袍</td>
+<td align="right">7%</td>
+<td>无尽之衣</td>
+</tr>
+<tr>
+<td>实用腰带</td>
+<td align="right">5%</td>
+<td>枯槁者之哀嚎</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-123">末日之刃</h3>
+<ul>
+<li>删除失效旧配方及原固定制作入口。</li>
+<li>白色幻化之刃配合 <strong>1颗机会宝珠</strong>，有几率生成末日之刃。</li>
+<li>保留幻化之刃分支5%的总暗金成功率；光之军刀、碧蓝怒火、末日之刃权重为 <strong>5∶1∶1</strong>。末日之刃单次概率为 <strong>1/140</strong>。</li>
+<li>新制作末日之刃装备后自动运行30级毁天灭地；已有武器不自动迁移。</li>
+</ul>
+</section><section class="note-section"><h2 id="divination-cards">命运卡 Divination Cards</h2>
+<h3 id="section-124">自然掉落</h3>
+<ul>
+<li>永生者、生不如死恢复进入普通T0命运卡池，保留原首领额外掉落来源。</li>
+<li>微调T0、T5命运卡掉率，使其更符合怪物等级分布。</li>
+</ul>
+<h3 id="section-125">兑换规则</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>命运卡</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>药剂师</td>
+<td>10张兑换四药剂形态法师之血 ×1。</td>
+</tr>
+<tr>
+<td>恐惧之眼</td>
+<td>8张兑换三药剂形态法师之血 ×1。</td>
+</tr>
+<tr>
+<td>医者</td>
+<td>10张兑换猎首 ×1。</td>
+</tr>
+<tr>
+<td>永生者</td>
+<td>5张兑换符文：佐德 ×2。</td>
+</tr>
+<tr>
+<td>财富与权力</td>
+<td>12张兑换光颂之瓶 ×1。</td>
+</tr>
+<tr>
+<td>镜中之家</td>
+<td>18张兑换莉莉丝的镜子 ×1。</td>
+</tr>
+<tr>
+<td>无果之爱</td>
+<td>5张兑换符文：查姆 ×2。</td>
+</tr>
+<tr>
+<td>炽天使之恩</td>
+<td>10张兑换泰瑞尔的力量 Tyrael&#39;s Might ×1。</td>
+</tr>
+<tr>
+<td>诱人悬赏</td>
+<td>10张兑换符文：贝 ×2。</td>
+</tr>
+<tr>
+<td>生不如死</td>
+<td>5张兑换符文：扎哈 ×2。</td>
+</tr>
+<tr>
+<td>完美之石</td>
+<td>10张兑换普通乔丹之石×1；移除额外+1所有技能及腐化标记，保留乔丹本身的技能属性。</td>
+</tr>
+<tr>
+<td>孤独战士</td>
+<td>5张兑换命运之抗争 ×1。</td>
+</tr>
+<tr>
+<td>博学者</td>
+<td>5张兑换均衡之符 ×1。</td>
+</tr>
+<tr>
+<td>虹彩之梦</td>
+<td>5张兑换未切割的纯净珠宝 ×1。</td>
+</tr>
+<tr>
+<td>罗网</td>
+<td>5张兑换蜘蛛之网 Arachnid Mesh ×1。</td>
+</tr>
+<tr>
+<td>我见众兄弟</td>
+<td>10张兑换兄弟会的召唤 ×1。</td>
+</tr>
+<tr>
+<td>收割者</td>
+<td>10张兑换死亡的平衡 ×1。</td>
+</tr>
+<tr>
+<td>持盾者</td>
+<td>6张兑换侍从 ×1。</td>
+</tr>
+<tr>
+<td>复仇者</td>
+<td>12张兑换雷神之锤 ×1。</td>
+</tr>
+<tr>
+<td>宝石匠的承诺</td>
+<td>保留规则：3张兑换暗金神话珠宝×1，不采用增加兑换成本的旧建议。</td>
+</tr>
+<tr>
+<td>混乱性情</td>
+<td>1张兑换混沌宝珠 ×5。</td>
+</tr>
+<tr>
+<td>意外之奖</td>
+<td>1张兑换晶化烬魂 ×100。</td>
+</tr>
+<tr>
+<td>更进一步的发明</td>
+<td>5张兑换魔法华丽护符 ×1；物品等级91。</td>
+</tr>
+<tr>
+<td>宝石匠的慈悲</td>
+<td>5张兑换稀有神话珠宝 ×1；物品等级91。</td>
+</tr>
+<tr>
+<td>失落世界</td>
+<td>5张兑换稀有罪恶庇佑所 ×1。</td>
+</tr>
+<tr>
+<td>无尽疆域</td>
+<td>5张兑换稀有苦痛平原 ×1。</td>
+</tr>
+<tr>
+<td>旅程</td>
+<td>5张兑换稀有达肯沙尔荒原 ×1。</td>
+</tr>
+<tr>
+<td>制图师之悦</td>
+<td>5张兑换制图钉·贪婪 ×5。</td>
+</tr>
+<tr>
+<td>制图师</td>
+<td>5张兑换制图钉·贪婪 ×5。</td>
+</tr>
+<tr>
+<td>永不知足</td>
+<td>2张兑换宿敌铭文 ×3。</td>
+</tr>
+<tr>
+<td>伏击</td>
+<td>10张兑换91级刺客 陷阱技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>艺术家</td>
+<td>10张兑换91级刺客 武学艺术技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>黑暗中的苦难</td>
+<td>10张兑换91级刺客 影子训练技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>制弓师之梦</td>
+<td>10张兑换91级亚马逊 弓与弩技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>沉眠诱惑</td>
+<td>10张兑换91级亚马逊 被动与魔法技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>阿瑟盖长矛</td>
+<td>10张兑换91级亚马逊 标枪与长矛技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>元素仪式</td>
+<td>10张兑换91级德鲁伊 元素技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>初民的召唤</td>
+<td>10张兑换91级德鲁伊 召唤技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>兽化</td>
+<td>10张兑换91级德鲁伊 变形技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>诅咒之语</td>
+<td>10张兑换91级死灵法师 诅咒技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>黑暗法师</td>
+<td>10张兑换91级死灵法师 毒素与白骨技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>巫妖</td>
+<td>10张兑换91级死灵法师 召唤技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>天界裁决者</td>
+<td>10张兑换91级圣骑士 战斗技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>圣战士</td>
+<td>10张兑换91级圣骑士 进攻灵气技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>壁垒</td>
+<td>10张兑换91级圣骑士 防御灵气技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>凛冽之风</td>
+<td>10张兑换91级法师 冰冷法术技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>炽烈之火</td>
+<td>10张兑换91级法师 火焰法术技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>风暴将至</td>
+<td>10张兑换91级法师 闪电法术技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>战争领主</td>
+<td>10张兑换91级野蛮人 战吼技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>战斗之裔</td>
+<td>10张兑换91级野蛮人 战斗技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>散兵</td>
+<td>10张兑换91级野蛮人 战斗专精技能护符 ×1；保留原技能系。</td>
+</tr>
+<tr>
+<td>无畏者</td>
+<td>4张兑换暗金belt ×1。</td>
+</tr>
+<tr>
+<td>宝石匠的馈赠</td>
+<td>4张兑换稀有珠宝 ×1；物品等级88。</td>
+</tr>
+<tr>
+<td>大法师的右手</td>
+<td>5张兑换法力风暴 ×1。</td>
+</tr>
+<tr>
+<td>生存专家</td>
+<td>2张兑换炼金宝珠 ×3。</td>
+</tr>
+<tr>
+<td>斥候</td>
+<td>4张兑换地平线宝珠 ×3。</td>
+</tr>
+<tr>
+<td>希望微光</td>
+<td>5张兑换金缕帽 ×1。</td>
+</tr>
+<tr>
+<td>逃出生天</td>
+<td>5张兑换七里之靴 ×1。</td>
+</tr>
+<tr>
+<td>谦恭</td>
+<td>10张兑换无尽之衣 ×1。</td>
+</tr>
+<tr>
+<td>发明家</td>
+<td>10张兑换世界之石碎片 ×20。</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="bug-fixes">错误修复 Bug Fixes</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>更新内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>剧毒花藤（毒藤）</td>
+<td>修复地面毒素伤害异常降低的问题。</td>
+</tr>
+<tr>
+<td>大主教奖励生成与魂石归属</td>
+<td>修复部分首领奖励未正确生成初始属性，以及魂石归属处理失效的问题。</td>
+</tr>
+<tr>
+<td>超级首领分级生命溢出</td>
+<td>修复超级首领在高难度档位下生命值异常降低的问题。</td>
+</tr>
+<tr>
+<td>公会日志刷新</td>
+<td>没有新增或变化记录时不重建公会日志列表，减少刷新引起的滚动跳动。</td>
+</tr>
+<tr>
+<td>地狱锻造收藏</td>
+<td>对应31件白名单地狱锻造装备，在合成成功后为操作者触发圣杯发现</td>
+</tr>
+<tr>
+<td>凯恩的智慧收藏</td>
+<td>新凯恩成功合成时触发对应圣杯发现，核对新底材与实际产物归属。</td>
+</tr>
+<tr>
+<td>末日之刃收藏</td>
+<td>指定末日之刃成功合成时触发圣杯发现。</td>
+</tr>
+<tr>
+<td>驯服收藏</td>
+<td>由三枚巴尔戒指合成驯服时触发圣杯发现。</td>
+</tr>
+<tr>
+<td>打开魔盒收起护符栏</td>
+<td>打开魔盒时自动收起独立护符栏，避免面板遮挡；收起不关闭护符效果。</td>
+</tr>
+<tr>
+<td>物品提示与设置窗口</td>
+<td>护符栏按钮不再遮挡物品提示。D2DX提示框按当前文字和位置统一绘制背景及字形，顶部增加留白，避免黑底高度不足或层级分离。修复设置窗口初始化导致的尺寸异常及重复最小化登记。</td>
+</tr>
+<tr>
+<td>破坏者第三阶持续时间</td>
+<td>修复升华配方中持续时间属性引用断链，恢复对应技能持续时间加成。</td>
+</tr>
+<tr>
+<td>暗金与套装收藏页跨页快存</td>
+<td>暗金、套装收藏页之间可双向快捷存入，物品按自身类别归位，不受这两类页面的亲和开关限制；保留新版原生自动存入与指定页转移的独立判断。</td>
+</tr>
+<tr>
+<td>进房／复活／切武器后的装备效果恢复</td>
+<td>按有效装备和护符恢复物品光环及装备技能。</td>
+</tr>
+<tr>
+<td>同账号多角色进房</td>
+<td>允许同账号多角色同时进房，但只能由持有共享仓库的角色发现圣杯。</td>
+</tr>
+</tbody></table></div>
+<hr>
+<p>内容依据：<a href="https://docs.qq.com/sheet/DT2dHWVR0cGxDRVRP">PD2-SOE S2改动清单</a>完整Excel（2026年11月12日导出）及当前S2改动记录。章节组织参考 <a href="https://wiki.projectdiablo2.cn/w/index.php?title=Patch:Season_14&amp;action=edit">PD2第十四赛季更新说明</a>。</p>
+</section><p id="article-empty" hidden>没有找到相关改动，试试其他关键词或清空搜索。</p></article></div></main><footer class="updates-footer updates-shell"><span>流放圣所 <i>✦</i> SANCTUARY OF EXILE</span><a href="./updates.html">赛季更新档案</a><a href="#top">回到顶部 ↑</a></footer></body></html>

@@ -10,16 +10,70 @@
   <link rel="stylesheet" href="./brand-home.css?v=20261030-1">
   <script src="./mapping-core.js?v=20261030-1" defer></script>
   <script src="./mapping.js?v=20261030-2" defer></script>
-</head>
-<body>
+<link rel="stylesheet" href="./navigation.css"><script defer src="./navigation.js"></script></head>
+<body id="top">
 <a class="skip-link" href="#overview">跳到主要内容</a>
-<header id="top" class="topbar">
-  <div class="shell topbar-inner">
-    <a class="brand" href="./index.html" aria-label="返回流放圣所首页"><span class="brand-mark">✦</span><span><b>流放圣所</b><small>SANCTUARY OF EXILE</small></span></a>
-    <nav class="top-nav" aria-label="页面导航"><a href="#overview">刷图概览</a><a href="#maps">地图图鉴</a><a href="#currency">地图通货</a><a href="#recipes">方块配方</a></nav>
-    <a class="back" href="./index.html">返回首页 <span>↗</span></a>
-  </div>
-</header>
+<!-- site-header:start -->
+<header class="sg-site-header" id="site-header">
+    <div class="sg-header-inner sg-shell">
+      <a class="sg-brand" href="./index.html" aria-label="返回流放圣所首页">
+        <span class="sg-brand-mark" aria-hidden="true"><span>✦</span></span>
+        <span class="sg-brand-wordmark"><strong>流放圣所</strong><small>SANCTUARY OF EXILE</small></span>
+      </a>
+      <nav class="sg-main-nav" id="main-nav" aria-label="主导航"><a href="./index.html">首页</a><a href="./updates.html">赛季更新</a><a href="./damnation.html">服务器设定</a><a href="./ascendancies.html">升华职业</a><a href="./mapping.html" aria-current="page">刷图系统</a><a href="./kiln.html">炼狱熔炉</a><a href="https://bd.wdjwxh.com/">天梯与构筑</a></nav>
+      <div class="sg-header-actions">
+        <button class="sg-search-toggle" type="button" aria-label="搜索资料分类" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+        <div class="sg-archive-index">
+          <button class="sg-archive-index-toggle" type="button" aria-expanded="false" aria-controls="archive-index-panel">资料索引 <span aria-hidden="true">⌄</span></button>
+          <nav class="sg-archive-index-panel" id="archive-index-panel" aria-label="资料索引" hidden>
+            <div class="sg-archive-index-heading"><strong>资料索引</strong><span>选择栏目直达</span></div>
+            <div class="sg-archive-index-list">
+              <div class="sg-archive-index-group">
+                <p>本站页面</p>
+                <a href="./updates.html"><span>赛季更新</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html" style="--index-order:0"><span>服务器设定</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html#journey" style="--index-order:1"><span>新手指南</span><span aria-hidden="true">→</span></a>
+                <a href="./ascendancies.html" style="--index-order:2"><span>升华职业</span><span aria-hidden="true">→</span></a>
+                <a href="./mapping.html" style="--index-order:3"><span>刷图系统</span><span aria-hidden="true">→</span></a>
+                <a href="./kiln.html" style="--index-order:4"><span>炼狱熔炉</span><span aria-hidden="true">→</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>其他服务 <span>↗</span></p>
+                <a href="https://bd.wdjwxh.com/" target="_blank" rel="noopener noreferrer" style="--index-order:5"><span>天梯与人物构筑</span><span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>中文档案馆 <span>↗</span></p>
+                <a href="https://dev.wdjwxh.com/pd2-new/#runewords" target="_blank" rel="noopener noreferrer" style="--index-order:6"><span>符文之语</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#sacreds" target="_blank" rel="noopener noreferrer" style="--index-order:7"><span>圣化物品</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#uniques" target="_blank" rel="noopener noreferrer" style="--index-order:8"><span>暗金装备</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#weapons" target="_blank" rel="noopener noreferrer" style="--index-order:9"><span>武器基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#armors" target="_blank" rel="noopener noreferrer" style="--index-order:10"><span>护甲基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#affixes" target="_blank" rel="noopener noreferrer" style="--index-order:11"><span>装备词缀</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer" style="--index-order:12"><span>腐化图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#cube" target="_blank" rel="noopener noreferrer" style="--index-order:13"><span>方块配方</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#fatecards" target="_blank" rel="noopener noreferrer" style="--index-order:14"><span>命运卡</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#materials" target="_blank" rel="noopener noreferrer" style="--index-order:15"><span>材料图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#skills" target="_blank" rel="noopener noreferrer" style="--index-order:16"><span>技能资料</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#drops" target="_blank" rel="noopener noreferrer" style="--index-order:17"><span>掉率查询</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#changelog" target="_blank" rel="noopener noreferrer" style="--index-order:18"><span>资料更新日志</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <button class="sg-menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="sg-search-panel" id="search-panel" hidden>
+      <div class="sg-search-inner">
+        <label for="archive-search">搜索资料分类</label>
+        <div class="sg-search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="archive-search" type="search" placeholder="例如：符文、装备、配方……" autocomplete="off"><kbd>ESC</kbd></div>
+        <p class="sg-search-hint">搜索资料分类，选择结果后打开对应页面。</p>
+        <div class="sg-search-results" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+<!-- site-header:end -->
+<nav class="sg-page-nav" aria-label="本页目录"><span>本页目录</span><a href="#overview">刷图概览</a><a href="#maps">地图图鉴</a><a href="#currency">地图通货</a><a href="#recipes">方块配方</a></nav>
 <main>
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-art" aria-hidden="true"></div><div class="hero-shade" aria-hidden="true"></div>

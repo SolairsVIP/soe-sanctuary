@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="./style.css?v=20261031-14">
   <link rel="stylesheet" href="./brand-home.css?v=20261030-1">
   <script defer src="./script.js?v=20261030-4"></script>
-</head>
-<body>
+<link rel="stylesheet" href="./navigation.css"><script defer src="./navigation.js"></script></head>
+<body id="top">
   <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="icon-rune" viewBox="0 0 48 48"><path d="M24 4 38 12v24l-14 8L10 36V12zM24 9v30M14 17l20 14M34 17 14 31M19 14l5-5 5 5M19 34l5 5 5-5"/></symbol>
     <symbol id="icon-helm" viewBox="0 0 48 48"><path d="M9 21C9 11 15 5 24 5s15 6 15 16v12l-7 7-8-4-8 4-7-7zM9 21l10 3 5 11 5-11 10-3M24 5v14M14 14l5 4m15-4-5 4"/></symbol>
@@ -28,41 +28,35 @@
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
   </svg>
 
-  <header class="site-header" id="top">
-    <div class="header-inner shell">
-      <a class="brand" href="#top" aria-label="返回流放圣所首页顶部">
-        <span class="brand-mark" aria-hidden="true"><span>✦</span></span>
-        <span class="brand-wordmark"><strong>流放圣所</strong><small>SANCTUARY OF EXILE</small></span>
+  <!-- site-header:start -->
+<header class="sg-site-header" id="site-header">
+    <div class="sg-header-inner sg-shell">
+      <a class="sg-brand" href="./index.html" aria-label="返回流放圣所首页">
+        <span class="sg-brand-mark" aria-hidden="true"><span>✦</span></span>
+        <span class="sg-brand-wordmark"><strong>流放圣所</strong><small>SANCTUARY OF EXILE</small></span>
       </a>
-      <nav class="main-nav" id="main-nav" aria-label="主导航">
-        <a class="nav-active" href="#top">首页</a>
-        <a href="#ladder">天梯与构筑</a>
-        <a href="#guild">公会系统</a>
-        <a href="#features">玩法亮点</a>
-        <a href="#t4-map">T4 地图</a>
-        <a href="#journey">终局之路</a>
-        <a href="#archive">资料图鉴</a>
-      </nav>
-      <div class="header-actions">
-        <button class="search-toggle" type="button" aria-label="搜索资料分类" aria-expanded="false" aria-controls="search-panel"><svg><use href="#icon-search"/></svg></button>
-        <div class="archive-index">
-          <button class="archive-index-toggle" type="button" aria-expanded="false" aria-controls="archive-index-panel">资料索引 <span aria-hidden="true">⌄</span></button>
-          <nav class="archive-index-panel" id="archive-index-panel" aria-label="资料索引" hidden>
-            <div class="archive-index-heading"><strong>资料索引</strong><span>选择栏目直达</span></div>
-            <div class="archive-index-list">
-              <div class="archive-index-group">
+      <nav class="sg-main-nav" id="main-nav" aria-label="主导航"><a href="./index.html" aria-current="page">首页</a><a href="./updates.html">赛季更新</a><a href="./damnation.html">服务器设定</a><a href="./ascendancies.html">升华职业</a><a href="./mapping.html">刷图系统</a><a href="./kiln.html">炼狱熔炉</a><a href="https://bd.wdjwxh.com/">天梯与构筑</a></nav>
+      <div class="sg-header-actions">
+        <button class="sg-search-toggle" type="button" aria-label="搜索资料分类" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+        <div class="sg-archive-index">
+          <button class="sg-archive-index-toggle" type="button" aria-expanded="false" aria-controls="archive-index-panel">资料索引 <span aria-hidden="true">⌄</span></button>
+          <nav class="sg-archive-index-panel" id="archive-index-panel" aria-label="资料索引" hidden>
+            <div class="sg-archive-index-heading"><strong>资料索引</strong><span>选择栏目直达</span></div>
+            <div class="sg-archive-index-list">
+              <div class="sg-archive-index-group">
                 <p>本站页面</p>
+                <a href="./updates.html"><span>赛季更新</span><span aria-hidden="true">→</span></a>
                 <a href="./damnation.html" style="--index-order:0"><span>服务器设定</span><span aria-hidden="true">→</span></a>
                 <a href="./damnation.html#journey" style="--index-order:1"><span>新手指南</span><span aria-hidden="true">→</span></a>
                 <a href="./ascendancies.html" style="--index-order:2"><span>升华职业</span><span aria-hidden="true">→</span></a>
                 <a href="./mapping.html" style="--index-order:3"><span>刷图系统</span><span aria-hidden="true">→</span></a>
                 <a href="./kiln.html" style="--index-order:4"><span>炼狱熔炉</span><span aria-hidden="true">→</span></a>
               </div>
-              <div class="archive-index-group">
+              <div class="sg-archive-index-group">
                 <p>其他服务 <span>↗</span></p>
                 <a href="https://bd.wdjwxh.com/" target="_blank" rel="noopener noreferrer" style="--index-order:5"><span>天梯与人物构筑</span><span aria-hidden="true">↗</span></a>
               </div>
-              <div class="archive-index-group">
+              <div class="sg-archive-index-group">
                 <p>中文档案馆 <span>↗</span></p>
                 <a href="https://dev.wdjwxh.com/pd2-new/#runewords" target="_blank" rel="noopener noreferrer" style="--index-order:6"><span>符文之语</span><span aria-hidden="true">↗</span></a>
                 <a href="https://dev.wdjwxh.com/pd2-new/#sacreds" target="_blank" rel="noopener noreferrer" style="--index-order:7"><span>圣化物品</span><span aria-hidden="true">↗</span></a>
@@ -81,18 +75,19 @@
             </div>
           </nav>
         </div>
-        <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+        <button class="sg-menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
       </div>
     </div>
-    <div class="search-panel" id="search-panel" hidden>
-      <div class="search-inner">
+    <div class="sg-search-panel" id="search-panel" hidden>
+      <div class="sg-search-inner">
         <label for="archive-search">搜索资料分类</label>
-        <div class="search-input-wrap"><svg><use href="#icon-search"/></svg><input id="archive-search" type="search" placeholder="例如：符文、装备、配方……" autocomplete="off"><kbd>ESC</kbd></div>
-        <p class="search-hint">搜索资料分类，选择结果后打开对应页面。</p>
-        <div class="search-results" aria-live="polite"></div>
+        <div class="sg-search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="archive-search" type="search" placeholder="例如：符文、装备、配方……" autocomplete="off"><kbd>ESC</kbd></div>
+        <p class="sg-search-hint">搜索资料分类，选择结果后打开对应页面。</p>
+        <div class="sg-search-results" aria-live="polite"></div>
       </div>
     </div>
   </header>
+<!-- site-header:end -->
 
   <main>
     <section class="hero" aria-labelledby="hero-title">

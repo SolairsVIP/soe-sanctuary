@@ -1,0 +1,69 @@
+{
+  "seasons": [
+    {
+      "id": "s2",
+      "name": "第二赛季",
+      "label": "S2",
+      "description": "新的征途，从这里开始。"
+    },
+    {
+      "id": "s1",
+      "name": "第一赛季",
+      "label": "S1",
+      "description": "开季调整与赛季中的修复记录。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "s2-season",
+      "season": "s2",
+      "type": "season",
+      "status": "test",
+      "title": "第二赛季 BETA 更新说明",
+      "date": "2026-11-12",
+      "dateLabel": "整理日期",
+      "summary": "七职业技能与升华调整，装备、圣化与制作更新，以及地图事件和超级首领奖励的完整改动。",
+      "tags": [
+        "职业与技能",
+        "升华",
+        "装备与圣化",
+        "地图与首领"
+      ],
+      "source": "s2-season.md"
+    },
+    {
+      "id": "s1-hotfix",
+      "season": "s1",
+      "type": "patch",
+      "status": "released",
+      "title": "第一赛季持续更新记录",
+      "date": "2026-11-01",
+      "dateLabel": "最后更新",
+      "summary": "9 月 12 日至 11 月 1 日的赛季中更新，涵盖 S14 适配、公会与护符背包、掉落修复、自动拾取和服务器稳定性。",
+      "tags": [
+        "赛季中修复",
+        "S14 适配",
+        "公会与背包",
+        "稳定性"
+      ],
+      "source": "s1-hotfix.md"
+    },
+    {
+      "id": "s1-season",
+      "season": "s1",
+      "type": "season",
+      "status": "released",
+      "title": "第一赛季完整更新说明",
+      "date": "2026-09-11",
+      "dateLabel": "上线日期",
+      "summary": "第一赛季开季的职业技能、升华、掉落与制作、荣誉光环调整，以及技能范围、增益效果和频率的机制说明。",
+      "tags": [
+        "职业与技能",
+        "升华",
+        "掉落与制作",
+        "荣誉光环"
+      ],
+      "source": "s1-season.md"
+    }
+  ]
+}

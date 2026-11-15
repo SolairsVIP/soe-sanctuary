@@ -15,26 +15,16 @@
  {
   "id": "ascension",
   "text": [
-   "After defeating Baal for the first time in normal difficulty, he will drop Ascendancy Cairn alongside Ascendancy Soulstone of Tier 1 - Soulstone of Might. \n",
+   "Defeat Baal on Nightmare difficulty to obtain the Ascendancy Cairn and Tier 1 Soulstone of Might.\n",
    "To cycle through the available Ascendancies, just cube Soulstone of Might on its own. After you have decided which Ascendancy you want to advance with, cube Soulstone of Might with your Ascendancy Cairn. Ascendancy Cairn acts as any other talisman, so just keep it in your inventory.\n",
-   "Defeating Baal for the first time on Nightmare and Hell difficulties, will yield you Soulstones of Tier 2 and 3 respectively. Cube them with your Ascendancy Cairn to unlock more power of the sub-class of your choice. \n",
-   "To obtain final Soulstone and achieve complete ascension, you have to prove your strength by defeating any of the Ubers on any tier:",
-   "- Diablo Clone",
-   "- Rathma",
-   "- Uber Tristram",
-   "- Lazarus",
-   "- Lucion"
+   "Defeat Hell Baal for the Tier 2 Soulstone. Cube it with your Ascendancy Cairn to advance.\n",
+   "Diablo Clone, Rathma and Lucion provide Tier 3 Soulstones at L0 and Tier 4 Soulstones at L1. Both tiers are personal loot."
   ],
   "textZh": [
-   "首次在普通难度击败巴尔后,他将掉落升华石碑与 1 阶升华魂石——力量魂石。",
+   "击败噩梦巴尔后，可获得升华石碑与 1 阶升华魂石——力量魂石。",
    "若想切换可用的升华,只需将力量魂石单独放入方块。确定要进阶的升华后,将力量魂石与升华石碑一同放入方块。升华石碑与任何护符一样放入背包即可生效。",
-   "首次在噩梦与地狱难度击败巴尔,将分别获得 2 阶与 3 阶魂石。将其与升华石碑合成,可解锁所选修职业的更多力量。",
-   "要获得最终的灵魂石并完成全部升华，你需要在任意难度击败以下超级首领之一来证明自己的实力：",
-   "- 暗黑破坏神之子",
-   "- 拉玛",
-   "- 超级崔斯特瑞姆",
-   "- 拉扎鲁斯",
-   "- 卢西恩"
+   "击败地狱巴尔可获得 2 阶魂石。将魂石与升华石碑放入方块合成，解锁更多升华力量。",
+   "挑战超级迪亚波罗、拉斯玛或路西昂：L0 掉落 3 阶魂石，L1 掉落 4 阶魂石；三、四阶魂石均为个人拾取。"
   ],
   "title": "How to ascend",
   "titleZh": "如何升华"

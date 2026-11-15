@@ -1,3 +1,4 @@
 preview-server*.log
 tests/*.png
 __pycache__/
+node_modules/

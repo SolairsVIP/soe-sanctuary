@@ -1,0 +1,12 @@
+{
+  "name": "soe-sanctuary",
+  "private": true,
+  "scripts": {
+    "build:updates": "node tools/build-updates.mjs && node tools/build-navigation.mjs",
+    "test": "node --test tests/*.test.cjs",
+    "build:navigation": "node tools/build-navigation.mjs"
+  },
+  "devDependencies": {
+    "marked": "18.2.0"
+  }
+}
