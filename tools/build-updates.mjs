@@ -26,6 +26,9 @@ for (const entry of catalog.entries) {
   const source = path.resolve(contentDir, entry.source);
   if (!source.startsWith(contentDir + path.sep) || path.extname(source) !== '.md') throw new Error('Invalid source path');
   let markdown = await readFile(source, 'utf8');
+  const modelVideos = [...markdown.matchAll(/^\[\[MODEL_VIDEO\|([^|]+)\|([^|]+)\|(https?:[^\]]+)\]\]$/gm)]
+    .map(([, name, className, url]) => ({name, className, url}));
+  markdown = markdown.replace(/^\[\[MODEL_VIDEO\|[^\n]+\]\]$/gm, '[[MODEL_VIDEOS]]');
   // The website supplies its own title, metadata and responsive directory.
   markdown = markdown.replace(/^# .*\r?\n/, '').replace(/^> 内测整理稿[^\n]*\r?\n/m, '');
   markdown = markdown.replace(/## 目录[\s\S]*?(?=<a id=)/, '');
@@ -53,11 +56,8 @@ for (const entry of catalog.entries) {
   };
   // Table cell line breaks are the only inline HTML supported by these notes.
   let html = marked.parser(tokens, {gfm: true, renderer}).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
-  html = html.replace('<p>[[MODEL_VIDEOS]]</p>', `<div class="model-videos" aria-label="玩家模型展示视频">
-<article class="model-video"><h4>希尔瓦娜斯 · 亚马逊</h4><video controls preload="none" playsinline data-lazy-src="https://dev.wdjwxh.com/videos/sylvanas-amazon.mp4"><p>你的浏览器不支持视频播放。</p></video></article>
-<article class="model-video"><h4>伊利丹 · 野蛮人</h4><video controls preload="none" playsinline data-lazy-src="https://dev.wdjwxh.com/videos/illidan-barbarian.mp4"><p>你的浏览器不支持视频播放。</p></video></article>
-<article class="model-video"><h4>Tifa · 刺客</h4><video controls preload="none" playsinline data-lazy-src="https://dev.wdjwxh.com/videos/tifa-assassin.mp4"><p>你的浏览器不支持视频播放。</p></video></article>
-</div>`);
+  const videoCards = modelVideos.map(({name, className, url}) => `<article class="model-video"><h4>${escape(name)} · ${escape(className)}</h4><video controls preload="none" playsinline data-lazy-src="${escape(url)}"><p>你的浏览器不支持视频播放。</p></video></article>`).join('\n');
+  html = html.replace('<p>[[MODEL_VIDEOS]]</p>', `<div class="model-videos" aria-label="玩家模型展示视频">${videoCards}</div>`);
   html = html.replace(/<table>/g, '<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>').replace(/<\/table>/g, '</table></div>');
   html = html.replace(/(<h2 id=)/g, '</section><section class="note-section">$1').replace(/^\s*<\/section>/, '') + '</section>';
   const status = entry.status === 'test' ? '内测' : '已上线';

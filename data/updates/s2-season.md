@@ -50,7 +50,9 @@
 
 新增三个可选玩家模型：希尔瓦娜斯（亚马逊）、伊利丹（野蛮人）和 Tifa（刺客）。获取方式见 QQ 群。
 
-[[MODEL_VIDEOS]]
+[[MODEL_VIDEO|希尔瓦娜斯|亚马逊|https://dev.wdjwxh.com/videos/sylvanas-amazon.mp4]]
+[[MODEL_VIDEO|伊利丹|野蛮人|https://dev.wdjwxh.com/videos/illidan-barbarian.mp4]]
+[[MODEL_VIDEO|Tifa|刺客|https://dev.wdjwxh.com/videos/tifa-assassin.mp4]]
 
 ### 掉落结算
 
