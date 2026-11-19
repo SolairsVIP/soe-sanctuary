@@ -40,6 +40,17 @@
   }
   const content = document.querySelector('.patch-content');
   if (content) {
+    const lazyVideos = [...content.querySelectorAll('video[data-lazy-src]')];
+    if ('IntersectionObserver' in window) {
+      const videoObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const video = entry.target;
+        video.src = video.dataset.lazySrc;
+        video.removeAttribute('data-lazy-src');
+        videoObserver.unobserve(video);
+      }), { rootMargin: '240px 0px' });
+      lazyVideos.forEach(video => videoObserver.observe(video));
+    } else lazyVideos.forEach(video => { video.src = video.dataset.lazySrc; video.removeAttribute('data-lazy-src'); });
     const links = [...document.querySelectorAll('.article-toc a')];
     const search = document.querySelector('#toc-search');
     const articleSearch = document.querySelector('#article-search');
