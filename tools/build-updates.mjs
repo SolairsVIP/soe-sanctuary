@@ -57,7 +57,7 @@ for (const entry of catalog.entries) {
   // Table cell line breaks are the only inline HTML supported by these notes.
   let html = marked.parser(tokens, {gfm: true, renderer}).replace(/&lt;br\s*\/?&gt;/gi, '<br>');
   const videoCards = modelVideos.map(({name, className, url}) => `<article class="model-video"><h4>${escape(name)} · ${escape(className)}</h4><video controls preload="none" playsinline data-lazy-src="${escape(url)}"><p>你的浏览器不支持视频播放。</p></video></article>`).join('\n');
-  html = html.replace('<p>[[MODEL_VIDEOS]]</p>', `<div class="model-videos" aria-label="玩家模型展示视频">${videoCards}</div>`);
+  html = html.replace(/<p>(?:\[\[MODEL_VIDEOS\]\]\s*)+<\/p>/, `<div class="model-videos" aria-label="玩家模型展示视频">${videoCards}</div>`);
   html = html.replace(/<table>/g, '<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>').replace(/<\/table>/g, '</table></div>');
   html = html.replace(/(<h2 id=)/g, '</section><section class="note-section">$1').replace(/^\s*<\/section>/, '') + '</section>';
   const status = entry.status === 'test' ? '内测' : '已上线';
