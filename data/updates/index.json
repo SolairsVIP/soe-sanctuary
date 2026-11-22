@@ -64,6 +64,23 @@
         "荣誉光环"
       ],
       "source": "s1-season.md"
+    },
+    {
+      "id": "s2-patch-1",
+      "season": "s2",
+      "type": "patch",
+      "status": "released",
+      "title": "第二赛季补丁 #1 更新说明",
+      "date": "2026-11-22",
+      "dateLabel": "更新日期",
+      "summary": "首领奖励归属、大主教掉落、黑门英雄奖励、荣誉光环和公会聊天命令的赛季中修复与调整。",
+      "tags": [
+        "赛季中修复",
+        "首领奖励",
+        "荣誉光环",
+        "公会功能"
+      ],
+      "source": "s2-patch-1.md"
     }
   ]
 }
