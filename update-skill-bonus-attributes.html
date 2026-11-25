@@ -1,0 +1,1706 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#100f0d"><meta name="description" content="灵气效果、诅咒效果、技能范围、技能增益效果、技能持续时间和技能频率怎么计算，各自影响哪些技能，并附每个技能的算例。"><title>技能加成属性说明 · 流放圣所</title><link rel="stylesheet" href="./updates.css"><script defer src="./updates.js"></script><link rel="stylesheet" href="./navigation.css"><script defer src="./navigation.js"></script></head><body id="top" data-view="article"><a class="skip-link" href="#main">跳到主要内容</a><!-- site-header:start -->
+<header class="sg-site-header" id="site-header">
+    <div class="sg-header-inner sg-shell">
+      <a class="sg-brand" href="./index.html" aria-label="返回流放圣所首页">
+        <span class="sg-brand-mark" aria-hidden="true"><span>✦</span></span>
+        <span class="sg-brand-wordmark"><strong>流放圣所</strong><small>SANCTUARY OF EXILE</small></span>
+      </a>
+      <nav class="sg-main-nav" id="main-nav" aria-label="主导航"><a href="./index.html">首页</a><a href="./updates.html" aria-current="page">赛季更新</a><a href="./damnation.html">服务器设定</a><a href="./ascendancies.html">升华职业</a><a href="./mapping.html">刷图系统</a><a href="./kiln.html">炼狱熔炉</a><a href="https://bd.wdjwxh.com/">天梯与构筑</a></nav>
+      <div class="sg-header-actions">
+        <button class="sg-search-toggle" type="button" aria-label="搜索资料分类" aria-expanded="false" aria-controls="search-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+        <div class="sg-archive-index">
+          <button class="sg-archive-index-toggle" type="button" aria-expanded="false" aria-controls="archive-index-panel">资料索引 <span aria-hidden="true">⌄</span></button>
+          <nav class="sg-archive-index-panel" id="archive-index-panel" aria-label="资料索引" hidden>
+            <div class="sg-archive-index-heading"><strong>资料索引</strong><span>选择栏目直达</span></div>
+            <div class="sg-archive-index-list">
+              <div class="sg-archive-index-group">
+                <p>本站页面</p>
+                <a href="./updates.html"><span>赛季更新</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html" style="--index-order:0"><span>服务器设定</span><span aria-hidden="true">→</span></a>
+                <a href="./damnation.html#journey" style="--index-order:1"><span>新手指南</span><span aria-hidden="true">→</span></a>
+                <a href="./ascendancies.html" style="--index-order:2"><span>升华职业</span><span aria-hidden="true">→</span></a>
+                <a href="./mapping.html" style="--index-order:3"><span>刷图系统</span><span aria-hidden="true">→</span></a>
+                <a href="./kiln.html" style="--index-order:4"><span>炼狱熔炉</span><span aria-hidden="true">→</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>其他服务 <span>↗</span></p>
+                <a href="https://bd.wdjwxh.com/" target="_blank" rel="noopener noreferrer" style="--index-order:5"><span>天梯与人物构筑</span><span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="sg-archive-index-group">
+                <p>中文档案馆 <span>↗</span></p>
+                <a href="https://dev.wdjwxh.com/pd2-new/#runewords" target="_blank" rel="noopener noreferrer" style="--index-order:6"><span>符文之语</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#sacreds" target="_blank" rel="noopener noreferrer" style="--index-order:7"><span>圣化物品</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#uniques" target="_blank" rel="noopener noreferrer" style="--index-order:8"><span>暗金装备</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#weapons" target="_blank" rel="noopener noreferrer" style="--index-order:9"><span>武器基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#armors" target="_blank" rel="noopener noreferrer" style="--index-order:10"><span>护甲基底</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#affixes" target="_blank" rel="noopener noreferrer" style="--index-order:11"><span>装备词缀</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer" style="--index-order:12"><span>腐化图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#cube" target="_blank" rel="noopener noreferrer" style="--index-order:13"><span>方块配方</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#fatecards" target="_blank" rel="noopener noreferrer" style="--index-order:14"><span>命运卡</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#materials" target="_blank" rel="noopener noreferrer" style="--index-order:15"><span>材料图鉴</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#skills" target="_blank" rel="noopener noreferrer" style="--index-order:16"><span>技能资料</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#drops" target="_blank" rel="noopener noreferrer" style="--index-order:17"><span>掉率查询</span><span aria-hidden="true">↗</span></a>
+                <a href="https://dev.wdjwxh.com/pd2-new/#changelog" target="_blank" rel="noopener noreferrer" style="--index-order:18"><span>资料更新日志</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <button class="sg-menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="sg-search-panel" id="search-panel" hidden>
+      <div class="sg-search-inner">
+        <label for="archive-search">搜索资料分类</label>
+        <div class="sg-search-input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="archive-search" type="search" placeholder="例如：符文、装备、配方……" autocomplete="off"><kbd>ESC</kbd></div>
+        <p class="sg-search-hint">搜索资料分类，选择结果后打开对应页面。</p>
+        <div class="sg-search-results" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+<!-- site-header:end --><div class="reading-progress" aria-hidden="true"><span></span></div><main id="main" class="updates-shell article-main">
+<a class="breadcrumb" href="./updates.html?season=s2">← 赛季更新 <span>/ 第二赛季</span></a>
+<section class="article-heading"><p class="updates-kicker">SEASON 2 <span>✦</span> GAME GUIDE</p><div class="entry-meta"><span class="status-badge">已上线</span><span>常规文档</span><time datetime="2026-11-25">更新日期 2026.11.25</time></div><h1>技能加成属性说明</h1><p>灵气效果、诅咒效果、技能范围、技能增益效果、技能持续时间和技能频率怎么计算，各自影响哪些技能，并附每个技能的算例。</p><div class="article-actions"><span>7 个章节</span></div><label class="article-search"><span>搜索本文</span><input id="article-search" type="search" placeholder="输入技能、装备或改动关键词" aria-label="搜索文章全文"></label><p id="article-search-status" role="status" hidden></p></section>
+<div class="reading-layout"><aside class="article-sidebar"><details open><summary>文章目录 <span>CONTENTS</span></summary><label class="toc-search"><span class="sr-only">筛选文章目录</span><input type="search" id="toc-search" placeholder="查找章节，例如：升华"></label><nav class="article-toc" aria-label="文章目录"><a href="#overview">一页看懂</a><a href="#aura-effect">1. 灵气效果</a><a href="#curse-effect">2. 诅咒效果</a><a href="#skill-area">3. 技能范围 / 技能范围提高</a><a href="#buff-effect">4. 技能增益效果</a><a href="#skill-duration">5. 技能持续时间</a><a href="#skill-frequency">6. 技能频率</a></nav><p class="toc-empty" hidden>没有匹配的章节</p></details></aside><article class="patch-content"><p>装备上的“灵气效果”“诅咒效果”“技能范围”等属性，作用是<strong>在技能原本的数值上再乘一次</strong>。本文列出每种属性的计算方法，以及它影响哪些技能。</p>
+<p>所有算例统一按 <strong>20 级技能（20 点硬点，没有 +技能、没有协同）</strong> 计算。游戏里每一步除法都会抹去小数，本文的算例也按这个规则。</p>
+</section><section class="note-section"><h2 id="overview">一页看懂</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>加成怎么算</th>
+<th>上限</th>
+<th>影响的技能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>灵气效果</td>
+<td>灵气效果 × 60 ÷ (灵气效果 + 25)</td>
+<td>+60%</td>
+<td>23 个：圣骑士灵气、脆弱、黑暗统帅光环</td>
+</tr>
+<tr>
+<td>诅咒效果</td>
+<td>诅咒效果 × 70 ÷ (诅咒效果 + 22)</td>
+<td>+70%</td>
+<td>12 个：死灵法师诅咒等</td>
+</tr>
+<tr>
+<td>技能范围</td>
+<td>技能范围 × 70 ÷ (技能范围 + 18)</td>
+<td>+70%</td>
+<td>81 个技能的半径</td>
+</tr>
+<tr>
+<td>技能范围提高</td>
+<td>数值直接加到半径上</td>
+<td>—</td>
+<td>同“技能范围”</td>
+</tr>
+<tr>
+<td>技能增益效果</td>
+<td>属性值是多少就加多少 %</td>
+<td>无递减</td>
+<td>27 个：战吼、附魔、护甲类等</td>
+</tr>
+<tr>
+<td>技能持续时间</td>
+<td>属性值是多少就加多少 %</td>
+<td>无递减</td>
+<td>63 个增益或诅咒的持续时间</td>
+</tr>
+<tr>
+<td>技能频率</td>
+<td>间隔 × (100 − 属性值) ÷ 100</td>
+<td>—</td>
+<td>10 个技能的间隔</td>
+</tr>
+</tbody></table></div>
+<p>通用算法：</p>
+<pre><code>最终值 = 技能原数值 × (100 + 加成%) ÷ 100
+（每一步除法都抹去小数）
+</code></pre>
+<p>举例：20 级力量给队友的伤害是 +210%，身上有 25 点灵气效果（查表是 +30%）：</p>
+<pre><code>210 × (100 + 30) ÷ 100 = 273
+队友伤害变成 +273%
+</code></pre>
+<p>两种范围属性同时有时是先加后乘。例如 20 级力量有 18 点技能范围（+35%）和 2 点技能范围提高：</p>
+<pre><code>(77 + 2) × 135 ÷ 100 = 106
+光环半径 51.3 码 → 70.6 码
+</code></pre>
+</section><section class="note-section"><h2 id="aura-effect">1. 灵气效果</h2>
+<p><strong>只影响圣骑士的灵气、脆弱和黑暗统帅光环。</strong> 其他职业的光环、战吼、德鲁伊灵气，以及佣兵和怪物的光环，都不吃灵气效果。</p>
+<pre><code>加成% = 灵气效果 × 60 ÷ (灵气效果 + 25)
+</code></pre>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>灵气效果</th>
+<th>加成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+10%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>+17%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+22%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>+26%</td>
+</tr>
+<tr>
+<td>25</td>
+<td>+30%</td>
+</tr>
+<tr>
+<td>30</td>
+<td>+32%</td>
+</tr>
+<tr>
+<td>40</td>
+<td>+36%</td>
+</tr>
+<tr>
+<td>50</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>75</td>
+<td>+45%</td>
+</tr>
+<tr>
+<td>100</td>
+<td>+48%</td>
+</tr>
+</tbody></table></div>
+<p>几件装备的灵气效果直接相加后再查表。例如 5 + 5 + 10 = 20 点，按 20 查表是 +26%。</p>
+<h3 id="section-1">受影响的技能</h3>
+<p>算例按 <strong>25 点灵气效果（+30%）</strong> 计算，也就是“原数值 × 130 ÷ 100”。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>加成影响的数值（算例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>力量</td>
+<td>圣骑士</td>
+<td>伤害 210×130÷100=273%<br>自己伤害 420×130÷100=546%</td>
+</tr>
+<tr>
+<td>祈祷</td>
+<td>圣骑士</td>
+<td>每次治疗生命 58×130÷100=75；击中回复生命 11×130÷100=14<br>自己生命回复 20×130÷100=26</td>
+</tr>
+<tr>
+<td>抵抗火焰</td>
+<td>圣骑士</td>
+<td>抗火 85×130÷100=110%；火焰技能伤害 24×130÷100=31%<br>自己抗火上限 10×130÷100=13%</td>
+</tr>
+<tr>
+<td>圣火</td>
+<td>圣骑士</td>
+<td>自己火焰伤害下限 79×130÷100=102；自己火焰伤害上限 108×130÷100=140；自己命中值 145×130÷100=188%</td>
+</tr>
+<tr>
+<td>荆棘</td>
+<td>圣骑士</td>
+<td>攻击者反伤 33×130÷100=42%；造成撕裂伤口的几率 21×130÷100=27%；额外流血伤害（每秒） 32×130÷100=41；施加第二层撕裂伤口的几率 34×130÷100=44%<br>自己额外流血伤害（每秒） 42×130÷100=54</td>
+</tr>
+<tr>
+<td>反抗</td>
+<td>圣骑士</td>
+<td>防御 178×130÷100=231%；物理伤害减免/物理抗性 10×130÷100=13%；最大物理抗性 2×130÷100=2%</td>
+</tr>
+<tr>
+<td>抵抗冰冻</td>
+<td>圣骑士</td>
+<td>抗寒 85×130÷100=110%；冰霜技能伤害 24×130÷100=31%<br>自己抗寒上限 10×130÷100=13%</td>
+</tr>
+<tr>
+<td>祝福瞄准</td>
+<td>圣骑士</td>
+<td>命中值 345×130÷100=448%；致命一击几率 15×130÷100=19%<br>自己穿透目标防御 20×130÷100=26%</td>
+</tr>
+<tr>
+<td>净化</td>
+<td>圣骑士</td>
+<td>中毒时间缩短 37×130÷100=48%；诅咒抗性 20×130÷100=26%<br>自己诅咒持续时间降低/中毒时间缩短 20×130÷100=26%</td>
+</tr>
+<tr>
+<td>抵抗闪电</td>
+<td>圣骑士</td>
+<td>抗闪电 85×130÷100=110%；闪电技能伤害 24×130÷100=31%<br>自己抗闪电上限 10×130÷100=13%</td>
+</tr>
+<tr>
+<td>专注</td>
+<td>圣骑士</td>
+<td>伤害 172×130÷100=223%；无法被打断几率 21×130÷100=27%；命中值 240×130÷100=312%<br>自己伤害 345×130÷100=448%</td>
+</tr>
+<tr>
+<td>神圣冰冻</td>
+<td>圣骑士</td>
+<td>降低敌人移动速度/攻击速度/动作速度 54×130÷100=70%<br>自己冰霜伤害下限 164×130÷100=213；自己冰霜伤害上限 206×130÷100=267；自己命中值 145×130÷100=188%</td>
+</tr>
+<tr>
+<td>活力</td>
+<td>圣骑士</td>
+<td>耐力恢复率/耐力加成 525×130÷100=682%；移动速度 43×130÷100=55%<br>自己跑速 20×130÷100=26%</td>
+</tr>
+<tr>
+<td>神圣冲击</td>
+<td>圣骑士</td>
+<td>自己闪电伤害下限 6×130÷100=7；自己闪电伤害上限 738×130÷100=959；自己命中值 145×130÷100=188%</td>
+</tr>
+<tr>
+<td>庇护所</td>
+<td>圣骑士</td>
+<td>降低敌人抗魔法 15×130÷100=19%<br>自己魔法伤害下限 220×130÷100=286；自己魔法伤害上限 235×130÷100=305；自己命中值 145×130÷100=188%</td>
+</tr>
+<tr>
+<td>冥思</td>
+<td>圣骑士</td>
+<td>法力恢复速度 378×130÷100=491%<br>自己杀敌回复法力 10×130÷100=13</td>
+</tr>
+<tr>
+<td>狂热</td>
+<td>圣骑士</td>
+<td>攻击速度 35×130÷100=45%；命中值 135×130÷100=175%；伤害 167×130÷100=217%<br>自己伤害 335×130÷100=435%</td>
+</tr>
+<tr>
+<td>审判</td>
+<td>圣骑士</td>
+<td>降低敌人防御 64×130÷100=83%；降低敌人抗火/抗寒/抗闪电/抗毒 50×130÷100=65%</td>
+</tr>
+<tr>
+<td>救赎</td>
+<td>圣骑士</td>
+<td>救赎灵魂的几率 85×130÷100=110，有上限，实际 100%；生命恢复 45×130÷100=58；法力回复 120×130÷100=156</td>
+</tr>
+<tr>
+<td>救助</td>
+<td>圣骑士</td>
+<td>抗火/抗寒/抗闪电 75×130÷100=97%；火焰技能伤害/冰霜技能伤害/闪电技能伤害 11×130÷100=14%</td>
+</tr>
+<tr>
+<td>脆弱</td>
+<td>装备赋予</td>
+<td>降低敌人物理抗性 26×130÷100=33%；降低敌人防御 79×130÷100=102%</td>
+</tr>
+<tr>
+<td>守护者四阶光环</td>
+<td>升华·守护者四阶（1 级）</td>
+<td>自己不吃灵气效果，而是<strong>赋予</strong>灵气效果：四项抗性上限之和 × 2 ÷ 3；另外给防御 = 灵气效果 × 100</td>
+</tr>
+<tr>
+<td>黑暗统帅</td>
+<td>升华·巫妖四阶</td>
+<td>伤害 150×130÷100=195%；防御 75×130÷100=97%；击中偷取生命 5×130÷100=6%</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>光环只看<strong>施放者自己</strong>身上的灵气效果；队友自己的灵气效果不会加到别人的光环上。</li>
+<li>标“自己”的是只给施放者本人的额外效果，其余是光环范围内所有人都能拿到的。</li>
+<li>圣火、荆棘、神圣冰冻、神圣冲击、庇护所的协同加成部分，同样被灵气效果放大。</li>
+<li>脆弱的技能说明不显示放大后的数值，以上表为准。</li>
+<li>守护者四阶光环按四抗上限赋予灵气效果。例如四抗上限各 75：(75 + 75 + 75 + 75) × 2 ÷ 3 = 200 点，按 200 查表是 +53%。</li>
+</ul>
+<p>脆弱实用查表：要把“降低敌人物理抗性”堆到 22 点，不同等级各需要多少灵气效果。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>脆弱等级</th>
+<th>基础减抗</th>
+<th>需要的灵气效果</th>
+<th>对应加成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>12 级</td>
+<td>18</td>
+<td>16</td>
+<td>+23%</td>
+</tr>
+<tr>
+<td>13 级</td>
+<td>19</td>
+<td>10</td>
+<td>+17%</td>
+</tr>
+<tr>
+<td>14 级</td>
+<td>20</td>
+<td>5</td>
+<td>+10%</td>
+</tr>
+<tr>
+<td>15 级</td>
+<td>21</td>
+<td>3</td>
+<td>+6%</td>
+</tr>
+<tr>
+<td>16 级</td>
+<td>22</td>
+<td>0</td>
+<td>不需要</td>
+</tr>
+</tbody></table></div>
+</section><section class="note-section"><h2 id="curse-effect">2. 诅咒效果</h2>
+<p><strong>影响死灵法师的诅咒。</strong></p>
+<pre><code>加成% = 诅咒效果 × 70 ÷ (诅咒效果 + 22)
+</code></pre>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>诅咒效果</th>
+<th>加成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+12%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>+21%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+28%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>+33%</td>
+</tr>
+<tr>
+<td>25</td>
+<td>+37%</td>
+</tr>
+<tr>
+<td>30</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>40</td>
+<td>+45%</td>
+</tr>
+<tr>
+<td>50</td>
+<td>+48%</td>
+</tr>
+<tr>
+<td>75</td>
+<td>+54%</td>
+</tr>
+<tr>
+<td>100</td>
+<td>+57%</td>
+</tr>
+</tbody></table></div>
+<p>几件装备的诅咒效果直接相加后再查表。</p>
+<h3 id="section-2">受影响的技能</h3>
+<p>算例按 <strong>22 点诅咒效果（+35%）</strong> 计算，也就是“原数值 × 135 ÷ 100”。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>加成影响的数值（算例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>伤害加深</td>
+<td>死灵法师</td>
+<td>降低敌人物理抗性 34×135÷100=45%</td>
+</tr>
+<tr>
+<td>微暗灵视</td>
+<td>死灵法师</td>
+<td>降低敌人攻击命中值 230×135÷100=310</td>
+</tr>
+<tr>
+<td>削弱</td>
+<td>死灵法师</td>
+<td>降低敌人伤害 29×135÷100=39%；降低敌人防御 48×135÷100=64%</td>
+</tr>
+<tr>
+<td>攻击反噬</td>
+<td>死灵法师</td>
+<td>对怪物反弹伤害 675×121÷100=816%；对玩家反弹伤害 675×135÷100=911%；对其他目标反弹伤害 168×135÷100=226%</td>
+</tr>
+<tr>
+<td>恐惧</td>
+<td>死灵法师</td>
+<td>降低敌人移动速度 55×135÷100=74%</td>
+</tr>
+<tr>
+<td>迷乱</td>
+<td>死灵法师</td>
+<td>敌人攻击速度 240×135÷100=324%</td>
+</tr>
+<tr>
+<td>偷取生命</td>
+<td>死灵法师</td>
+<td>偷取生命 48×135÷100=64%</td>
+</tr>
+<tr>
+<td>吸引</td>
+<td>死灵法师</td>
+<td>降低敌人防御 310×135÷100=418</td>
+</tr>
+<tr>
+<td>衰老</td>
+<td>死灵法师</td>
+<td>降低敌人移动速度/攻击速度/施法速度/跳跃飞行速度 39×135÷100=52%；降低敌人物理抗性 20×135÷100=27%</td>
+</tr>
+<tr>
+<td>降低抵抗</td>
+<td>死灵法师</td>
+<td>降低敌人抗火/抗寒/抗闪电/抗毒 39×135÷100=52%；降低敌人抗魔法 19 → 26%（这一项算法略有不同）</td>
+</tr>
+<tr>
+<td>时间冻结</td>
+<td>升华·时术师三阶</td>
+<td>降低敌人移动速度/攻击速度/动作速度 50×135÷100=67%</td>
+</tr>
+<tr>
+<td>秘术家四阶光环</td>
+<td>升华·秘术家四阶（1 级）</td>
+<td>自己不吃诅咒效果，而是<strong>赋予</strong>诅咒效果：可施放诅咒数上限 × 5；另外给等量的魔法技能伤害% 和快速打击恢复%</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>攻击反噬“对怪物反弹伤害”这一项用的是另一条曲线：诅咒效果 × 60 ÷ (诅咒效果 + 40)，上限 +60%。</li>
+<li>装备上“击中时施放××级伤害加深（衰老等）”触发的诅咒，同样吃诅咒效果。</li>
+<li>秘术家一阶的升华会直接赋予诅咒效果。</li>
+</ul>
+</section><section class="note-section"><h2 id="skill-area">3. 技能范围 / 技能范围提高</h2>
+<p>两个属性影响同一批技能，都是改技能的半径：</p>
+<ul>
+<li><strong>技能范围</strong>按百分比放大：<code>加成% = 技能范围 × 70 ÷ (技能范围 + 18)</code>，上限 +70%。</li>
+<li><strong>技能范围提高</strong>把数值直接加到半径上。</li>
+</ul>
+<pre><code>新半径 = (原半径 + 技能范围提高) × (100 + 加成%) ÷ 100
+</code></pre>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能范围</th>
+<th>加成</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+15%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>+25%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>+31%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>+36%</td>
+</tr>
+<tr>
+<td>25</td>
+<td>+40%</td>
+</tr>
+<tr>
+<td>30</td>
+<td>+43%</td>
+</tr>
+<tr>
+<td>40</td>
+<td>+48%</td>
+</tr>
+<tr>
+<td>50</td>
+<td>+51%</td>
+</tr>
+<tr>
+<td>75</td>
+<td>+56%</td>
+</tr>
+<tr>
+<td>100</td>
+<td>+59%</td>
+</tr>
+</tbody></table></div>
+<p>几件装备的技能范围直接相加后再查表。</p>
+<h3 id="section-3">受影响的技能</h3>
+<p>半径单位是码。算例按 <strong>18 点技能范围（+35%）</strong> 和 <strong>+2 技能范围提高</strong> 计算。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>20 级半径</th>
+<th>技能范围 18（+35%）</th>
+<th>技能范围提高 +2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>爆裂箭</td>
+<td>亚马逊</td>
+<td>8（5.3 码）</td>
+<td>8×135÷100=10（6.6 码）</td>
+<td>8+2=10（6.6 码）</td>
+</tr>
+<tr>
+<td>牺牲之箭</td>
+<td>亚马逊</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>冻结之箭</td>
+<td>亚马逊</td>
+<td>9（6.0 码）</td>
+<td>9×135÷100=12（8.0 码）</td>
+<td>9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>闪电攻击</td>
+<td>亚马逊</td>
+<td>16（10.6 码）</td>
+<td>16×135÷100=21（14.0 码）</td>
+<td>16+2=18（12.0 码）</td>
+</tr>
+<tr>
+<td>地狱之火</td>
+<td>法师</td>
+<td>30（20.0 码）；13（8.6 码）</td>
+<td>30×135÷100=40（26.6 码）；13×135÷100=17（11.3 码）</td>
+<td>30+2=32（21.3 码）；13+2=15（10.0 码）</td>
+</tr>
+<tr>
+<td>霜之新星</td>
+<td>法师</td>
+<td>0</td>
+<td>+8</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>火球</td>
+<td>法师</td>
+<td>8（5.3 码）</td>
+<td>8×135÷100=10（6.6 码）</td>
+<td>8+2=10（6.6 码）</td>
+</tr>
+<tr>
+<td>新星</td>
+<td>法师</td>
+<td>0</td>
+<td>+8</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>闪电齐射</td>
+<td>法师</td>
+<td>23（15.3 码）；9（6.0 码）</td>
+<td>23×135÷100=31（20.6 码）；9×135÷100=12（8.0 码）</td>
+<td>23+2=25（16.6 码）；9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>连锁闪电</td>
+<td>法师</td>
+<td>20（13.3 码）</td>
+<td>20×135÷100=27（18.0 码）</td>
+<td>20+2=22（14.6 码）</td>
+</tr>
+<tr>
+<td>陨石</td>
+<td>法师</td>
+<td>10（6.6 码）</td>
+<td>10×135÷100=13（8.6 码）</td>
+<td>10+2=12（8.0 码）</td>
+</tr>
+<tr>
+<td>暴风雪</td>
+<td>法师</td>
+<td>8（5.3 码）</td>
+<td>8×135÷100=10（6.6 码）</td>
+<td>8+2=10（6.6 码）</td>
+</tr>
+<tr>
+<td>寒冰弹幕</td>
+<td>法师</td>
+<td>7（4.6 码）</td>
+<td>7×135÷100=9（6.0 码）</td>
+<td>7+2=9（6.0 码）</td>
+</tr>
+<tr>
+<td>伤害加深</td>
+<td>死灵法师</td>
+<td>15（10.0 码）</td>
+<td>15×135÷100=20（13.3 码）</td>
+<td>15+2=17（11.3 码）</td>
+</tr>
+<tr>
+<td>微暗灵视</td>
+<td>死灵法师</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>削弱</td>
+<td>死灵法师</td>
+<td>18（12.0 码）</td>
+<td>18×135÷100=24（16.0 码）</td>
+<td>18+2=20（13.3 码）</td>
+</tr>
+<tr>
+<td>尸体爆炸</td>
+<td>死灵法师</td>
+<td>34（22.6 码）</td>
+<td>34×135÷100=45（30.0 码）</td>
+<td>34+2=36（24.0 码）</td>
+</tr>
+<tr>
+<td>攻击反噬</td>
+<td>死灵法师</td>
+<td>18（12.0 码）</td>
+<td>18×135÷100=24（16.0 码）</td>
+<td>18+2=20（13.3 码）</td>
+</tr>
+<tr>
+<td>恐惧</td>
+<td>死灵法师</td>
+<td>9（6.0 码）</td>
+<td>9×135÷100=12（8.0 码）</td>
+<td>9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>迷乱</td>
+<td>死灵法师</td>
+<td>9（6.0 码）</td>
+<td>9×135÷100=12（8.0 码）</td>
+<td>9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>偷取生命</td>
+<td>死灵法师</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>吸引</td>
+<td>死灵法师</td>
+<td>10（6.6 码）</td>
+<td>10×135÷100=13（8.6 码）</td>
+<td>10+2=12（8.0 码）</td>
+</tr>
+<tr>
+<td>衰老</td>
+<td>死灵法师</td>
+<td>18（12.0 码）</td>
+<td>18×135÷100=24（16.0 码）</td>
+<td>18+2=20（13.3 码）</td>
+</tr>
+<tr>
+<td>降低抵抗</td>
+<td>死灵法师</td>
+<td>15（10.0 码）</td>
+<td>15×135÷100=20（13.3 码）</td>
+<td>15+2=17（11.3 码）</td>
+</tr>
+<tr>
+<td>黑暗契约</td>
+<td>死灵法师</td>
+<td>4（2.6 码）；12（8.0 码）</td>
+<td>4×135÷100=5（3.3 码）；12×135÷100=16（10.6 码）</td>
+<td>4+2=6（4.0 码）；12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>牺牲</td>
+<td>圣骑士</td>
+<td>10（6.6 码）</td>
+<td>10×135÷100=13（8.6 码）</td>
+<td>10+2=12（8.0 码）</td>
+</tr>
+<tr>
+<td>力量</td>
+<td>圣骑士</td>
+<td>77（51.3 码）</td>
+<td>77×135÷100=103（68.6 码）</td>
+<td>77+2=79（52.6 码）</td>
+</tr>
+<tr>
+<td>祈祷</td>
+<td>圣骑士</td>
+<td>77（51.3 码）</td>
+<td>77×135÷100=103（68.6 码）</td>
+<td>77+2=79（52.6 码）</td>
+</tr>
+<tr>
+<td>抵抗火焰</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>圣火</td>
+<td>圣骑士</td>
+<td>22（14.6 码）</td>
+<td>22×135÷100=29（19.3 码）</td>
+<td>22+2=24（16.0 码）</td>
+</tr>
+<tr>
+<td>荆棘</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>反抗</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>抵抗冰冻</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>祝福瞄准</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>净化</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>抵抗闪电</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>复仇</td>
+<td>圣骑士</td>
+<td>7（4.6 码）</td>
+<td>7×135÷100=9（6.0 码）</td>
+<td>7+2=9（6.0 码）</td>
+</tr>
+<tr>
+<td>专注</td>
+<td>圣骑士</td>
+<td>77（51.3 码）</td>
+<td>77×135÷100=103（68.6 码）</td>
+<td>77+2=79（52.6 码）</td>
+</tr>
+<tr>
+<td>神圣冰冻</td>
+<td>圣骑士</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>活力</td>
+<td>圣骑士</td>
+<td>83（55.3 码）</td>
+<td>83×135÷100=112（74.6 码）</td>
+<td>83+2=85（56.6 码）</td>
+</tr>
+<tr>
+<td>神圣冲击</td>
+<td>圣骑士</td>
+<td>16（10.6 码）</td>
+<td>16×135÷100=21（14.0 码）</td>
+<td>16+2=18（12.0 码）</td>
+</tr>
+<tr>
+<td>庇护所</td>
+<td>圣骑士</td>
+<td>18（12.0 码）</td>
+<td>18×135÷100=24（16.0 码）</td>
+<td>18+2=20（13.3 码）</td>
+</tr>
+<tr>
+<td>冥思</td>
+<td>圣骑士</td>
+<td>58（38.6 码）</td>
+<td>58×135÷100=78（52.0 码）</td>
+<td>58+2=60（40.0 码）</td>
+</tr>
+<tr>
+<td>狂热</td>
+<td>圣骑士</td>
+<td>77（51.3 码）</td>
+<td>77×135÷100=103（68.6 码）</td>
+<td>77+2=79（52.6 码）</td>
+</tr>
+<tr>
+<td>审判</td>
+<td>圣骑士</td>
+<td>41（27.3 码）</td>
+<td>41×135÷100=55（36.6 码）</td>
+<td>41+2=43（28.6 码）</td>
+</tr>
+<tr>
+<td>救赎</td>
+<td>圣骑士</td>
+<td>16（10.6 码）</td>
+<td>16×135÷100=21（14.0 码）</td>
+<td>16+2=18（12.0 码）</td>
+</tr>
+<tr>
+<td>救助</td>
+<td>圣骑士</td>
+<td>54（36.0 码）</td>
+<td>54×135÷100=72（48.0 码）</td>
+<td>54+2=56（37.3 码）</td>
+</tr>
+<tr>
+<td>圣光术</td>
+<td>圣骑士</td>
+<td>6（4.0 码）</td>
+<td>6×135÷100=8（5.3 码）</td>
+<td>6+2=8（5.3 码）</td>
+</tr>
+<tr>
+<td>跳跃</td>
+<td>野蛮人</td>
+<td>15（10.0 码）；36（24.0 码）</td>
+<td>15×135÷100=20（13.3 码）；36×135÷100=48（32.0 码）</td>
+<td>15+2=17（11.3 码）；36+2=38（25.3 码）</td>
+</tr>
+<tr>
+<td>嘲弄</td>
+<td>野蛮人</td>
+<td>16（10.6 码）</td>
+<td>16×135÷100=21（14.0 码）</td>
+<td>16+2=18（12.0 码）</td>
+</tr>
+<tr>
+<td>双手投掷</td>
+<td>野蛮人</td>
+<td>15（10.0 码）</td>
+<td>15×135÷100=20（13.3 码）</td>
+<td>15+2=17（11.3 码）</td>
+</tr>
+<tr>
+<td>跳跃攻击</td>
+<td>野蛮人</td>
+<td>8（5.3 码）；30（20.0 码）</td>
+<td>8×135÷100=10（6.6 码）；30×135÷100=40（26.6 码）</td>
+<td>8+2=10（6.6 码）；30+2=32（21.3 码）</td>
+</tr>
+<tr>
+<td>残酷吓阻</td>
+<td>野蛮人</td>
+<td>35（23.3 码）</td>
+<td>35×135÷100=47（31.3 码）</td>
+<td>35+2=37（24.6 码）</td>
+</tr>
+<tr>
+<td>战斗狂嗥</td>
+<td>野蛮人</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>熔浆巨岩</td>
+<td>德鲁伊</td>
+<td>7（4.6 码）</td>
+<td>7×135÷100=9（6.0 码）</td>
+<td>7+2=9（6.0 码）</td>
+</tr>
+<tr>
+<td>极地风暴</td>
+<td>德鲁伊</td>
+<td>24（16.0 码）；13（8.6 码）</td>
+<td>24×135÷100=32（21.3 码）；13×135÷100=17（11.3 码）</td>
+<td>24+2=26（17.3 码）；13+2=15（10.0 码）</td>
+</tr>
+<tr>
+<td>火山爆</td>
+<td>德鲁伊</td>
+<td>7（4.6 码）</td>
+<td>7×135÷100=9（6.0 码）</td>
+<td>7+2=9（6.0 码）</td>
+</tr>
+<tr>
+<td>火山</td>
+<td>德鲁伊</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>龙卷风</td>
+<td>德鲁伊</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>毁天灭地</td>
+<td>德鲁伊</td>
+<td>9（6.0 码）</td>
+<td>9×135÷100=12（8.0 码）</td>
+<td>9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>暴风</td>
+<td>德鲁伊</td>
+<td>9（6.0 码）</td>
+<td>9×135÷100=12（8.0 码）</td>
+<td>9+2=11（7.3 码）</td>
+</tr>
+<tr>
+<td>风遁</td>
+<td>德鲁伊</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>火焰爆震</td>
+<td>刺客</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>心灵战锤</td>
+<td>刺客</td>
+<td>8（5.3 码）</td>
+<td>8×135÷100=10（6.6 码）</td>
+<td>8+2=10（6.6 码）</td>
+</tr>
+<tr>
+<td>雷电网</td>
+<td>刺客</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>刃之守卫</td>
+<td>刺客</td>
+<td>7（4.6 码）</td>
+<td>7×135÷100=9（6.0 码）</td>
+<td>7+2=9（6.0 码）</td>
+</tr>
+<tr>
+<td>焰拳</td>
+<td>刺客</td>
+<td>4（2.6 码）</td>
+<td>4×135÷100=5（3.3 码）</td>
+<td>4+2=6（4.0 码）</td>
+</tr>
+<tr>
+<td>神龙摆尾</td>
+<td>刺客</td>
+<td>6（4.0 码）</td>
+<td>6×135÷100=8（5.3 码）</td>
+<td>6+2=8（5.3 码）</td>
+</tr>
+<tr>
+<td>雷霆守卫</td>
+<td>刺客</td>
+<td>20（13.3 码）</td>
+<td>20×135÷100=27（18.0 码）</td>
+<td>20+2=22（14.6 码）</td>
+</tr>
+<tr>
+<td>心灵爆震</td>
+<td>刺客</td>
+<td>8（5.3 码）</td>
+<td>8×135÷100=10（6.6 码）</td>
+<td>8+2=10（6.6 码）</td>
+</tr>
+<tr>
+<td>飞龙在天</td>
+<td>刺客</td>
+<td>40（26.6 码）</td>
+<td>40×135÷100=54（36.0 码）</td>
+<td>40+2=42（28.0 码）</td>
+</tr>
+<tr>
+<td>刀刃之盾</td>
+<td>刺客</td>
+<td>5（3.3 码）</td>
+<td>5×135÷100=6（4.0 码）</td>
+<td>5+2=7（4.6 码）</td>
+</tr>
+<tr>
+<td>凤凰攻击</td>
+<td>刺客</td>
+<td>6（4.0 码）；8（5.3 码）；10（6.6 码）</td>
+<td>6×135÷100=8（5.3 码）；8×135÷100=10（6.6 码）；10×135÷100=13（8.6 码）</td>
+<td>6+2=8（5.3 码）；8+2=10（6.6 码）；10+2=12（8.0 码）</td>
+</tr>
+<tr>
+<td>火焰之环</td>
+<td>术士</td>
+<td>0</td>
+<td>+8</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>脆弱</td>
+<td>装备赋予</td>
+<td>41（27.3 码）</td>
+<td>41×135÷100=55（36.6 码）</td>
+<td>41+2=43（28.6 码）</td>
+</tr>
+<tr>
+<td>封印命运</td>
+<td>装备赋予</td>
+<td>3（2.0 码）；5（3.3 码）</td>
+<td>3×135÷100=4（2.6 码）；5×135÷100=6（4.0 码）</td>
+<td>3+2=5（3.3 码）；5+2=7（4.6 码）</td>
+</tr>
+<tr>
+<td>巨型陨石</td>
+<td>装备赋予</td>
+<td>24（16.0 码）；24（16.0 码）</td>
+<td>24×135÷100=32（21.3 码）；24×135÷100=32（21.3 码）</td>
+<td>24（16.0 码）；24+2=26（17.3 码）</td>
+</tr>
+<tr>
+<td>时间冻结</td>
+<td>升华·时术师三阶</td>
+<td>22（14.6 码）</td>
+<td>22×135÷100=29（19.3 码）</td>
+<td>22+2=24（16.0 码）</td>
+</tr>
+<tr>
+<td>黑暗统帅</td>
+<td>升华·巫妖四阶</td>
+<td>77（51.3 码）</td>
+<td>77×135÷100=103（68.6 码）</td>
+<td>77+2=79（52.6 码）</td>
+</tr>
+<tr>
+<td>爆燃</td>
+<td>升华·酋长四阶</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+<tr>
+<td>秽言绽放</td>
+<td>升华·秘术家三阶</td>
+<td>12（8.0 码）</td>
+<td>12×135÷100=16（10.6 码）</td>
+<td>12+2=14（9.3 码）</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>霜之新星、新星、烈焰之环这三行的数字是“额外范围”的内部数值，不换算成码。</li>
+<li>圣宗四阶光环自己不吃技能范围，而是按最大法力<strong>赋予</strong>技能范围（最大法力 × 1%，例如 1500 法力给 15 点）。</li>
+<li>没列在表里的技能不吃这两个属性。</li>
+</ul>
+</section><section class="note-section"><h2 id="buff-effect">4. 技能增益效果</h2>
+<p><strong>影响战吼、附魔、护甲类技能和一部分升华技能。</strong> 这个属性不递减，有多少就加多少。</p>
+<pre><code>加成% = 技能增益效果
+</code></pre>
+<p>例如 20 点技能增益效果就是 +20%，40 点就是 +40%。</p>
+<h3 id="section-4">受影响的技能</h3>
+<p>算例按 <strong>20 点技能增益效果（+20%）</strong> 计算，也就是“原数值 × 120 ÷ 100”。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>加成影响的数值（算例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>附魔冰霜</td>
+<td>法师</td>
+<td>冰霜伤害下限 91×120÷100=109；冰霜伤害上限 111×120÷100=133；冰冻持续时间 25×120÷100=30%；命中值 210×120÷100=252%</td>
+</tr>
+<tr>
+<td>炽烈之径</td>
+<td>法师</td>
+<td>自己移动速度 44×120÷100=52%</td>
+</tr>
+<tr>
+<td>碎冰甲</td>
+<td>法师</td>
+<td>防御 159×120÷100=190%；格挡速度 50×120÷100=60%</td>
+</tr>
+<tr>
+<td>附魔火焰</td>
+<td>法师</td>
+<td>火焰伤害下限 121×120÷100=145；火焰伤害上限 145×120÷100=174；命中值 115×120÷100=138%</td>
+</tr>
+<tr>
+<td>寒冰装甲</td>
+<td>法师</td>
+<td>防御 140×120÷100=168%；格挡几率 25×120÷100=30%</td>
+</tr>
+<tr>
+<td>圣剑</td>
+<td>圣骑士</td>
+<td>格挡几率 46×120÷100=55%；伤害 69×120÷100=82%；自己魔法伤害下限 417×120÷100=500；自己魔法伤害上限 447×120÷100=536</td>
+</tr>
+<tr>
+<td>神圣之盾</td>
+<td>圣骑士</td>
+<td>格挡几率 34×120÷100=40%；防御 215×120÷100=258%</td>
+</tr>
+<tr>
+<td>大叫</td>
+<td>野蛮人</td>
+<td>防御 215×120÷100=258%</td>
+</tr>
+<tr>
+<td>战斗体制</td>
+<td>野蛮人</td>
+<td>法力上限 167.5×120÷100=201；生命上限 335×120÷100=402</td>
+</tr>
+<tr>
+<td>战斗指挥</td>
+<td>野蛮人</td>
+<td>所有技能 3×120÷100=3；伤害 77×120÷100=92%</td>
+</tr>
+<tr>
+<td>野性狂暴</td>
+<td>德鲁伊</td>
+<td>移动速度 104×120÷100=124%；击中偷取生命 20×120÷100=24%；击中偷取生命（上限） 10×120÷100=12%</td>
+</tr>
+<tr>
+<td>速度爆发</td>
+<td>刺客</td>
+<td>移动速度 46×120÷100=55%；攻击速度 53×120÷100=63%</td>
+</tr>
+<tr>
+<td>能量消解</td>
+<td>刺客</td>
+<td>抗火/抗寒/抗闪电/抗毒 41×120÷100=49%；诅咒持续时间降低 24×120÷100=28%；物理抗性 6×120÷100=7%</td>
+</tr>
+<tr>
+<td>毒牙</td>
+<td>刺客</td>
+<td>毒素伤害下限 25.25×120÷100=30.3；毒素伤害上限 26.25×120÷100=31.5；毒素持续时间 25×120÷100=30 帧</td>
+</tr>
+<tr>
+<td>战斗体制</td>
+<td>装备赋予</td>
+<td>法力上限/生命上限/耐力加成 46×120÷100=55%</td>
+</tr>
+<tr>
+<td>次级影散</td>
+<td>装备赋予</td>
+<td>抗火/抗寒/抗闪电/抗毒 40×120÷100=48%；诅咒持续时间降低 48×120÷100=57%；物理抗性 20×120÷100=24%</td>
+</tr>
+<tr>
+<td>增援</td>
+<td>装备赋予</td>
+<td>减免数值由角色防御换算而来，换算结果同样乘 (100 + 加成%) ÷ 100</td>
+</tr>
+<tr>
+<td>猛攻</td>
+<td>装备赋予</td>
+<td>施法速度/跑速/攻击速度/冰冻持续时间 25×120÷100=30%</td>
+</tr>
+<tr>
+<td>烈风之力</td>
+<td>装备赋予</td>
+<td>数值随“烈风之力”层数计算，层数收益同样乘 (100 + 加成%) ÷ 100</td>
+</tr>
+<tr>
+<td>耐力球</td>
+<td>升华·勇士二阶</td>
+<td>每层耐力球的物理抗性、四抗收益同样乘 (100 + 加成%) ÷ 100</td>
+</tr>
+<tr>
+<td>时间扭曲</td>
+<td>升华·时术师三阶</td>
+<td>施法速度/攻击速度 40×120÷100=48%；跑速 30×120÷100=36%</td>
+</tr>
+<tr>
+<td>奥术涌动</td>
+<td>升华·圣宗三阶（1 级）</td>
+<td>施法速度 25×120÷100=30%；法力恢复速度 100×120÷100=120%</td>
+</tr>
+<tr>
+<td>纷争之源</td>
+<td>升华·元素使三阶（1 级）</td>
+<td>火焰技能伤害/冰霜技能伤害/闪电技能伤害 30×120÷100=36%；敌人抗火/敌人抗寒/敌人抗闪电 15×120÷100=18%</td>
+</tr>
+<tr>
+<td>凋零</td>
+<td>升华·追猎者三阶</td>
+<td>数值随“凋零”层数计算，层数收益同样乘 (100 + 加成%) ÷ 100</td>
+</tr>
+<tr>
+<td>制毒宗师</td>
+<td>升华·追猎者四阶（1 级）</td>
+<td>毒素技能伤害 50×120÷100=60%</td>
+</tr>
+<tr>
+<td>凶猛咆哮</td>
+<td>升华·灵行者四阶（1 级）</td>
+<td>伤害 300×120÷100=360%；跑速 40×120÷100=48%；攻击速度 50×120÷100=60%</td>
+</tr>
+<tr>
+<td>烈风之力</td>
+<td>升华·锐眼三阶</td>
+<td>数值随“烈风之力”层数计算，层数收益同样乘 (100 + 加成%) ÷ 100</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>附魔火焰、附魔冰霜的伤害还会再受对应元素精通影响；圣剑的格挡几率还与角色自身格挡值有关。表中都按没有额外加成计算。</li>
+<li>已经施放的增益按施放时的数值生效，换装后需要重新施放才会更新。</li>
+<li>追猎者二阶、酋长二阶的升华会直接赋予技能增益效果。</li>
+</ul>
+</section><section class="note-section"><h2 id="skill-duration">5. 技能持续时间</h2>
+<p><strong>影响增益和诅咒的持续时间。</strong> 不递减，有多少就加多少。</p>
+<pre><code>新持续时间 = 原持续时间 × (100 + 技能持续时间) ÷ 100
+</code></pre>
+<p>例如 20 点技能持续时间就是 +20%，40 点就是 +40%。</p>
+<h3 id="section-5">受影响的技能</h3>
+<p>算例按 <strong>20 点技能持续时间（+20%）</strong> 计算。游戏里 25 帧等于 1 秒。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>20 级持续时间 → 加成后（算例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内视</td>
+<td>亚马逊</td>
+<td>2100×120÷100=2520 帧（84.0 秒 → 100.8 秒）</td>
+</tr>
+<tr>
+<td>迟缓</td>
+<td>亚马逊</td>
+<td>345×120÷100=414 帧（13.8 秒 → 16.6 秒）</td>
+</tr>
+<tr>
+<td>诱饵</td>
+<td>亚马逊</td>
+<td>750×120÷100=900 帧（30.0 秒 → 36.0 秒）</td>
+</tr>
+<tr>
+<td>附魔冰霜</td>
+<td>法师</td>
+<td>15000×120÷100=18000 帧（600.0 秒 → 720.0 秒）</td>
+</tr>
+<tr>
+<td>地狱之火</td>
+<td>法师</td>
+<td>10×120÷100=12 帧（引导状态，释放后多残留几帧，几乎没有实际感觉）</td>
+</tr>
+<tr>
+<td>静态力场</td>
+<td>法师</td>
+<td>125×120÷100=150 帧（5.0 秒 → 6.0 秒）</td>
+</tr>
+<tr>
+<td>炽烈之径</td>
+<td>法师</td>
+<td>170×120÷100=204 帧（6.8 秒 → 8.2 秒）</td>
+</tr>
+<tr>
+<td>闪电齐射</td>
+<td>法师</td>
+<td>10×120÷100=12 帧（引导状态，释放后多残留几帧，几乎没有实际感觉）</td>
+</tr>
+<tr>
+<td>碎冰甲</td>
+<td>法师</td>
+<td>5925×120÷100=7110 帧（237.0 秒 → 284.4 秒）</td>
+</tr>
+<tr>
+<td>附魔火焰</td>
+<td>法师</td>
+<td>15000×120÷100=18000 帧（600.0 秒 → 720.0 秒）</td>
+</tr>
+<tr>
+<td>雷云风暴</td>
+<td>法师</td>
+<td>4600×120÷100=5520 帧（184.0 秒 → 220.8 秒）</td>
+</tr>
+<tr>
+<td>能量护盾</td>
+<td>法师</td>
+<td>32100×120÷100=38520 帧（1284.0 秒 → 1540.8 秒）</td>
+</tr>
+<tr>
+<td>寒冰装甲</td>
+<td>法师</td>
+<td>7425×120÷100=8910 帧（297.0 秒 → 356.4 秒）</td>
+</tr>
+<tr>
+<td>寒冰弹幕</td>
+<td>法师</td>
+<td>57×120÷100=68 帧（2.3 秒 → 2.7 秒）</td>
+</tr>
+<tr>
+<td>伤害加深</td>
+<td>死灵法师</td>
+<td>245×120÷100=294 帧（9.8 秒 → 11.8 秒）</td>
+</tr>
+<tr>
+<td>微暗灵视</td>
+<td>死灵法师</td>
+<td>625×120÷100=750 帧（25.0 秒 → 30.0 秒）</td>
+</tr>
+<tr>
+<td>削弱</td>
+<td>死灵法师</td>
+<td>915×120÷100=1098 帧（36.6 秒 → 43.9 秒）</td>
+</tr>
+<tr>
+<td>攻击反噬</td>
+<td>死灵法师</td>
+<td>820×120÷100=984 帧（32.8 秒 → 39.4 秒）</td>
+</tr>
+<tr>
+<td>恐惧</td>
+<td>死灵法师</td>
+<td>75×120÷100=90 帧（3.0 秒 → 3.6 秒）</td>
+</tr>
+<tr>
+<td>迷乱</td>
+<td>死灵法师</td>
+<td>500×120÷100=600 帧（20.0 秒 → 24.0 秒）</td>
+</tr>
+<tr>
+<td>偷取生命</td>
+<td>死灵法师</td>
+<td>500×120÷100=600 帧（20.0 秒 → 24.0 秒）</td>
+</tr>
+<tr>
+<td>吸引</td>
+<td>死灵法师</td>
+<td>295×120÷100=354 帧（11.8 秒 → 14.2 秒）</td>
+</tr>
+<tr>
+<td>衰老</td>
+<td>死灵法师</td>
+<td>340×120÷100=408 帧（13.6 秒 → 16.3 秒）</td>
+</tr>
+<tr>
+<td>降低抵抗</td>
+<td>死灵法师</td>
+<td>675×120÷100=810 帧（27.0 秒 → 32.4 秒）</td>
+</tr>
+<tr>
+<td>圣剑</td>
+<td>圣骑士</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>神圣之盾</td>
+<td>圣骑士</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>突袭</td>
+<td>圣骑士</td>
+<td>50×120÷100=60 帧（2.0 秒 → 2.4 秒）</td>
+</tr>
+<tr>
+<td>嘲弄</td>
+<td>野蛮人</td>
+<td>175×120÷100=210 帧（7.0 秒 → 8.4 秒）</td>
+</tr>
+<tr>
+<td>大叫</td>
+<td>野蛮人</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>战嗥</td>
+<td>野蛮人</td>
+<td>300×120÷100=360 帧（12.0 秒 → 14.4 秒）</td>
+</tr>
+<tr>
+<td>狂乱</td>
+<td>野蛮人</td>
+<td>1375×120÷100=1650 帧（55.0 秒 → 66.0 秒）</td>
+</tr>
+<tr>
+<td>战斗体制</td>
+<td>野蛮人</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>战斗指挥</td>
+<td>野蛮人</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>极地风暴</td>
+<td>德鲁伊</td>
+<td>10×120÷100=12 帧（引导状态，释放后多残留几帧，几乎没有实际感觉）</td>
+</tr>
+<tr>
+<td>野性狂暴</td>
+<td>德鲁伊</td>
+<td>750×120÷100=900 帧（30.0 秒 → 36.0 秒）</td>
+</tr>
+<tr>
+<td>撞锤</td>
+<td>德鲁伊</td>
+<td>500×120÷100=600 帧（20.0 秒 → 24.0 秒）</td>
+</tr>
+<tr>
+<td>饥饿</td>
+<td>德鲁伊</td>
+<td>2925×120÷100=3510 帧（117.0 秒 → 140.4 秒）</td>
+</tr>
+<tr>
+<td>毁天灭地</td>
+<td>德鲁伊</td>
+<td>5850×120÷100=7020 帧（234.0 秒 → 280.8 秒）</td>
+</tr>
+<tr>
+<td>暴风</td>
+<td>德鲁伊</td>
+<td>5850×120÷100=7020 帧（234.0 秒 → 280.8 秒）</td>
+</tr>
+<tr>
+<td>虎击</td>
+<td>刺客</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>速度爆发</td>
+<td>刺客</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>焰拳</td>
+<td>刺客</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>魔影斗篷</td>
+<td>刺客</td>
+<td>125×120÷100=150 帧（5.0 秒 → 6.0 秒）</td>
+</tr>
+<tr>
+<td>眼镜蛇攻击</td>
+<td>刺客</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>能量消解</td>
+<td>刺客</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>雷电爪</td>
+<td>刺客</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>寒冰刃</td>
+<td>刺客</td>
+<td>7500×120÷100=9000 帧（300.0 秒 → 360.0 秒）</td>
+</tr>
+<tr>
+<td>刀刃之盾</td>
+<td>刺客</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>毒牙</td>
+<td>刺客</td>
+<td>9875×120÷100=11850 帧（395.0 秒 → 474.0 秒）</td>
+</tr>
+<tr>
+<td>战斗体制</td>
+<td>装备赋予</td>
+<td>5500×120÷100=6600 帧（220.0 秒 → 264.0 秒）</td>
+</tr>
+<tr>
+<td>次级影散</td>
+<td>装备赋予</td>
+<td>750×120÷100=900 帧（30.0 秒 → 36.0 秒）</td>
+</tr>
+<tr>
+<td>增援</td>
+<td>装备赋予</td>
+<td>150×120÷100=180 帧（6.0 秒 → 7.2 秒）</td>
+</tr>
+<tr>
+<td>猛攻</td>
+<td>装备赋予</td>
+<td>125×120÷100=150 帧（5.0 秒 → 6.0 秒）</td>
+</tr>
+<tr>
+<td>烈风之力</td>
+<td>装备赋予</td>
+<td>100×120÷100=120 帧（4.0 秒 → 4.8 秒）</td>
+</tr>
+<tr>
+<td>耐力球</td>
+<td>升华·勇士二阶</td>
+<td>250×120÷100=300 帧（10.0 秒 → 12.0 秒）</td>
+</tr>
+<tr>
+<td>时间扭曲</td>
+<td>升华·时术师三阶</td>
+<td>375×120÷100=450 帧（15.0 秒 → 18.0 秒）</td>
+</tr>
+<tr>
+<td>时间冻结</td>
+<td>升华·时术师三阶</td>
+<td>375×120÷100=450 帧（15.0 秒 → 18.0 秒）</td>
+</tr>
+<tr>
+<td>奥术涌动</td>
+<td>升华·圣宗三阶（1 级）</td>
+<td>100×120÷100=120 帧（4.0 秒 → 4.8 秒）</td>
+</tr>
+<tr>
+<td>纷争之源</td>
+<td>升华·元素使三阶（1 级）</td>
+<td>100×120÷100=120 帧（4.0 秒 → 4.8 秒）</td>
+</tr>
+<tr>
+<td>凋零</td>
+<td>升华·追猎者三阶</td>
+<td>100×120÷100=120 帧（4.0 秒 → 4.8 秒）</td>
+</tr>
+<tr>
+<td>制毒宗师</td>
+<td>升华·追猎者四阶（1 级）</td>
+<td>200×120÷100=240 帧（8.0 秒 → 9.6 秒）</td>
+</tr>
+<tr>
+<td>凶猛咆哮</td>
+<td>升华·灵行者四阶（1 级）</td>
+<td>9000×120÷100=10800 帧（360.0 秒 → 432.0 秒）</td>
+</tr>
+<tr>
+<td>烈风之力</td>
+<td>升华·锐眼三阶</td>
+<td>100×120÷100=120 帧（4.0 秒 → 4.8 秒）</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>时术师二阶、破坏者三阶的升华会直接赋予技能持续时间。</li>
+</ul>
+</section><section class="note-section"><h2 id="skill-frequency">6. 技能频率</h2>
+<p><strong>只影响下面这几个技能的触发或脉冲间隔。</strong> 属性越高，间隔越短。</p>
+<pre><code>新间隔 = 原间隔 − 原间隔 × 技能频率 ÷ 100
+</code></pre>
+<h3 id="section-6">受影响的技能</h3>
+<p>算例按 <strong>20 点技能频率</strong> 计算。25 帧等于 1 秒。</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>技能</th>
+<th>来源</th>
+<th>20 级间隔 → 加成后（算例）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>爆裂箭</td>
+<td>亚马逊</td>
+<td>爆炸间隔 2 − 2×20÷100 = 2 帧（0.08 秒 → 0.08 秒）</td>
+</tr>
+<tr>
+<td>雷云风暴</td>
+<td>法师</td>
+<td>脉冲间隔 25 − 25×20÷100 = 20 帧（1.00 秒 → 0.80 秒）</td>
+</tr>
+<tr>
+<td>圣火</td>
+<td>圣骑士</td>
+<td>脉冲间隔 25 − 25×20÷100 = 20 帧（1.00 秒 → 0.80 秒）</td>
+</tr>
+<tr>
+<td>神圣冰冻</td>
+<td>圣骑士</td>
+<td>脉冲间隔 25 − 25×20÷100 = 20 帧（1.00 秒 → 0.80 秒）</td>
+</tr>
+<tr>
+<td>神圣冲击</td>
+<td>圣骑士</td>
+<td>脉冲间隔 25 − 25×20÷100 = 20 帧（1.00 秒 → 0.80 秒）</td>
+</tr>
+<tr>
+<td>庇护所</td>
+<td>圣骑士</td>
+<td>脉冲间隔 25 − 25×20÷100 = 20 帧（1.00 秒 → 0.80 秒）</td>
+</tr>
+<tr>
+<td>火山爆</td>
+<td>德鲁伊</td>
+<td>喷发间隔 1 − 1×20÷100 = 1 帧（0.04 秒 → 0.04 秒）</td>
+</tr>
+<tr>
+<td>龙卷风</td>
+<td>德鲁伊</td>
+<td>间隔 15 − 15×20÷100 = 12 帧（0.60 秒 → 0.48 秒）</td>
+</tr>
+<tr>
+<td>刃之怒</td>
+<td>刺客</td>
+<td>间隔 4 − 4×20÷100 = 4 帧（0.16 秒 → 0.16 秒）</td>
+</tr>
+<tr>
+<td>刀刃之盾</td>
+<td>刺客</td>
+<td>间隔 20 − 20×20÷100 = 16 帧（0.80 秒 → 0.64 秒）；脉冲间隔 10 − 10×20÷100 = 8 帧（0.40 秒 → 0.32 秒）</td>
+</tr>
+</tbody></table></div>
+<p>说明：</p>
+<ul>
+<li>间隔是整数帧，基数小的技能要堆得比较高才会见效。例如刃之怒间隔 4 帧，25 点技能频率才降到 3 帧，50 点才降到 2 帧（2 帧是它的下限）。</li>
+<li>时术师四阶的升华会直接赋予技能频率。</li>
+</ul>
+<p>数值取自 S2 技能表（2026-11-25）。</p>
+</section><p id="article-empty" hidden>没有找到相关改动，试试其他关键词或清空搜索。</p></article></div></main><footer class="updates-footer updates-shell"><span>流放圣所 <i>✦</i> SANCTUARY OF EXILE</span><a href="./updates.html">赛季更新档案</a><a href="#top">回到顶部 ↑</a></footer></body></html>
