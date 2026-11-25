@@ -116,7 +116,7 @@
 </tr>
 <tr>
 <td>行动速度</td>
-<td>同时加到跑速、攻速和其他动作速度</td>
+<td>加跑速、攻速和其他动作速度，不含施法速度</td>
 <td>—</td>
 <td>不针对技能，直接作用于角色</td>
 </tr>
@@ -1776,13 +1776,66 @@
 </ul>
 <p>物品名称可以点开档案馆的详情页。</p>
 </section><section class="note-section"><h2 id="action-speed">7. 行动速度</h2>
-<p><strong>同时提高角色的跑步/行走速度、攻击速度和其他动作速度。</strong> 它不针对具体技能，直接作用在角色身上，所有移动和攻击动作都受益。</p>
-<p>服务器设定页的说明是：行动速度以乘算方式影响总跑步/行走速度，并降低达到下一攻击速度档位所需的攻速。</p>
-<h3 id="section-13">来源</h3>
+<p><strong>同时提高角色的跑步/行走速度、攻击速度和其他动作速度。</strong> 它不针对具体技能，直接作用在角色身上。</p>
+<p>它本身不是施法速度，也不是攻速词缀。引擎把行动速度按同一个比例派生到三项属性上，每项再按各自的规则参与计算：</p>
+<pre><code>跑速：原跑速 × (100 + 行动速度) ÷ 100
+攻速：原攻速 × (100 + 行动速度) ÷ 100
+其他动作速度：原值 × (100 + 行动速度) ÷ 100
+</code></pre>
+<p>三项的原值都以 100 为基准。行动速度 +10% 时攻速 100 → 110，相当于 +10 有效攻速（约等于 11% 装备攻速，不受攻速递减影响）；跑速和其他动作速度同样 100 → 110。角色身上已有的技能跑速或攻速类光环（例如狂热）会先加进去，再一起乘。</p>
+<h3 id="section-13">每种动作用哪个速度</h3>
+<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
+<thead>
+<tr>
+<th>动作</th>
+<th>用的速度属性</th>
+<th>行动速度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>施法（火球、传送、暴雪、战吼、诅咒这类）</td>
+<td>施法速度 FCR</td>
+<td>不影响</td>
+</tr>
+<tr>
+<td>格挡</td>
+<td>格挡速度 FBR</td>
+<td>不影响</td>
+</tr>
+<tr>
+<td>受击恢复</td>
+<td>打击恢复 FHR</td>
+<td>不影响</td>
+</tr>
+<tr>
+<td>走路、跑步、城镇走路</td>
+<td>跑速</td>
+<td>影响</td>
+</tr>
+<tr>
+<td>普通攻击、投掷、踢击，以及使用攻击动作的技能</td>
+<td>攻速 IAS</td>
+<td>影响</td>
+</tr>
+<tr>
+<td>站立待机、城镇站立、击退，以及没有归入上面各类的技能动作</td>
+<td>其他动作速度</td>
+<td>影响</td>
+</tr>
+<tr>
+<td>死亡、倒地</td>
+<td>固定速度</td>
+<td>不影响</td>
+</tr>
+</tbody></table></div>
+<p><strong>“其他动作速度”就是表里倒数第二行。</strong> 施法、格挡、受击、走跑、攻击各自有专属的速度属性，不会读“其他动作速度”；扣掉这些之后剩下的动作才归它管。对玩家来说其中真正有用的是<strong>击退</strong>（被击退后恢复得更快），站立只是待机动画变快。</p>
+<p>所以施法技能（火球、连锁闪电、冰封球这些）加行动速度，得到的只有跑速和击退恢复，<strong>施法速度不会变</strong>；近战和弓系则是跑速、攻速都吃到。</p>
+<p>这一节按引擎的动画速度代码整理，没有做游戏内实测。</p>
+<h3 id="section-14">来源</h3>
 <ul>
 <li>技能：烈风之力（装备版）每层 +1%，最多 +6%；烈风之力（锐眼三阶版）每层 +1%，最多 +10%。每层收益吃技能增益效果。</li>
 </ul>
-<h3 id="section-14">有这个属性的装备</h3>
+<h3 id="section-15">有这个属性的装备</h3>
 <ul>
 <li>暗金：<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Atides" target="_blank" rel="noopener noreferrer">时光浪潮</a>（行动速度 +5%）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ascreams-of-the-desiccated" target="_blank" rel="noopener noreferrer">枯槁者之哀嚎</a>（行动速度 +10%，仅部分变体）</li>
 </ul>
@@ -1798,7 +1851,7 @@
 <li><strong>法术投射物上限 +1</strong>：只抬高上限，本身不增加数量。</li>
 <li>技能顶在上限时，需要数量和上限<strong>一起 +1</strong> 才能再多 1 个。</li>
 </ul>
-<h3 id="section-15">受影响的技能</h3>
+<h3 id="section-16">受影响的技能</h3>
 <p>数量按 <strong>20 点硬点（没有 +技能）</strong> 计算。最后三列是加上对应属性后的数量。</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
 <thead>
@@ -2012,7 +2065,7 @@
 <li>连锁闪电算的是连锁命中数，天堂之拳算的是命中后释放的圣光弹数。</li>
 <li>火风暴的数量公式少了一个右括号，没法按公式计算，没有列进表里。</li>
 </ul>
-<h3 id="section-16">有法术投射物的装备</h3>
+<h3 id="section-17">有法术投射物的装备</h3>
 <ul>
 <li>暗金：<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aravenlore" target="_blank" rel="noopener noreferrer">乌鸦之王</a>（法术投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Afathom" target="_blank" rel="noopener noreferrer">死亡深度</a>（法术投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Athe-third-eye" target="_blank" rel="noopener noreferrer">第三只眼</a>（法术投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Arathmas-hand" target="_blank" rel="noopener noreferrer">拉斯玛的冥河之手</a>（法术投射物 +1）</li>
 <li>亵渎（随机结果）：对地狱火炬使用亵渎宝珠，可能获得“法术投射物 +1”。结果是随机的一种，也可能让物品化为灰烬。</li>
@@ -2020,7 +2073,7 @@
 </ul>
 <p>物品名称可以点开档案馆的详情页。</p>
 <p>只加上限不会增加数量，要和上面这些“法术投射物 +1”的来源配合，技能才能超过原本的上限。</p>
-<h3 id="section-17">法术投射物上限 +1 的装备</h3>
+<h3 id="section-18">法术投射物上限 +1 的装备</h3>
 <ul>
 <li>腐化（随机结果）：对毁灭使用暗之世界石碎片约 10% 的概率获得“法术投射物上限 +1”。<a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer">全部腐化结果</a>可在档案馆查看。</li>
 <li>升华魂石：力量灵魂石·元素使（四阶，法术投射物上限 +1）</li>
@@ -2036,7 +2089,7 @@
 <li><strong>攻击打击次数上限 +1</strong>：只抬高上限，本身不增加数量。</li>
 <li>技能顶在上限时，需要数量和上限<strong>一起 +1</strong> 才能再多 1 个。</li>
 </ul>
-<h3 id="section-18">受影响的技能</h3>
+<h3 id="section-19">受影响的技能</h3>
 <p>数量按 <strong>20 点硬点（没有 +技能）</strong> 计算。最后三列是加上对应属性后的数量。</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
 <thead>
@@ -2118,7 +2171,7 @@
 <li>焰爪、狂怒、心灵战锤、龙爪 在 20 级时顶在上限，只加数量或只加上限都不会变多，要两个一起加。</li>
 <li>焰爪算的是它放出的火球数，狂怒算的是一次最多打到的目标数，心灵战锤算的是弹跳命中数。</li>
 </ul>
-<h3 id="section-19">有攻击打击次数的装备</h3>
+<h3 id="section-20">有攻击打击次数的装备</h3>
 <ul>
 <li>暗金：<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Athe-cranium-basher" target="_blank" rel="noopener noreferrer">碎脑锤</a>（攻击打击次数 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aoverlords-helm" target="_blank" rel="noopener noreferrer">大君面甲</a>（攻击打击次数 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Astalkers-cull" target="_blank" rel="noopener noreferrer">追猎者的刺杀</a>（攻击打击次数 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Anightmares-feast" target="_blank" rel="noopener noreferrer">乌尔萨的噩梦</a>（攻击打击次数 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Athe-veinpiercer" target="_blank" rel="noopener noreferrer">穿脉者</a>（攻击打击次数 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahalo-of-the-justicar" target="_blank" rel="noopener noreferrer">裁决者光环</a>（攻击打击次数 +1，仅部分变体）</li>
 <li>亵渎（随机结果）：对地狱火炬使用亵渎宝珠，可能获得“攻击打击次数 +1”。结果是随机的一种，也可能让物品化为灰烬。</li>
@@ -2126,7 +2179,7 @@
 </ul>
 <p>物品名称可以点开档案馆的详情页。</p>
 <p>只加上限不会增加数量，要和上面这些“攻击打击次数 +1”的来源配合，技能才能超过原本的上限。</p>
-<h3 id="section-20">攻击打击次数上限 +1 的装备</h3>
+<h3 id="section-21">攻击打击次数上限 +1 的装备</h3>
 <ul>
 <li>腐化（随机结果）：对毁灭使用暗之世界石碎片约 10% 的概率获得“攻击打击次数上限 +1”。<a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer">全部腐化结果</a>可在档案馆查看。</li>
 <li>升华魂石：力量灵魂石·狂战士（四阶，攻击打击次数上限 +1）</li>
@@ -2142,7 +2195,7 @@
 <li><strong>攻击投射物上限 +1</strong>：只抬高上限，本身不增加数量。</li>
 <li>技能顶在上限时，需要数量和上限<strong>一起 +1</strong> 才能再多 1 个。</li>
 </ul>
-<h3 id="section-21">受影响的技能</h3>
+<h3 id="section-22">受影响的技能</h3>
 <p>数量按 <strong>20 点硬点（没有 +技能）</strong> 计算。最后三列是加上对应属性后的数量。</p>
 <div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>
 <thead>
@@ -2378,7 +2431,7 @@
 <li>寒冰刃第三段的公式写的是一个除数（64 ÷ 该值），加攻击投射物的实际效果没有核实，没有列进表里。</li>
 <li>锐眼四阶光环：每 1 点攻击投射物上限提供 +150% 增强伤害。</li>
 </ul>
-<h3 id="section-22">有攻击投射物的装备</h3>
+<h3 id="section-23">有攻击投射物的装备</h3>
 <ul>
 <li>暗金：<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ashadowkiller" target="_blank" rel="noopener noreferrer">影杀者</a>（攻击投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aaskaris-zephyr" target="_blank" rel="noopener noreferrer">阿斯卡里的和风</a>（攻击投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Akashyas-sorrow" target="_blank" rel="noopener noreferrer">卡夏之殇</a>（攻击投射物 +1）、<a href="https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-zeraes-resolve" target="_blank" rel="noopener noreferrer">地狱锻铸·泽瑞尔的决心</a>（攻击投射物 +1）</li>
 <li>亵渎（随机结果）：对地狱火炬使用亵渎宝珠，可能获得“攻击投射物 +1”。结果是随机的一种，也可能让物品化为灰烬。</li>
@@ -2386,7 +2439,7 @@
 </ul>
 <p>物品名称可以点开档案馆的详情页。</p>
 <p>只加上限不会增加数量，要和上面这些“攻击投射物 +1”的来源配合，技能才能超过原本的上限。</p>
-<h3 id="section-23">攻击投射物上限 +1 的装备</h3>
+<h3 id="section-24">攻击投射物上限 +1 的装备</h3>
 <ul>
 <li>腐化（随机结果）：对毁灭使用暗之世界石碎片约 10% 的概率获得“攻击投射物上限 +1”。<a href="https://dev.wdjwxh.com/pd2-new/#corruptions" target="_blank" rel="noopener noreferrer">全部腐化结果</a>可在档案馆查看。</li>
 </ul>
