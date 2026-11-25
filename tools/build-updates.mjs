@@ -53,7 +53,10 @@ for (const entry of catalog.entries) {
   };
   renderer.link = function({href, tokens}) {
     const safe = /^(https?:|#|\.\/)/i.test(href);
-    return safe ? `<a href="${escape(href)}">${this.parser.parseInline(tokens)}</a>` : this.parser.parseInline(tokens);
+    if (!safe) return this.parser.parseInline(tokens);
+    // Links to other sites (the archive wiki, videos, documents) open in a new tab, as elsewhere on the site.
+    const external = /^https?:/i.test(href) ? ' target="_blank" rel="noopener noreferrer"' : '';
+    return `<a href="${escape(href)}"${external}>${this.parser.parseInline(tokens)}</a>`;
   };
   // Table cell line breaks are the only inline HTML supported by these notes.
   let html = marked.parser(tokens, {gfm: true, renderer}).replace(/&lt;br\s*\/?&gt;/gi, '<br>');

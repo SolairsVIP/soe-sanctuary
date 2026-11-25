@@ -112,6 +112,16 @@
 | 15 级 | 21 | 3 | +6% |
 | 16 级 | 22 | 0 | 不需要 |
 
+### 有这个属性的装备
+
+- 暗金：[乔丹之石](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Athe-stone-of-jordan)（灵气效果 +3-5）、[炽天使之韵](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aseraphs-hymn)（灵气效果 +5）、[魂系结界](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aspirit-ward)（灵气效果 +6-8）、[法拉之怨](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Apalm-fire)（灵气效果 +5）、[法拉之悔](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Apalm-cold)（灵气效果 +5）、[法拉之忆](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Apalm-ltng)（灵气效果 +5）
+- 符文之语：[共鸣](https://dev.wdjwxh.com/pd2-new/#runewords/Resonance)（33# 16# 15#，鞋，灵气效果 +8-10）、[崇高](https://dev.wdjwxh.com/pd2-new/#runewords/Exaltation)（29# 31# 21# 22#，护甲，灵气效果 +8-10）
+- 圣化宝珠：[圣化宝珠·共鸣](https://dev.wdjwxh.com/pd2-new/#sacreds/Resonance)（空白圣化宝珠 + 33# 16# 15#，用在鞋上：灵气效果 +8-10）、[圣化宝珠·崇高](https://dev.wdjwxh.com/pd2-new/#sacreds/Exaltation)（空白圣化宝珠 + 29# 31# 21# 22#，用在护甲上：灵气效果 +8-10）
+- 词缀：[影响](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E9%A1%B9%E9%93%BE&q=of%20Influence)（项链后缀，需求 85 级，灵气效果 +5-7）
+- 腐化（随机结果）：对聚合体（暗金项链）使用世界之石碎片约 5% 的概率获得“灵气效果 +5”；对无孔戒指、项链使用世界之石碎片约 1.9% 的概率获得“灵气效果 +5”。[全部腐化结果](https://dev.wdjwxh.com/pd2-new/#corruptions)可在档案馆查看。
+
+物品名称可以点开档案馆的详情页。
+
 <a id="curse-effect"></a>
 ## 2. 诅咒效果
 
@@ -161,6 +171,17 @@
 - 攻击反噬“对怪物反弹伤害”这一项用的是另一条曲线：诅咒效果 × 60 ÷ (诅咒效果 + 40)，上限 +60%。
 - 装备上“击中时施放××级伤害加深（衰老等）”触发的诅咒，同样吃诅咒效果。
 - 秘术家一阶的升华会直接赋予诅咒效果。
+
+### 有这个属性的装备
+
+- 暗金：[死亡之网](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Adeathss-web)（诅咒效果 +5-8）、[艾丹的伤痕](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aaidans-scar)（诅咒效果 +8-10）、[哈德尔之手](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahadriels-hand)（诅咒效果 +8-10）、[无垢者牢笼](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Acage-of-the-unsullied)（诅咒效果 +10-15）、[地狱锻铸·乔丹之石](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-stone-of-jordan)（诅咒效果 +3-5）、[地狱锻铸·秘术师](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-occultist)（诅咒效果 +5-10）
+- 符文之语：[忏悔](https://dev.wdjwxh.com/pd2-new/#runewords/Penance)（28# 31# 27#，头盔，诅咒效果 +8-10）
+- 圣化宝珠：[圣化宝珠·忏悔](https://dev.wdjwxh.com/pd2-new/#sacreds/Penance)（空白圣化宝珠 + 28# 31# 27#，用在头盔上：诅咒效果 +8-10）
+- 词缀：[秘术](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E6%88%92%E6%8C%87&q=of%20Occultism)（戒指后缀，需求 85 级，诅咒效果 +3-5）
+- 腐化（随机结果）：对聚合体（暗金项链）使用世界之石碎片约 5% 的概率获得“诅咒效果 +5”；对无孔戒指、项链使用世界之石碎片约 1.9% 的概率获得“诅咒效果 +5”。[全部腐化结果](https://dev.wdjwxh.com/pd2-new/#corruptions)可在档案馆查看。
+- 升华魂石：力量灵魂石·秘术家（一阶，诅咒效果 +10）
+
+物品名称可以点开档案馆的详情页。
 
 <a id="skill-area"></a>
 ## 3. 技能范围 / 技能范围提高
@@ -284,6 +305,15 @@
 - 圣宗四阶光环自己不吃技能范围，而是按最大法力**赋予**技能范围（最大法力 × 1%，例如 1500 法力给 15 点）。
 - 没列在表里的技能不吃这两个属性。
 
+### 有这个属性的装备
+
+- 暗金：[纱织](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Asilkweave)（技能范围 +5）、[马拉的万花筒](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Amaras-kaleidoscope)（技能范围 +6-12）、[奥玛斯的长袍](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aormus-robes)（技能范围 +8-10）、[低语骷髅](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Awhispering-skull)（技能范围 +10-15）、[地狱锻铸·广域毁灭](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-widespread)（技能范围 +5）、[地狱锻铸·美杜莎的凝视](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-medusas-gaze)（技能范围 +5-10）、[地狱锻铸·谐角之冠](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-harlequin-crest)（技能范围 +5-10）、[地狱锻铸·死亡之网](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-deaths-web)（技能范围 +10-12）、[地狱锻铸·马拉的万花筒](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-maras)（技能范围 +9-12、技能范围提高 +1-3）、[枯槁者之哀嚎](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ascreams-of-the-desiccated)（技能范围 +50，仅部分变体）
+- 符文之语：[天真](https://dev.wdjwxh.com/pd2-new/#runewords/Innocence)（25# 20# 33# 15#，护甲，技能范围 +15-20）
+- 词缀：[专精](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E6%89%8B%E5%A5%97&q=of%20Expertise)（手套前缀，需求 28 级，技能范围 +3-5）、[精通](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E6%89%8B%E5%A5%97&q=of%20Mastery)（手套前缀，需求 65 级，技能范围 +6-8）、[宗师](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E6%89%8B%E5%A5%97&q=of%20Grandmastery)（手套前缀，需求 85 级，技能范围 +9-12）
+- 腐化（随机结果）：对无孔手套使用世界之石碎片约 1.8% 的概率获得“技能范围 +10”。[全部腐化结果](https://dev.wdjwxh.com/pd2-new/#corruptions)可在档案馆查看。
+
+物品名称可以点开档案馆的详情页。
+
 <a id="buff-effect"></a>
 ## 4. 技能增益效果
 
@@ -334,6 +364,13 @@
 - 附魔火焰、附魔冰霜的伤害还会再受对应元素精通影响；圣剑的格挡几率还与角色自身格挡值有关。表中都按没有额外加成计算。
 - 已经施放的增益按施放时的数值生效，换装后需要重新施放才会更新。
 - 追猎者二阶、酋长二阶的升华会直接赋予技能增益效果。
+
+### 有这个属性的装备
+
+- 暗金：[粗野之冠](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Apeasent-crown)（技能增益效果 +10）、[水上飘](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Awaterwalk)（技能增益效果 +10-15）、[黑橡树盾](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ablackoak-shield)（技能增益效果 +10）、[大自然的和平](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Anatures-peace)（技能增益效果 +5-10）、[海王利维亚桑](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Aleviathan)（技能增益效果 +15-20）、[地狱锻铸·黑橡树盾](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-blackoak-shield)（技能增益效果 +10）、[枯槁者之哀嚎](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ascreams-of-the-desiccated)（技能增益效果 +20，仅部分变体）
+- 升华魂石：力量灵魂石·追猎者（二阶，技能增益效果 +40）、力量灵魂石·酋长（二阶，技能增益效果 +30）
+
+物品名称可以点开档案馆的详情页。
 
 <a id="skill-duration"></a>
 ## 5. 技能持续时间
@@ -420,6 +457,13 @@
 
 - 时术师二阶、破坏者三阶的升华会直接赋予技能持续时间。
 
+### 有这个属性的装备
+
+- 暗金：[粗野之冠](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Apeasent-crown)（技能持续时间 +10）、[大自然的和平](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Anatures-peace)（技能持续时间 +20）、[圣堂武士的力量](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Atemplars-might)（技能持续时间 +20-25）
+- 升华魂石：力量灵魂石·时术师（二阶，技能持续时间 +25）、力量灵魂石·破坏者（三阶，技能持续时间 +20）
+
+物品名称可以点开档案馆的详情页。
+
 <a id="skill-frequency"></a>
 ## 6. 技能频率
 
@@ -450,6 +494,17 @@
 
 - 间隔是整数帧，基数小的技能要堆得比较高才会见效。例如刃之怒间隔 4 帧，25 点技能频率才降到 3 帧，50 点才降到 2 帧（2 帧是它的下限）。
 - 时术师四阶的升华会直接赋予技能频率。
+
+### 有这个属性的装备
+
+- 暗金：[腐肉之风](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Acarrion-wind)（技能频率 +5-7）、[时光浪潮](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Atides)（技能频率 +30-40）、[地狱锻铸·炽天使之韵](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ahellforged-seraphs-hymn)（技能频率 +5）、[火焰复苏](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Awake-of-destruction)（技能频率 +5-10）、[枯槁者之哀嚎](https://dev.wdjwxh.com/pd2-new/#uniques/unique%3Ascreams-of-the-desiccated)（技能频率 +20，仅部分变体）
+- 符文之语：[喧嚣](https://dev.wdjwxh.com/pd2-new/#runewords/Hustle)（13# 18# 2#，护甲，技能频率 +5-8）、[顺风](https://dev.wdjwxh.com/pd2-new/#runewords/Tailwind)（28# 24# 29#，鞋，技能频率 +10-15）
+- 圣化宝珠：[圣化宝珠·顺风](https://dev.wdjwxh.com/pd2-new/#sacreds/Tailwind)（空白圣化宝珠 + 28# 29# 24#，用在鞋上：技能频率 +10-15）、[圣化宝珠·喧嚣](https://dev.wdjwxh.com/pd2-new/#sacreds/Hustle)（空白圣化宝珠 + 13# 18#×2 2#，用在护甲上：暗金 技能频率 +5-8；手工、稀有 技能频率 +5-10）
+- 词缀：[偶发](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E8%85%B0%E5%B8%A6&q=of%20Incidence)（腰带后缀，需求 28 级，技能频率 +1-5）、[频发](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E8%85%B0%E5%B8%A6&q=of%20Occurrence)（腰带后缀，需求 65 级，技能频率 +6-10）、[盛行](https://dev.wdjwxh.com/pd2-new/#affixes/slot=%E8%85%B0%E5%B8%A6&q=of%20Prevalence)（腰带后缀，需求 85 级，技能频率 +11-20）
+- 腐化（随机结果）：对腰带使用世界之石碎片约 1.9% 的概率获得“技能频率 +10”。[全部腐化结果](https://dev.wdjwxh.com/pd2-new/#corruptions)可在档案馆查看。
+- 升华魂石：力量灵魂石·时术师（四阶，技能频率 +20）
+
+物品名称可以点开档案馆的详情页。
 
 
 数值取自 S2 技能表（2026-11-25）。
