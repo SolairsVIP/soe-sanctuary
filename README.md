@@ -67,7 +67,7 @@ T4 地牢中文名参照 [PD2 汉化资料](https://wiki.projectdiablo2.cn/wiki/
 
 - 正文：`data/updates/<文章ID>.md`。S2 完整说明为 `s2-season.md`；S1 开季说明为 `s1-season.md`，赛季中记录为 `s1-hotfix.md`，保留原文的更新日期与历史规则，配图在 `assets/updates/s1/`。
 - 目录：`data/updates/index.json`，维护赛季、文章标题、整理或发布日期、类型、状态、摘要和主题标签。
-- 类型：`season`（赛季完整说明）、`patch`（赛季中更新）、`test`（内测调整）、`guide`（常规文档，机制与数值说明，归入数据对应的赛季）。状态独立为 `test` 或 `released`，内测草稿不能仅因生成页面改成已上线。
+- 类型：`season`（赛季完整说明）、`patch`（赛季中更新）、`test`（内测调整）、`guide`（常规文档，机制与数值说明，归入数据对应的赛季）。状态独立为 `test`、`planned` 或 `released`（内测、待上线、已上线），内测草稿不能仅因生成页面改成已上线。
 - 页面：`updates.html`、`update-<文章ID>.html` 由工具生成。编辑Markdown后重新生成，不手工改文章HTML。
 
 首次运行 `npm ci`，然后运行 `npm run build:updates`。之后每次编辑正文或目录，重新运行 `npm run build:updates` 并连同生成页面一起提交。网站部署直接使用已生成HTML，无浏览器Markdown解析依赖。

@@ -15,6 +15,21 @@
   ],
   "entries": [
     {
+      "id": "s2-patch-3",
+      "season": "s2",
+      "type": "patch",
+      "status": "planned",
+      "title": "第二赛季补丁 #3 更新说明",
+      "date": "2026-11-27",
+      "dateLabel": "整理日期",
+      "summary": "修复炼狱地图先祖标志、升华石、怪物光环、技能冷却与龙卷射击问题，补齐遗漏的 S14 暗金变更，并调整掉落与命运卡兑换。",
+      "tags": [
+        "修复",
+        "调整"
+      ],
+      "source": "s2-patch-3.md"
+    },
+    {
       "id": "s2-patch-2",
       "season": "s2",
       "type": "patch",

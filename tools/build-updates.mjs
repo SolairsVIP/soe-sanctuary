@@ -22,7 +22,7 @@ for (const entry of catalog.entries) {
   if (!/^[a-z0-9-]+$/.test(entry.id) || entryIds.has(entry.id)) throw new Error('Invalid/duplicate entry id');
   entryIds.add(entry.id);
   const season = catalog.seasons.find(item => item.id === entry.season);
-  if (!season || !typeNames[entry.type] || !['test', 'released'].includes(entry.status)) throw new Error(`Invalid entry: ${entry.id}`);
+  if (!season || !typeNames[entry.type] || !['test', 'released', 'planned'].includes(entry.status)) throw new Error(`Invalid entry: ${entry.id}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.date) || !Number.isFinite(Date.parse(entry.date))) throw new Error('Invalid date');
   const source = path.resolve(contentDir, entry.source);
   if (!source.startsWith(contentDir + path.sep) || path.extname(source) !== '.md') throw new Error('Invalid source path');
@@ -64,7 +64,7 @@ for (const entry of catalog.entries) {
   html = html.replace(/<p>(?:\[\[MODEL_VIDEOS\]\]\s*)+<\/p>/, `<div class="model-videos" aria-label="玩家模型展示视频">${videoCards}</div>`);
   html = html.replace(/<table>/g, '<div class="table-scroll" tabindex="0" role="region" aria-label="更新数据表格"><table>').replace(/<\/table>/g, '</table></div>');
   html = html.replace(/(<h2 id=)/g, '</section><section class="note-section">$1').replace(/^\s*<\/section>/, '') + '</section>';
-  const status = entry.status === 'test' ? '内测' : '已上线';
+  const status = entry.status === 'planned' ? '待上线' : entry.status === 'test' ? '内测' : '已上线';
   const tocHtml = toc.map(item => `<a href="#${escape(item.id)}">${escape(item.label)}</a>`).join('');
   const body = `<div class="reading-progress" aria-hidden="true"><span></span></div><main id="main" class="updates-shell article-main">
 <a class="breadcrumb" href="./updates.html?season=${escape(season.id)}">← 赛季更新 <span>/ ${escape(season.name)}</span></a>
@@ -75,7 +75,7 @@ for (const entry of catalog.entries) {
   cards.push({...entry, seasonName: season.name, seasonLabel: season.label, filename});
 }
 cards.sort((a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
-const cardHtml = cards.map(entry => `<a class="update-card" href="./${entry.filename}" data-season="${escape(entry.season)}" data-type="${escape(entry.type)}" data-search="${escape([entry.title, entry.summary, ...entry.tags].join(' ').toLowerCase())}"><div class="update-card-top"><span class="entry-season">${escape(entry.seasonLabel)} <i>/</i> ${escape(entry.seasonName)}</span><span class="status-badge">${entry.status === 'test' ? '内测' : '已上线'}</span></div><div class="update-card-body"><div><p class="updates-kicker">${typeNames[entry.type]} <span>·</span> ${entry.date.replaceAll('-', '.')}</p><h3>${escape(entry.title)}</h3><p>${escape(entry.summary)}</p><div class="entry-tags">${entry.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></div><span class="card-arrow" aria-hidden="true">↗</span></div><div class="update-card-bottom"><span>${escape(entry.dateLabel || '更新日期')} ${entry.date.replaceAll('-', '.')}</span><span>${typeKickers[entry.type] ? '阅读文档' : '阅读更新说明'} →</span></div></a>`).join('');
+const cardHtml = cards.map(entry => `<a class="update-card" href="./${entry.filename}" data-season="${escape(entry.season)}" data-type="${escape(entry.type)}" data-search="${escape([entry.title, entry.summary, ...entry.tags].join(' ').toLowerCase())}"><div class="update-card-top"><span class="entry-season">${escape(entry.seasonLabel)} <i>/</i> ${escape(entry.seasonName)}</span><span class="status-badge">${entry.status === 'planned' ? '待上线' : entry.status === 'test' ? '内测' : '已上线'}</span></div><div class="update-card-body"><div><p class="updates-kicker">${typeNames[entry.type]} <span>·</span> ${entry.date.replaceAll('-', '.')}</p><h3>${escape(entry.title)}</h3><p>${escape(entry.summary)}</p><div class="entry-tags">${entry.tags.map(tag => `<span>${escape(tag)}</span>`).join('')}</div></div><span class="card-arrow" aria-hidden="true">↗</span></div><div class="update-card-bottom"><span>${escape(entry.dateLabel || '更新日期')} ${entry.date.replaceAll('-', '.')}</span><span>${typeKickers[entry.type] ? '阅读文档' : '阅读更新说明'} →</span></div></a>`).join('');
 const seasons = catalog.seasons.map(s => `<button type="button" data-season="${escape(s.id)}" aria-pressed="false">${escape(s.label)} ${escape(s.name)}</button>`).join('');
 const types = Object.entries(typeNames).map(([id, label]) => `<button type="button" data-type="${id}" aria-pressed="false">${label}</button>`).join('');
 const body = `<main id="main"><section class="updates-hero"><div class="updates-hero-art" aria-hidden="true"></div><div class="updates-shell updates-hero-inner"><p class="updates-kicker">THE SEASON ARCHIVE <span>✦</span> 流放圣所</p><h1>每一次改变，<br><em>都是新的征途。</em></h1><p class="updates-intro">从赛季启程到每一次平衡调整，<br>在这里查阅流放圣所的更新记录。</p><div class="archive-facts"><span><b>${escape(cards[0]?.seasonLabel || "—")}</b> 最新收录赛季</span><span><b>${cards.length.toString().padStart(2, '0')}</b> 篇更新说明</span><span>${escape(Object.values(typeNames).join(' · '))}</span></div></div><div class="hero-issue" aria-hidden="true">II</div></section>
